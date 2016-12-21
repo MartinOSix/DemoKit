@@ -1,0 +1,10 @@
+/* 
+  MultiLanguage.strings
+  LocalNotification
+
+  Created by runo on 16/10/21.
+  Copyright © 2016年 com.runo. All rights reserved.
+*/
+
+LabelName  = "哈哈";
+LabelAge = "15";
