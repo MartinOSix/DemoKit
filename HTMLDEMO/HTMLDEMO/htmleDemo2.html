@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>为HTML 添加新元素</title>
+		<script type="text/javascript">
+			document.createElement("myHero");
+		</script>
+		<style type="text/css">
+			myHero{
+				display: block;
+				background-color: #ddd;
+				padding: 50px;
+				font-size: 30px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1>标题一</h1>
+		<p>段落一</p>
+		<myHero>我的第一个新元素</myHero>
+		<br>
+		<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+		<br>
+		<img id="scream" src="wecschool.png" >
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="190">
+		   <polygon points="100,10 40,180 190,60 10,60 160,180"
+		   style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;"/>
+		</svg>
+	</body>
+
+	<script type="text/javascript">
+		var myCanv = document.getElementById("myCanvas");
+		var ctx = myCanv.getContext("2d");
+		/*
+		ctx.fillStyle="#FF0000";
+		ctx.fillRect(0,0,150,79);
+
+		// ctx.moveTo(0,0);
+		// ctx.lineTo(200,100);
+		// ctx.stroke()
+		//划线
+		ctx.moveTo(0,0);
+		ctx.lineTo(200,100);
+		ctx.stroke();
+		//画圆
+		ctx.beginPath();
+		ctx.arc(95,50,40,0,2*Math.PI);
+		ctx.stroke();
+		*/
+		/*
+		ctx.font="30px Arial";
+		ctx.strokeText("Hello World",10,50);
+
+		//Create gradient
+		//创建线性渐变区域
+		var grd = ctx.createLinearGradient(0,150,200,0);
+		//创建圆形键盘
+		//var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+		grd.addColorStop(0,"red");
+		grd.addColorStop(1,"white");
+
+		ctx.fillStyle=grd;
+		ctx.fillRect(0,0,200,100);
+		*/
+		var img = document.getElementById("scream");
+		img.onload =function(){
+			ctx.drawImage(img,10,10);
+		}
+
+	</script>
+
+</html>

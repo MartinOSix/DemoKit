@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>定位demo</title>
+
+		<script type="text/javascript">
+			var x = document.getElementById("demo");
+			function getLocation () {
+				if (navigator.geolocation) {
+					navigator.geolocation.getCurrentPosition(showPosition,showError);
+				}else{
+					x.innerHTML="该浏览器不支持定位";
+				}
+			}
+
+			function showPosition (position) {
+				x.innerHTML="纬度:"+position.coords.latitude+"<br>精度:"+position.coords.longitude;
+			}
+
+			function showError(error)
+			{
+				switch(error.code) 
+				{
+					case error.PERMISSION_DENIED:
+						x.innerHTML="用户拒绝对获取地理位置的请求。"
+						break;
+					case error.POSITION_UNAVAILABLE:
+						x.innerHTML="位置信息是不可用的。"
+						break;
+					case error.TIMEOUT:
+						x.innerHTML="请求用户地理位置超时。"
+						break;
+					case error.UNKNOWN_ERROR:
+						x.innerHTML="未知错误。"
+						break;
+				}
+			}
+		</script>
+		
+	</head>
+
+	<body>
+		<p id="demo">点击按钮获取当前位置</p>
+		<button onclick="getLocation()">点我</button>
+
+		<p>input number</p>
+		<input type="number" name="quantity" min="1" max="5">
+		<p>input Range</p>
+		<input type="range" name="points" min="1" max="10" step="2">
+		<p>data input</p>
+		<input type="date" name="bday">
+		<p>color input</p>
+		<input type="color" name="favcolor">
+		<p>datetime input</p>
+		<input type="datetime" name="bdaytime">
+		<p>datetime-local input</p>
+		<input type="datetime-local" name="bdaytime">
+		<p>email input</p>
+		<input type="email" name="email">
+		<p>month input</p>
+		<input type="month" name="bdaymonth">
+		<p>week input</p>
+		<input type="week" name="week_yaer">
+
+		<p>datalist 元素</p>
+		<input list="browsers">
+		<datalist id="browsers">
+			<option value="internet explorer">
+			<option value="firefox">
+			<option value="Chrome">
+		</datalist>
+		
+		<br>
+		<p>output</p>
+		<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">0
+		<input type="range" id="a" value="50">100+
+		<input type="number" id="b" value="50">=
+		<output name="x" >0</output>
+		</form>
+		<br>
+		
+		<br>
+		<p>autocomplete 属性</p>
+		<form autocomplete="on">
+			FirstName:<input type="text" name="fname" autofocus><br>
+			LastName:<input type="text" name="lname"><br>
+			E-mail:<input type="email" name="email" autocomplete="off" required><br>
+			<input type="submit">
+		</form>
+
+		<br><br>
+	</body>
+</html>

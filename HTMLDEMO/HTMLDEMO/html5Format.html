@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>html5语义元素</title>
+	</head>
+
+	<body>
+
+		<nav>
+			<a href="https://www.baidu.com">百度</a>
+			<a href="https://www.souhu.com">搜狐</a>
+			<a href="https://www.sina.com">新浪</a>
+		</nav>
+
+		<section>
+			<h1>标题一</h1>
+			<p>the world wide fund for Nature</p>
+		</section>
+		<article>
+			<h1>Internet Explorer</h1>
+			<p>Windows Internet Explorer 9(缩写为IE9)</p>
+		</article>
+
+		<p>My family and I visited The Epcot center this summer.</p>
+		<aside>
+			<h4>Epcot Center</h4>
+			<p>The Epcot Center is a theme park in DIsney World, Florida.</p>
+		</aside>
+
+		<div id="result"></div>
+		<script type="text/javascript">
+			if (typeof(Storage)!="undefined") {
+				//localStorage.lastname="Smith";
+				//localStorage.lastname = "haha"
+				document.getElementById("result").innerHTML="lastname:"+localStorage.lastname;
+			}else{
+				document.getElementById("result").innerHTML="对不起，您的浏览器不支持web存储";
+			}
+		</script>
+		
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+	</body>
+
+</html>

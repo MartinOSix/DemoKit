@@ -1,0 +1,253 @@
+.p4{
+	color: red;
+	font-size: 30px;
+	text-align: center;
+
+}
+
+.allStyle{
+	color: blue;
+	background-color: rgb(255,255,255);/*背景颜色*/
+	background-size: 100%;/*背景图片拉伸*/
+	background-image: url("img1.png");/*背景图*/
+	background-repeat: no-repeat;/*背景图平铺顺序*/
+	background-attachment: scroll;/*背景图片是否跟随界面滚动*/
+	background-position:  top right center left bottom;/*背景图片顺序,可以适当组合*/
+}
+
+.allStyle2{
+	/*属性简写*/
+	background: #0000ff url("img1.png") no-repeat top center;
+	background-color: rgb(245,245,245);
+}
+
+p.testp5{
+	text-align: right;
+	font-style: italic;
+	font-size: 2.5em;
+}
+
+a.testa:link,a.testa:visited{
+	display: block;
+	font-weight: bold;
+	color: #ffffff;
+	background-color: #98bf21;
+	width: 120px;
+	text-align: center;
+	padding: 4px;
+	text-decoration: none;
+}
+
+a.testa:hover,a.testa:active{
+	background-color: #7a991a;
+}
+
+.p6{
+	text-decoration: line-through;/*删除线*/
+	text-decoration: overline;/*上划线*/
+	text-decoration: underline;/*下划线*/
+	text-indent: 50px;
+	text-transform: uppercase;
+	text-transform: capitalize;
+}
+
+ul.testul{
+	list-style-type: circle;/*圆形*/
+	list-style-type: square;/*方形*/
+	/* list-style-image: url("img1.png");*/
+	list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+
+
+}
+
+ul li{
+	background-image: url("img1.png");
+	background-repeat: no-repeat;
+	background-position: center left;
+	background-size: 10px 10px;
+
+	padding-left: 14px;
+}
+
+ul.testol{
+	list-style-type: lower-roman;
+	list-style-type: lower-latin;
+}
+
+table.testtable,th,td{
+	border-collapse: collapse;
+	border: 1px solid black;
+	text-align: right;
+}
+
+th{
+	height: 50px;
+}
+
+td{
+	height: 20px;
+}
+
+p.testp7{
+	/*border: groove 5px #ff0000;*/
+	border: solid;
+	margin: 10px;
+	outline-width: 2px;
+	outline-style: solid;
+	outline-color: #ff0000;
+	padding: 20px;
+	background-color: #ff0000;
+}
+
+p.testmargin{
+	/*
+	margin: auto;
+	width: 50%;
+	background-color: #b0e0e6;
+	*/
+	clear: both;
+	margin-left: 10px;
+	right: 0px;
+	width: 300px;
+	background-color: #b0e0e6;
+}
+
+div.testselect>p{
+	background-color: yellow;
+
+}
+
+/* 容器，需要定位下拉的内容 */
+div.dropdown{
+
+	position: relative;
+	display: inline-block;
+
+}
+/*下拉按钮的样式*/
+.dropbtn{
+	background-color: #4caf50;
+	color: white;
+	padding: 16px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}
+
+
+/*下拉内容，默认隐藏*/
+div.dropdown-content{
+	display: none;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	padding: 12px 16px;
+	z-index: 1;
+}
+
+/*下拉菜单连接*/
+.dropdown-content a{
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+/* 鼠标移上去后显示下拉菜单 */
+div.dropdown:hover .dropdown-content{
+	display: block;
+}
+
+.dropdown:hover .dropbtn{
+	color: #ff0000;
+}
+
+/* 鼠标一上去后修改下拉菜单连接颜色*/
+.dropdown-content a:hover{
+	background-color: #f1f1f1;
+}
+
+img.imgtest{
+	opacity: 0.4;
+}
+img.imgtest:hover{
+	opacity: 1.0;
+}
+
+p.ptest{
+	opacity: 0.0;
+	background-color: white;
+}
+p.ptest:hover{
+	opacity: 1.0;
+	background-color: blue;
+}
+
+p.testCss3{
+	position: relative;
+	background-color: blue;
+	box-shadow: 10px 10px 5px #888888;
+	border-image: url(img1.png) 30 30 stretch;
+	border-radius: 20px;
+	transform:rotate(30deg);
+}
+
+div.round{
+	position: relative;
+	margin-top: 100px;
+	border:15px solid blue;
+	width: 250px;
+	padding: 10px 20px;
+	border-image: url(img1.png) 30 30 stretch;
+}
+
+div.divimages{
+	position: relative;
+	margin-top: 10px;
+	background-image: url(img2.png),url(img1.png);
+	background-position: right bottom,left top;
+	background-repeat: no-repeat,no-repeat;
+	background-size: 60px 60px,625px 290px;
+	padding: 15px;
+}
+
+p.pgradient{
+	width: 500px;
+	height: 500px;
+	text-align: center;
+	margin: 50px;
+	background:linear-gradient(80deg, red,green,yellow,blue);
+	background-origin: content-box;
+
+}
+
+div.pcolumn{
+
+	column-count:3;
+	column-gap:100px;
+	column-width:80px;
+	column-rule-style:solid;
+	column-rule-width:5px;
+	column-rule-color:lightblue;
+	
+}
+
+h1.hcolom{
+	column-span:all;
+}
+
+div.div933{
+	margin: 20px;
+	width: 150px;
+	padding: 10px;
+	height: 70px;
+	border:2px solid black;
+	outline: 2px solid red;
+	outline-offset: 15px
+}
+
+
+

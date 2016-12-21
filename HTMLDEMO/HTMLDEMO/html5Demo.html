@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>h5Demo</title>
+	</head>
+	<body>
+		<div style="text-align:center">
+			<button onclick="playPause()">播放/暂停</button>
+			<button onclick="makeBig()">放大</button>
+			<button onclick="makeSmall()">缩小</button>
+			<button onclick="makeNormal()">普通</button>
+			<br>
+
+			<video id="video1" width ="320" height="480" >
+				<source src="viedo.mov" type="video/mp4">
+			</video>
+		</div>
+
+		<script type="text/javascript">
+			var myVideo = document.getElementById("video1");
+			function playPause () {
+				if (myVideo.paused) {
+					myVideo.play();
+				}else{
+					myVideo.pause();
+				}
+			}
+
+			function makeBig () {
+				myVideo.width = 520;
+			}
+
+			function makeNormal () {
+				myVideo.width = 320;
+			}
+
+			function makeSmall () {
+				myVideo.width = 220;
+			}
+		</script>
+
+	</body>
+</html>
+
+
+
+

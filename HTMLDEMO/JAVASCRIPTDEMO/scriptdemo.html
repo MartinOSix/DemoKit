@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>javascript</title>
+		<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+		<script type="text/javascript">
+			function displayDate () {
+				document.getElementById("demo").innerHTML=Date();
+				//document.write("<h1>this is head1</h1>");
+			}
+
+			function fun1 () {
+				var x = document.getElementById("demo1");
+				x.innerHTML="hello javaScript";
+			}
+
+			function fun2 () {
+				y = document.getElementById("demo3");
+				y.innerHTML=16+"volo";
+				var x = document.getElementById("demo2");
+				if (x.src.match("bulbon")) {
+					x.src="images/pic_bulboff.gif";
+					x.alt="bulboff";
+				}else{
+					x.src="images/pic_bulbon.gif";
+					x.alt="bulbon";
+				}
+			}
+
+		</script>
+	</head>
+	<body>
+		<h1>my first javascript program</h1>
+		<p id="demo">this is paragraph</p>
+		<button type="button" onclick="displayDate()">显示日期</button>
+		<script type="text/javascript">
+			document.write("<h1>this is head1</h1>");
+			document.write("<p>this is a paragraph</p>");
+		</script>
+		<button type="button" onclick="alert('welome')">click me</button>
+		<p id="demo1">javaScript can change html element content</p>
+		<button type="button" onclick="fun1()">click here</button>
+
+		<img id="demo2" onclick="fun2()" src="/images/pic_bulboff.gif" width="100" height="180" alt="bulboff">
+		<p id="demo3">hehe</p>
+		<script type="text/javascript">
+			var x;
+			document.write(typeof "john");
+			document.write("<br>" + typeof 3.14);
+			document.write("<br>" + typeof x);
+
+		</script>
+		<h1>浏览器窗口的大小</h1>
+		<p id="windowtest"></p>
+		<script type="text/javascript">
+			var ele = document.getElementById("windowtest");
+			window.addEventListener("resize",myFun);
+			function myFun(){
+				ele.innerHTML = window.innerHeight + "\n  width" + window.innerWidth + window.location.pathname;
+			}
+		</script>
+		<h1>访问者信息</h1>
+		<div id="example"></div>
+		<script type="text/javascript">
+			txt = "<p>Browser CodeName: "+navigator.appCodeName + "</p>";
+			txt += "<p>Browser Name: "+navigator.appName + "</p>";
+			txt += "<p>Browser Version: "+navigator.appVersion + "</p>";
+			txt+= "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+			txt+= "<p>Platform: " + navigator.platform + "</p>";
+			txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
+			txt+= "<p>User-agent language: " + navigator.systemLanguage + "</p>";
+
+			document.getElementById("example").innerHTML = txt;
+		</script>
+		<h1>各种弹框</h1>
+		<script type="text/javascript">
+			function fun429 () {
+				alert("警告框");
+			}
+			function fun500 () {
+				console.log("2222");
+				var r = window.confirm("按下按钮");
+				if (r==true) {
+					document.getElementById("alertType").innerHTML="按下按钮";
+				}else{
+					document.getElementById("alertType").innerHTML="取消按钮";
+				}
+			}
+			function fun503 () {
+				var txt = window.prompt("提示框s");
+				document.getElementById("alertType").innerHTML=txt;
+			}
+		</script>
+		<p id="alertType" onclick="fun429()" style="background-Color:red">dasf</p>
+		<input type="button" onclick="fun429()" value="显示警告框" />
+		<input type="button" onclick="fun500()" value="确认框">
+		<input type="button" onclick="fun503()" value="提示框">
+		<h1>测试JQuery</h1>
+		<p id="p01"></p>
+		<script type="text/javascript">
+			function fun552 () {
+				$("#p01").html("hello world");
+			}
+			$(document).ready(fun552);	
+
+		</script>
+		<br>
+		<br>
+		<br>
+		<br>
+	</body>
+</html>
