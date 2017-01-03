@@ -12,12 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        self.window?.rootViewController = ViewController_closure()
-        
+        let nav = UINavigationController.init(rootViewController: ViewController_Class())
+        self.window?.rootViewController = nav
         
         return true
     }

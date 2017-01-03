@@ -15,8 +15,17 @@
 		A007C7BD1DF54D5800765E4C /* SwiftSyntaxDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A007C7BC1DF54D5800765E4C /* SwiftSyntaxDemoTests.swift */; };
 		A007C7C81DF54D5800765E4C /* SwiftSyntaxDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A007C7C71DF54D5800765E4C /* SwiftSyntaxDemoUITests.swift */; };
 		A007C7D61DF54D8700765E4C /* ViewController_Function.swift in Sources */ = {isa = PBXBuildFile; fileRef = A007C7D51DF54D8700765E4C /* ViewController_Function.swift */; };
+		A05BA7E71E0A34B30065E4EF /* ViewController_enum_Struct_class_protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BA7E61E0A34B30065E4EF /* ViewController_enum_Struct_class_protocol.swift */; };
 		A07216C11E026ED7007AC6DB /* ViewController_MultThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07216C01E026ED7007AC6DB /* ViewController_MultThread.swift */; };
 		A07216C31E076CB7007AC6DB /* ViewController_closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07216C21E076CB7007AC6DB /* ViewController_closure.swift */; };
+		A0AC9A711E10B8E4005626C8 /* ViewController_Dictonary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC9A701E10B8E4005626C8 /* ViewController_Dictonary.swift */; };
+		A0AC9A731E10CA60005626C8 /* ViewController_controlFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC9A721E10CA60005626C8 /* ViewController_controlFlow.swift */; };
+		A0AC9A751E11FB26005626C8 /* ViewController_AnyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC9A741E11FB26005626C8 /* ViewController_AnyObject.swift */; };
+		A0AC9A771E120C9F005626C8 /* ViewController_Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC9A761E120C9F005626C8 /* ViewController_Class.swift */; };
+		A0C3134B1E0BD55100A72F11 /* ViewController_ViewA.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C3134A1E0BD55100A72F11 /* ViewController_ViewA.swift */; };
+		A0C3134D1E0BD55D00A72F11 /* ViewController_ViewB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C3134C1E0BD55D00A72F11 /* ViewController_ViewB.swift */; };
+		A0C3134F1E0BE50500A72F11 /* NSObject_SharInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C3134E1E0BE50500A72F11 /* NSObject_SharInstance.swift */; };
+		A0C313521E0D1CE900A72F11 /* ViewController_Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C313511E0D1CE900A72F11 /* ViewController_Array.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +60,17 @@
 		A007C7C71DF54D5800765E4C /* SwiftSyntaxDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftSyntaxDemoUITests.swift; sourceTree = "<group>"; };
 		A007C7C91DF54D5800765E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A007C7D51DF54D8700765E4C /* ViewController_Function.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Function.swift; sourceTree = "<group>"; };
+		A05BA7E61E0A34B30065E4EF /* ViewController_enum_Struct_class_protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_enum_Struct_class_protocol.swift; sourceTree = "<group>"; };
 		A07216C01E026ED7007AC6DB /* ViewController_MultThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_MultThread.swift; sourceTree = "<group>"; };
 		A07216C21E076CB7007AC6DB /* ViewController_closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_closure.swift; sourceTree = "<group>"; };
+		A0AC9A701E10B8E4005626C8 /* ViewController_Dictonary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Dictonary.swift; sourceTree = "<group>"; };
+		A0AC9A721E10CA60005626C8 /* ViewController_controlFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_controlFlow.swift; sourceTree = "<group>"; };
+		A0AC9A741E11FB26005626C8 /* ViewController_AnyObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_AnyObject.swift; sourceTree = "<group>"; };
+		A0AC9A761E120C9F005626C8 /* ViewController_Class.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Class.swift; sourceTree = "<group>"; };
+		A0C3134A1E0BD55100A72F11 /* ViewController_ViewA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_ViewA.swift; sourceTree = "<group>"; };
+		A0C3134C1E0BD55D00A72F11 /* ViewController_ViewB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_ViewB.swift; sourceTree = "<group>"; };
+		A0C3134E1E0BE50500A72F11 /* NSObject_SharInstance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObject_SharInstance.swift; sourceTree = "<group>"; };
+		A0C313511E0D1CE900A72F11 /* ViewController_Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Array.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +121,21 @@
 		A007C7A61DF54D5700765E4C /* SwiftSyntaxDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A0C313501E0D1CC300A72F11 /* 集合 */,
+				A0C313491E0BD52A00A72F11 /* 闭包代理反向传值 */,
 				A007C7A71DF54D5700765E4C /* AppDelegate.swift */,
 				A007C7A91DF54D5700765E4C /* ViewController.swift */,
 				A007C7D51DF54D8700765E4C /* ViewController_Function.swift */,
 				A07216C01E026ED7007AC6DB /* ViewController_MultThread.swift */,
 				A07216C21E076CB7007AC6DB /* ViewController_closure.swift */,
+				A05BA7E61E0A34B30065E4EF /* ViewController_enum_Struct_class_protocol.swift */,
 				A007C7AB1DF54D5700765E4C /* Main.storyboard */,
 				A007C7AE1DF54D5700765E4C /* Assets.xcassets */,
 				A007C7B01DF54D5700765E4C /* LaunchScreen.storyboard */,
 				A007C7B31DF54D5700765E4C /* Info.plist */,
+				A0C3134E1E0BE50500A72F11 /* NSObject_SharInstance.swift */,
+				A0AC9A741E11FB26005626C8 /* ViewController_AnyObject.swift */,
+				A0AC9A761E120C9F005626C8 /* ViewController_Class.swift */,
 			);
 			path = SwiftSyntaxDemo;
 			sourceTree = "<group>";
@@ -132,6 +156,25 @@
 				A007C7C91DF54D5800765E4C /* Info.plist */,
 			);
 			path = SwiftSyntaxDemoUITests;
+			sourceTree = "<group>";
+		};
+		A0C313491E0BD52A00A72F11 /* 闭包代理反向传值 */ = {
+			isa = PBXGroup;
+			children = (
+				A0C3134A1E0BD55100A72F11 /* ViewController_ViewA.swift */,
+				A0C3134C1E0BD55D00A72F11 /* ViewController_ViewB.swift */,
+			);
+			name = "闭包代理反向传值";
+			sourceTree = "<group>";
+		};
+		A0C313501E0D1CC300A72F11 /* 集合 */ = {
+			isa = PBXGroup;
+			children = (
+				A0C313511E0D1CE900A72F11 /* ViewController_Array.swift */,
+				A0AC9A701E10B8E4005626C8 /* ViewController_Dictonary.swift */,
+				A0AC9A721E10CA60005626C8 /* ViewController_controlFlow.swift */,
+			);
+			name = "集合";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,11 +314,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0C3134D1E0BD55D00A72F11 /* ViewController_ViewB.swift in Sources */,
+				A0C3134B1E0BD55100A72F11 /* ViewController_ViewA.swift in Sources */,
+				A0AC9A711E10B8E4005626C8 /* ViewController_Dictonary.swift in Sources */,
 				A007C7D61DF54D8700765E4C /* ViewController_Function.swift in Sources */,
 				A007C7AA1DF54D5700765E4C /* ViewController.swift in Sources */,
+				A0C313521E0D1CE900A72F11 /* ViewController_Array.swift in Sources */,
 				A07216C31E076CB7007AC6DB /* ViewController_closure.swift in Sources */,
 				A07216C11E026ED7007AC6DB /* ViewController_MultThread.swift in Sources */,
+				A0AC9A731E10CA60005626C8 /* ViewController_controlFlow.swift in Sources */,
+				A0AC9A751E11FB26005626C8 /* ViewController_AnyObject.swift in Sources */,
+				A0C3134F1E0BE50500A72F11 /* NSObject_SharInstance.swift in Sources */,
 				A007C7A81DF54D5700765E4C /* AppDelegate.swift in Sources */,
+				A05BA7E71E0A34B30065E4EF /* ViewController_enum_Struct_class_protocol.swift in Sources */,
+				A0AC9A771E120C9F005626C8 /* ViewController_Class.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

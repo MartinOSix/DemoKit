@@ -82,7 +82,10 @@ class ViewController_Function: UIViewController {
         print("函数作为参数的形式执行结果为\(fun(10,20))")
     }
     
-    //函数嵌套
+    /**函数嵌套
+     *item1
+     *item2
+     */
     func functionType9() -> Int {
         
         func functionType10(num :Int) -> Int{
@@ -92,7 +95,7 @@ class ViewController_Function: UIViewController {
         return functionType10(num: 2)
     }
     
-    //可变参数的函数
+    ///可变参数的函数
     func functionType11(parameters :Int...) -> Int {
         
         var sum = 0
