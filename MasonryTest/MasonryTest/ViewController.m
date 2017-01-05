@@ -11,6 +11,7 @@
 #import "ViewController_MutableConstraint.h"
 #import "ViewController_Center.h"
 #import "ViewController_hover.h"
+#import "ViewController_ImageFit.h"
 #import "Masonry.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -50,12 +51,15 @@
     _dataSource = @[[ViewController_ScrollView class],
                     [ViewController_MutableConstraint class],
                     [ViewController_Center class],
-                    [ViewController_hover class]]
+                    [ViewController_hover class],
+                    [ViewController_ImageFit class]]
     ;
     _dataSourceTitle = @[@"scrollView",
                          @"动态改变约束,比例约束",
                          @"居中显示",
-                         @"悬停显示"];
+                         @"悬停显示",
+                         @"图片拉伸"
+                         ];
     
     
 }
