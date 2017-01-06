@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  blueToothDemo
+//  BackgroundTask
 //
-//  Created by runo on 17/1/3.
+//  Created by runo on 17/1/4.
 //  Copyright © 2017年 com.runo. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "ViewController_Center.h"
 
 @interface AppDelegate ()
 
@@ -18,8 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window.rootViewController = [ViewController_Center new];
-    
     return YES;
 }
 
@@ -33,6 +30,7 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+     NSLog(@"%@",[NSDate date]);
 }
 
 

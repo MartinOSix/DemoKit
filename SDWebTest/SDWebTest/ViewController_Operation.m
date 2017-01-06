@@ -49,6 +49,10 @@
    
     static NSString * const str = @"name";
     
+    [NSTimer scheduledTimerWithTimeInterval:10 repeats:NO block:^(NSTimer * _Nonnull timer) {
+        NSLog(@"--result");
+    }];
+    
     
 }
 

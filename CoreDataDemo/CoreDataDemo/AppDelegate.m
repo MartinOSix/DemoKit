@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  blueToothDemo
+//  CoreDataDemo
 //
-//  Created by runo on 17/1/3.
+//  Created by runo on 17/1/4.
 //  Copyright © 2017年 com.runo. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "ViewController_Center.h"
 
 @interface AppDelegate ()
 
@@ -18,8 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window.rootViewController = [ViewController_Center new];
-    
     return YES;
 }
 

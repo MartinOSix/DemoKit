@@ -440,6 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XUCTDNYC49;
 				INFOPLIST_FILE = blueToothDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.runo.blueToothDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -452,6 +453,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XUCTDNYC49;
 				INFOPLIST_FILE = blueToothDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.runo.blueToothDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -527,6 +529,7 @@
 				A011AE431E1B4A2B00FF79FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A011AE441E1B4A2B00FF79FD /* Build configuration list for PBXNativeTarget "blueToothDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -535,6 +538,7 @@
 				A011AE461E1B4A2B00FF79FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A011AE471E1B4A2B00FF79FD /* Build configuration list for PBXNativeTarget "blueToothDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +547,7 @@
 				A011AE491E1B4A2B00FF79FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
