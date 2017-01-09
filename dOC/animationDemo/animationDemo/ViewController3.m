@@ -30,9 +30,12 @@
     inner = CATransform3DRotate(inner, -M_PI_4, 0, 1, 0);
     self.innerview.layer.transform = inner;
     
+    [self test1];
 }
 
 -(void)test1{
+    
+    //一旦重新设置3d旋转，则原来的状态会被复原，并不是在上一个基础上旋转
     CATransform3D outer = CATransform3DMakeRotation(M_PI_4, 0, 0, 1);
     self.outview.layer.transform = outer;
     

@@ -14,6 +14,7 @@
 #import "ViewController2.h"
 #import "ViewController5.h"
 #import "ViewController10.h"
+#import "MainViewController.h"
 #import vcname
 
 @interface AppDelegate ()<UITabBarControllerDelegate>
@@ -26,21 +27,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    /*
-    ViewController *vc = [[ViewController alloc]initWithNibName:@"ViewController" bundle:nil];
     
-    ViewController2 *vc2 = [[ViewController2 alloc]initWithNibName:@"ViewController2" bundle:nil];
-    
-    ViewController5 *vc3 = [[ViewController5 alloc]initWithNibName:@"ViewController5" bundle:nil];
-    //ViewController7 *vc7 = [[ViewController7 alloc]init];
-    
-    ViewController10 *vc10 = [[ViewController10 alloc]initWithNibName:@"ViewController10" bundle:nil];
-    
-    id vcall = [[NSClassFromString(vcName) alloc]init];
-    
-    self.window.rootViewController = vc10;
-    */
     
     UITabBarController *tabBar = [[UITabBarController alloc]init];
     UIViewController *viewA = [[UIViewController alloc]init];
@@ -51,7 +38,7 @@
     tabBar.view.backgroundColor = [UIColor whiteColor];
     tabBar.delegate = self;
     
-    self.window.rootViewController = tabBar;
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:[MainViewController new]];
     
     return YES;
 }

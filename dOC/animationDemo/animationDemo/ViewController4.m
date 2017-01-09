@@ -91,17 +91,16 @@
 -(void)gesture:(UIPanGestureRecognizer *)pan{
     
     CGPoint p = [pan translationInView:self.view];//获取偏移量
-    
+    NSLog(@"%@",NSStringFromCGPoint(p));
     [pan setTranslation:CGPointZero inView:self.view];
-    
-    CGFloat rx = (p.x/2000)*(M_PI);
-    _perspectivce = CATransform3DRotate(_perspectivce, rx, 1, 0, 0);
-    
-    CGFloat ry = (p.y/2000)*(M_PI);
-    _perspectivce = CATransform3DRotate(_perspectivce, ry, 0, 1, 0);
+    //x 偏移，旋转的是y轴
+    CGFloat rx = (p.x/2000)*(M_PI)*10;
+    _perspectivce = CATransform3DRotate(_perspectivce, rx, 0, 1, 0);
+    //y 偏移，旋转的是x轴
+    CGFloat ry = (p.y/2000)*(M_PI)*10;
+    _perspectivce = CATransform3DRotate(_perspectivce, ry, 1, 0, 0);
     
     CGFloat rz = (sqrt(p.y*p.y + p.x*p.x)/2000)*(M_PI);
-    
     _perspectivce = CATransform3DRotate(_perspectivce, rz, 0, 0, 1);
     
     self.contaner.layer.sublayerTransform = _perspectivce;
