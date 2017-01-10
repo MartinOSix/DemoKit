@@ -41,13 +41,14 @@
     self.titles = [NSMutableArray arrayWithArray:@[
                                                @"图片部分显示，3D翻转，放大，旋转，平移",
                                                @"视图嵌套3d翻转",
-                                               @"自己拼接立体图形，并通过手势移动",
+                                               @"view拼接立体图形，并通过手势移动",
                                                @"划线显示，手势跟踪",
                                                @"直接在layer上显示文字",
-                                               @"view7",
-                                               @"view8",
-                                               @"view9",
-                                               @"view10"
+                                               @"用layer拼接的立方体",
+                                               @"渐变动画",
+                                               @"关键帧动画，动画合集",
+                                               @"转场动画",
+                                               @"阴影，表盘，锚点，layer代理"
                                                    ]];
     self.viewControllers = [NSMutableArray arrayWithArray:@[
                                                    @"ViewController2",
@@ -58,7 +59,8 @@
                                                    @"ViewController7",
                                                    @"ViewController8",
                                                    @"ViewController9",
-                                                   @"ViewController10"
+                                                   @"ViewController10",
+                                                   @"ViewController"
                                                             ]];
     
 }
@@ -75,7 +77,6 @@
     cell.textLabel.text = self.titles[indexPath.row];
     cell.textLabel.adjustsFontSizeToFitWidth = YES;
     return cell;
-    
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

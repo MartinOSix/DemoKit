@@ -20,11 +20,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.colorView = ({
         UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
         [self.view addSubview:view];
+        view.layer.borderColor = [UIColor blackColor].CGColor;
+        view.layer.borderWidth = 1;
         view;
     });
     

@@ -24,11 +24,13 @@
    
     //关键帧动画
     self.view.backgroundColor = [UIColor whiteColor];
-    
+
+    //那个三角形
     self.bview = [[BezierView alloc]initWithFrame:CGRectMake(50, 50, 50, 50)];
     self.bview.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.bview];
     
+    //画路径
     UIBezierPath *bezierPath = [[UIBezierPath alloc]init];
     [bezierPath moveToPoint:CGPointMake(0, 150)];
     [bezierPath addCurveToPoint:CGPointMake(300, 150) controlPoint1:CGPointMake(100, 100) controlPoint2:CGPointMake(100, 100)];
@@ -39,23 +41,27 @@
     pathLayer.lineWidth = 3.0f;
     [self.view.layer addSublayer:pathLayer];
     
+    //关键帧动画
     CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
-    animation.keyPath = @"position";
-    //animation.duration = 4.0;
-    animation.path = bezierPath.CGPath;
+    animation.keyPath = @"position";//位置 + 下面句
+    animation.path = bezierPath.CGPath;//沿着path移动
     animation.rotationMode = kCAAnimationRotateAuto;
 
-    
+    //旋转360°
     CABasicAnimation *animation1 = [CABasicAnimation animation];
     animation1.keyPath = @"transform.rotation";
     //animation1.duration = 2.0;
     animation1.byValue = @(M_PI*2);//[NSValue valueWithCATransform3D:CATransform3DMakeRotation(2*M_PI, 0, 0, 1)];
     
+    //创建动画合集
     CAAnimationGroup *group = [CAAnimationGroup animation];
     group.animations = @[animation,animation1];
     group.duration = 4.0;
-    
+    //执行合集动画
     [self.bview.layer addAnimation:group forKey:nil];
+    
+    [self test1];//颜色沿着指定值变化
+    [self test2];//只移动
 }
 
 
@@ -86,7 +92,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.colorView = ({
-        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
+        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 400, 200, 200)];
         [self.view addSubview:view];
         view;
     });

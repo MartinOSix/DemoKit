@@ -19,6 +19,7 @@
 @property(nonatomic,strong) NSTimer *timer;//!<定时器
 @property (weak, nonatomic) IBOutlet UIView *view1;
 @property (weak, nonatomic) IBOutlet UIView *view2;
+@property(nonatomic,strong) CALayer *blueLayer;
 
 @end
 
@@ -26,25 +27,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    /*
+    self.edgesForExtendedLayout = UIRectEdgeNone;
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.view1.layer.shadowOpacity = 0.5f;
     self.view2.layer.shadowOpacity = 0.5f;
     
-    //create a square shadow
+    //创建方形阴影
     CGMutablePathRef squarePath = CGPathCreateMutable();
     CGPathAddRect(squarePath, NULL, self.view1.bounds);
     self.view1.layer.shadowPath = squarePath;
     CGPathRelease(squarePath);
     
-    //create a circular shadow
+    //创建圆形阴影
     CGMutablePathRef circlePath = CGPathCreateMutable();
     CGPathAddEllipseInRect(circlePath, NULL, self.view2.bounds);
     self.view2.layer.shadowPath = circlePath;
+    //阴影下移 130
     self.view2.layer.shadowOffset = CGSizeMake(0, 130);
     CGPathRelease(circlePath);
     
-    
+    //[self test1];//对图片的显示区域做操作
+    //[self test2];//锚点，旋转
+    */
+     [self test3];//通过代理给layer画画
+     
 }
 
 -(void)test2{
@@ -80,6 +88,7 @@
         UIImageView *imgv = [[UIImageView alloc]initWithFrame:CGRectMake(100, 100, 21, 166)];
         imgv.image = [UIImage imageNamed:@"secArrow.png"];
         imgv.center = CGPointMake(380/2.0f, (380/2.0f));
+        //锚点，表示旋转的点,
         imgv.layer.anchorPoint = CGPointMake(0.5f, 0.8f);
         [self.clockImg addSubview:imgv];
         imgv;
@@ -94,9 +103,9 @@
 -(void)tick{
     
     NSDate *nowDate = [NSDate date];
-    CGFloat hoursAngle = (nowDate.cqHour/12.0f)*M_PI*2.0;
+    CGFloat hoursAngle = (nowDate.cqHour%12)*(M_PI/6.0);
     CGFloat minAngle = (nowDate.cqMinute/60.0f)*2.0*M_PI;
-    hoursAngle += minAngle * 0.12f;
+    hoursAngle += (nowDate.cqMinute%60) * (M_PI/6.0/60.0);
     CGFloat secAngle = (nowDate.cqSecond/60.0f)*M_PI*2.0;
     self.hourImg.transform = CGAffineTransformMakeRotation(hoursAngle);
     self.secImg.transform = CGAffineTransformMakeRotation(secAngle);
@@ -126,9 +135,11 @@
     [self.layerView.layer addSublayer:blueLayer];
     
     [blueLayer display];
+    self.blueLayer = blueLayer;
 }
 
 -(void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx{
+    //通过代理给layer画画
     CGContextSetLineWidth(ctx, 10.0f);
     CGContextSetStrokeColorWithColor(ctx, [UIColor redColor].CGColor);
     CGContextStrokeEllipseInRect(ctx, layer.bounds);
@@ -136,21 +147,36 @@
 
 -(void)test1{
     UIImage *image = [UIImage imageNamed:@"img1.png"];
-    
+    self.layerView = ({
+        UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
+        view.backgroundColor = [UIColor whiteColor];
+        view.center = CGPointMake([UIScreen mainScreen].bounds.size.width/2, [UIScreen mainScreen].bounds.size.height/2);
+        [self.view addSubview:view];
+        view;
+    });
     CALayer *blueLyer = [CALayer layer];
     blueLyer.frame = CGRectMake(0.0f, 0.0f, 200.0f, 200.0f);
-    //blueLyer.backgroundColor = [UIColor blueColor].CGColor;
     blueLyer.contents = (__bridge id)image.CGImage;
     blueLyer.contentsGravity = kCAGravityResizeAspect;
     blueLyer.masksToBounds = YES;
-    blueLyer.contentsCenter = CGRectMake(0.25, 0.25, 0.2,0.2);
-    //blueLyer.contentsRect = CGRectMake(0.5, 0, 0.5, 0.5);
+    //说是中心点，但是其实是只要是这范围内的都相当于被删掉了
+    //blueLyer.contentsCenter = CGRectMake(0.25, 0.25, 0,0.5);
+    //这就是说的显示区域，可以只显示一个图片的部分区域
+    blueLyer.contentsRect = CGRectMake(0.5, 0, 0.5, 0.5);
     [self.layerView.layer addSublayer:blueLyer];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)dealloc{
+    if (self.timer) {
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+    self.blueLayer.delegate = nil;
 }
 
 
