@@ -11,28 +11,61 @@
 #import "swresample.h"
 #import "swscale.h"
 #import "pixdesc.h"
-
+#import "KxMovieGLView.h"
 #define kCheckError if (_hasError) {\
 return;\
 }
 
-typedef NS_ENUM(NSUInteger, VideoFrameType) {
-    VideoFrameTypeYUV,
-    VideoFrameTypeRGB
-};
+
+@implementation MovieFrame
+@end
 
 
-typedef NS_ENUM(NSUInteger, CQMovieError) {
-    CQMovieErrorCodecNotFount,//没有发现解码器
-    CQMovieErrorStreamNotFount,//没有发现媒体流
-    CQMovieErrorOpenCodec,//打开解码器失败
-    CQMovieErrorOpenFile,//打开文件失败地址那里
-    CQMovieErrorStreamInfoNotFound,//在f视频上下文中发现流失败
-    CQMovieErrorAllocateFormatContext,//创建f视频上下文失败
-    CQMovieErrorAllocateFrame,//创建v视频帧失败
-    CQMovieErrorNone//没有错误
+@implementation VideoFrame
+-(MovieFrameType)type{return MovieFrameTypeVideo;}
+@end
+
+
+@implementation VideoFrameYUV
+- (VideoFrameType) format { return VideoFrameTypeYUV; }
+@end
+
+
+@implementation VideoFrameRGB
+- (VideoFrameType) format { return VideoFrameTypeRGB; }
+- (UIImage *) asImage
+{
+    UIImage *image = nil;
     
-};
+    CGDataProviderRef provider = CGDataProviderCreateWithCFData((__bridge CFDataRef)(_rgb));
+    if (provider) {
+        CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
+        if (colorSpace) {
+            CGImageRef imageRef = CGImageCreate(self.width,
+                                                self.height,
+                                                8,
+                                                24,
+                                                self.linesize,
+                                                colorSpace,
+                                                kCGBitmapByteOrderDefault,
+                                                provider,
+                                                NULL,
+                                                YES, // NO
+                                                kCGRenderingIntentDefault);
+            
+            if (imageRef) {
+                image = [UIImage imageWithCGImage:imageRef];
+                CGImageRelease(imageRef);
+            }
+            CGColorSpaceRelease(colorSpace);
+        }
+        CGDataProviderRelease(provider);
+    }
+    
+    return image;
+}
+@end
+
 
 @interface ViewController ()
 
@@ -48,9 +81,10 @@ typedef NS_ENUM(NSUInteger, CQMovieError) {
     AVCodecContext      *_videoCodecCtx;//!<v视频流上下文
     AVFrame             *_videoFrame;//!<v视频帧
     VideoFrameType      _videoFrameType;//!<视频帧类型
-    CGFloat             *_videoTimeBase;//!<应该是一帧的时间单位
+    CGFloat             _videoTimeBase;//!<应该是一帧的时间单位
     NSInteger           _videoStream;//!<正在打开的v视频流
     NSArray             *_videoStreams;//!<v视频流所在文件中的位置，能打开的视频流
+    CGFloat             _position;//解码视频帧的位置
     
     NSInteger           _audioStream;//!<正在打开的a音频流
     NSArray             *_audioStreams;//!<能打开的音频流
@@ -61,6 +95,9 @@ typedef NS_ENUM(NSUInteger, CQMovieError) {
     BOOL                _hasAudioError;
     BOOL                _isEOF;
     
+    NSMutableArray      *_videoFrames;
+    CGFloat             _bufferedDuration;
+    KxMovieGLView       *_glView;
 }
 
 #pragma mark - Get and Set
@@ -132,17 +169,71 @@ typedef NS_ENUM(NSUInteger, CQMovieError) {
     if (_videoCodecCtx && (_videoCodecCtx->pix_fmt == AV_PIX_FMT_YUV420P || _videoCodecCtx->pix_fmt == AV_PIX_FMT_YUVJ420P) ) {
         
         _videoFrameType = VideoFrameTypeYUV;
+        NSLog(@"-----YUV");
     }else{
         _videoFrameType = VideoFrameTypeRGB;
+        NSLog(@"-----RGB");
     }
     
-    [self decodeVideoStream];
+    //在解码工作做完的时候创建播放view
+    _glView = [[KxMovieGLView alloc]initWithFrame:self.view.bounds decoderIsYUV:YES FrameWidth:_videoCodecCtx->width FrameHeight:_videoCodecCtx->height];
+    [self.view addSubview:_glView];
+    
+    
+    [self tick];
     return CQMovieErrorNone;
 }
 
-//从视频流中解码出数据
--(void)decodeVideoStream{
+-(void)tick{
+    [self asyDecodeStream];
+    CGFloat interval = [self presentFrame:nil];
+    const NSTimeInterval time = MAX(interval + 0, 0.01);
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, time * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [self tick];
+    });
+}
+
+-(void)asyDecodeStream{
+    NSArray *frames = [self decodeVideoStream];
+    _videoFrames = [NSMutableArray array];
+    @synchronized(_videoFrames) {
+        for (MovieFrame *frame in frames)
+            if (frame.type == MovieFrameTypeVideo) {
+                [_videoFrames addObject:frame];
+                _bufferedDuration += frame.duration;
+            }
+    }
+}
+
+-(CGFloat)presentFrame:(NSArray *)arr{
     
+    VideoFrame *frame;
+    @synchronized(_videoFrames) {
+        
+        if (_videoFrames.count > 0) {
+            
+            
+            frame = _videoFrames[0];
+            [_videoFrames removeObjectAtIndex:0];
+            _bufferedDuration -= frame.duration;
+        }
+    }
+    
+    if (frame) {
+        return [self presetnVideoFrame:frame];
+    }
+    return 0;
+}
+
+-(CGFloat )presetnVideoFrame:(VideoFrame *)videoFrame{
+    
+    [_glView render:videoFrame];
+    return videoFrame.duration;
+}
+
+//从视频流中解码出数据
+-(NSArray *)decodeVideoStream{
     
     NSMutableArray *result = [NSMutableArray array];
     AVPacket packet;
@@ -170,15 +261,64 @@ typedef NS_ENUM(NSUInteger, CQMovieError) {
                     break;
                 }
                 if (gotframe) {
-                    NSLog(@"getframe");
-                    if (!_videoFrame->data[0])
-                        return ;
+                    NSLog(@"getframe--");
+                    VideoFrame *frame = [self handleVideoFrame];
+                    if (frame) {
+                        [result addObject:frame];
+                        _position = frame.position;
+                        decodedDuration += frame.duration;
+                        if (decodedDuration > 0) {//这个0 是最小解码时间
+                            finished = YES;
+                        }
+                    }
                 }
+                if (0 == len) {
+                    break;
+                }
+                pktSize -= len;
             }
             
+        }else if (packet.stream_index == _audioStream){
+            //不管
+        }else if (packet.stream_index == _artworkStream){
+            
         }
+        av_free_packet(&packet);
+    }
+    return result;
+}
+
+-(VideoFrame *)handleVideoFrame{
+    if (!_videoFrame->data[0]) {
+        return nil;
+    }
+    VideoFrame *frame;
+    if (_videoFrameType == VideoFrameTypeYUV) {
+            //YUV
+        VideoFrameYUV *yuvFrame = [[VideoFrameYUV alloc]init];
+        yuvFrame.luma = copyFrameData(_videoFrame->data[0], _videoFrame->linesize[0], _videoCodecCtx->width, _videoCodecCtx->height);
+        yuvFrame.chromaB = copyFrameData(_videoFrame->data[1], _videoFrame->linesize[1], _videoCodecCtx->width/2, _videoCodecCtx->height/2);
+        yuvFrame.chromaR = copyFrameData(_videoFrame->data[2], _videoFrame->linesize[2], _videoCodecCtx->width/2, _videoCodecCtx->height/2);
+        frame = yuvFrame;
+    }else{//RGB暂时不管
+        
     }
     
+    frame.width = _videoCodecCtx->width;
+    frame.height = _videoCodecCtx->height;
+    frame.position = av_frame_get_best_effort_timestamp(_videoFrame)*_videoTimeBase;
+    const int64_t frameDuration = av_frame_get_pkt_duration(_videoFrame);
+    if (frameDuration) {
+        frame.duration = frameDuration * _videoTimeBase;
+        frame.duration += _videoFrame->repeat_pict * _videoTimeBase * 0.5;
+    }else{
+        frame.duration = 1.0 / _fps;
+    }
+    NSLog(@"VFD: %.4f %.4f | %lld ",
+          frame.position,
+          frame.duration,
+          av_frame_get_pkt_pos(_videoFrame));
+    return frame;//cq
 }
 
 -(CQMovieError)openAudioStream{
@@ -268,6 +408,19 @@ typedef NS_ENUM(NSUInteger, CQMovieError) {
     return NO;
 }
 #pragma mark - C funtion
+
+static NSData * copyFrameData(UInt8 *src, int linesize, int width, int height)
+{
+    width = MIN(linesize, width);
+    NSMutableData *md = [NSMutableData dataWithLength: width * height];
+    Byte *dst = md.mutableBytes;
+    for (NSUInteger i = 0; i < height; ++i) {
+        memcpy(dst, src, width);
+        dst += width;
+        src += linesize;
+    }
+    return md;
+}
 
 static BOOL audioCodecIsSupported(AVCodecContext *audio){
     return NO;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A034E2B11E48798900CCBC87 /* KxMovieGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = A034E2B01E48798900CCBC87 /* KxMovieGLView.m */; };
 		A07A17931E2C676A00874D44 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A07A17921E2C676A00874D44 /* main.m */; };
 		A07A17961E2C676A00874D44 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = A07A17951E2C676A00874D44 /* AppDelegate.mm */; };
 		A07A17991E2C676A00874D44 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A07A17981E2C676A00874D44 /* ViewController.m */; };
@@ -49,6 +50,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A034E2AF1E48798900CCBC87 /* KxMovieGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMovieGLView.h; sourceTree = "<group>"; };
+		A034E2B01E48798900CCBC87 /* KxMovieGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMovieGLView.m; sourceTree = "<group>"; };
 		A07A178E1E2C676A00874D44 /* FFMpegDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FFMpegDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07A17921E2C676A00874D44 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A07A17941E2C676A00874D44 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -241,6 +244,8 @@
 		A07A17901E2C676A00874D44 /* FFMpegDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A034E2AF1E48798900CCBC87 /* KxMovieGLView.h */,
+				A034E2B01E48798900CCBC87 /* KxMovieGLView.m */,
 				A0FE37C81E3096BC00E594C7 /* static.mov */,
 				A07A183E1E2C78BF00874D44 /* sysLib */,
 				A07A17C41E2C67A400874D44 /* FFmpeg-iOS */,
@@ -627,6 +632,7 @@
 				A07A17991E2C676A00874D44 /* ViewController.m in Sources */,
 				A07A17961E2C676A00874D44 /* AppDelegate.mm in Sources */,
 				A07A17931E2C676A00874D44 /* main.m in Sources */,
+				A034E2B11E48798900CCBC87 /* KxMovieGLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
