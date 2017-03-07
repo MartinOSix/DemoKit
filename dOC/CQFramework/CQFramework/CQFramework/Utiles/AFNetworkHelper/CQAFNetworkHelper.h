@@ -18,6 +18,8 @@
 
 @interface CQAFNetworkHelper : NSObject
 
++(instancetype)shareInstance;
+
 @property(nonatomic,strong)NSString *postURL;//!<请求地址
 @property(nonatomic,strong)AFHTTPSessionManager *manager;//!<AF请求引擎
 @property(nonatomic,strong)NSURLSessionDataTask *currentTask;//!<当前任务
@@ -25,6 +27,8 @@
 @property(nonatomic,weak) id <CQAFNetworkHelperDelegate> delegate;//!<回调代理
 
 -(NSURLSessionDataTask *)cqPostParameter:(NSDictionary *)parameter CompleteBlock:(void(^)(CQResponseResult *result))resultBlock;
+
+-(NSURLSessionDataTask *)cqPostParameter:(NSDictionary *)parameter URL:(NSString *)url CompleteBlock:(void(^)(CQResponseResult *result))resultBlock;
 
 -(void)cqCloseTask;
 +(void)cqCloseAllTask;

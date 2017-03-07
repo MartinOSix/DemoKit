@@ -39,6 +39,7 @@
 		A0B311331DDD8E79008B31D9 /* NSDate+CQDate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B311321DDD8E79008B31D9 /* NSDate+CQDate.m */; };
 		A0B311361DDD922C008B31D9 /* NSArray+CQArray.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B311351DDD922C008B31D9 /* NSArray+CQArray.m */; };
 		A0B311391DDD92A2008B31D9 /* NSDictionary+CQPrint.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B311381DDD92A2008B31D9 /* NSDictionary+CQPrint.m */; };
+		A0C4EAC21E671C4E009CB620 /* TestUTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C4EAC11E671C4E009CB620 /* TestUTViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +126,8 @@
 		A0B311351DDD922C008B31D9 /* NSArray+CQArray.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+CQArray.m"; sourceTree = "<group>"; };
 		A0B311371DDD92A2008B31D9 /* NSDictionary+CQPrint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+CQPrint.h"; sourceTree = "<group>"; };
 		A0B311381DDD92A2008B31D9 /* NSDictionary+CQPrint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+CQPrint.m"; sourceTree = "<group>"; };
+		A0C4EAC01E671C4E009CB620 /* TestUTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUTViewController.h; sourceTree = "<group>"; };
+		A0C4EAC11E671C4E009CB620 /* TestUTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUTViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,8 @@
 				A0B310C71DDD872F008B31D9 /* LaunchScreen.storyboard */,
 				A0B310CA1DDD8730008B31D9 /* Info.plist */,
 				A0B310B91DDD872F008B31D9 /* Supporting Files */,
+				A0C4EAC01E671C4E009CB620 /* TestUTViewController.h */,
+				A0C4EAC11E671C4E009CB620 /* TestUTViewController.m */,
 			);
 			path = TestInterface;
 			sourceTree = "<group>";
@@ -449,6 +454,7 @@
 				A0B311261DDD8CD8008B31D9 /* SBJsonTokeniser.m in Sources */,
 				A0B3112B1DDD8E12008B31D9 /* EntryString.m in Sources */,
 				A0B311281DDD8CD8008B31D9 /* SBJsonWriter.m in Sources */,
+				A0C4EAC21E671C4E009CB620 /* TestUTViewController.m in Sources */,
 				A0B310FD1DDD879B008B31D9 /* AFURLRequestSerialization.m in Sources */,
 				A0B311391DDD92A2008B31D9 /* NSDictionary+CQPrint.m in Sources */,
 				A0B310FE1DDD879B008B31D9 /* AFURLResponseSerialization.m in Sources */,

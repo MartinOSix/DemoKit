@@ -25,7 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [self test0217];
     self.task = [self postParamenter:[self getParamenter] NeedEntry:YES];
     
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -101,7 +101,7 @@
         NSString *resp = [[NSString alloc]initWithData:responseObject encoding:NSUTF8StringEncoding];
         NSLog(@"%@",resp);
         
-        NSDictionary * dics=[NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSDictionary * dics= [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
         //打印输出
         NSLog(@"\n%@",dics);
         
@@ -153,5 +153,16 @@
     return [mstr copy];
 }
 
+#pragma mark 其他测试
+-(void)test0217{
+    
+    NSString *key = @"key";
+    key = [CQURL ToJson:key];
+    
+    NSDictionary *dic = @{key:@"value"};
+    NSLog(@"%@",[dic allKeys]);
+    NSLog(@"%@  %@",dic,dic[@"\"key\""]);
+    
+}
 
 @end

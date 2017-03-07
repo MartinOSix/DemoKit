@@ -10,7 +10,7 @@
 #import "GCDAsyncSocket.h"
 
 
-#define ipAddress @"192.168.1.121"
+#define ipAddress @"191322.168.1.121"
 #define ipPort 8989
 
 /**屏幕尺寸*/

@@ -16,7 +16,9 @@
 #import "CQNUD.h"
 
 #import "CQFoundation.h"
-#import "ThirdLibarary.h"
+#import "ThirdLibarary.h" //ffmdb功能需要导入系统库 sqlite3.tdb
 #import "CQUIKit.h"
+
+#import "CQCacheKit.h"
 
 #endif /* CQFramework_h */

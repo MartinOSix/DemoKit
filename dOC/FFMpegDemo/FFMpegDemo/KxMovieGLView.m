@@ -284,6 +284,33 @@ static void mat4f_LoadOrtho(float left, float right, float bottom, float top, fl
     assert(yuvFrame.chromaB.length == (yuvFrame.width * yuvFrame.height) / 4);
     assert(yuvFrame.chromaR.length == (yuvFrame.width * yuvFrame.height) / 4);
 
+    
+    char *chars = malloc(yuvFrame.luma.length);
+    memcpy(chars, yuvFrame.luma.bytes, yuvFrame.luma.length);
+    
+    //改变亮度
+    //for (int i = 0; i < yuvFrame.luma.length; i++) {
+    //  unsigned char temp=chars[i]/2;
+    //  chars[i]=temp;
+    //}
+        //指定区域改变亮度
+        for(int j=0;j<yuvFrame.height;j++){
+            for(int k=0;k<yuvFrame.width;k++){
+                if(j>100&&j<250 && k > 200 && k < 350){
+                    chars[j*yuvFrame.width+k]=128;
+                    //pic[j*w+k]=0;
+                }
+            }
+        }
+        memcpy(yuvFrame.luma.bytes, chars, yuvFrame.luma.length);
+    
+    free(chars);
+    //强行去掉视频中的U V值,变成黑白
+    memset(yuvFrame.chromaB.bytes, 128, yuvFrame.chromaB.length);
+    memset(yuvFrame.chromaR.bytes, 128, yuvFrame.chromaR.length);
+    
+    //   4.输出到哪个文件
+    //fwrite(const void *restrict __ptr, size_t __size, size_t __nitems, FILE *restrict __stream)
     const NSUInteger frameWidth = frame.width;
     const NSUInteger frameHeight = frame.height;    
     
@@ -389,17 +416,17 @@ enum {
             _renderer = [[KxMovieGLRenderer_RGB alloc] init];
            // LoggerVideo(1, @"OK use RGB GL renderer");
         }
-        //图像layer
+        //为OpenGL ES渲染使用Core Animation图层
+        //1、创建CAEAGLLayer对象并配置性能
         CAEAGLLayer *eaglLayer = (CAEAGLLayer*) self.layer;
-        eaglLayer.opaque = YES;//不透明度
-        //画图属性
+        eaglLayer.opaque = YES;//不透明度，最佳性能
+        //2、通过分配值的新字典的配置呈现表面的表面性质drawableProperties的财产CAEAGLLayer对象。您可以指定renderbuffer的像素格式，并指定renderbuffer的内容在发送到Core Animation后是否被丢弃。
         eaglLayer.drawableProperties = [NSDictionary dictionaryWithObjectsAndKeys:
                                         [NSNumber numberWithBool:FALSE], kEAGLDrawablePropertyRetainedBacking,
                                         kEAGLColorFormatRGBA8, kEAGLDrawablePropertyColorFormat,
                                         nil];
-        //创建画图上下文
+        //3、分配OpenGL ES上下文并将其作为当前上下文。
         _context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-        
         if (!_context ||
             ![EAGLContext setCurrentContext:_context]) {
             
@@ -408,15 +435,19 @@ enum {
             return nil;
         }
         
+        //4、创建色彩渲染，通过调用上下文的分配它的存储renderbufferStorage:fromDrawable:方法并传递层对象作为参数。宽度，高度和像素格式取自图层，用于为renderbuffer分配存储空间。
         glGenFramebuffers(1, &_framebuffer);
         glGenRenderbuffers(1, &_renderbuffer);
         glBindFramebuffer(GL_FRAMEBUFFER, _framebuffer);
         glBindRenderbuffer(GL_RENDERBUFFER, _renderbuffer);
+        
         [_context renderbufferStorage:GL_RENDERBUFFER fromDrawable:(CAEAGLLayer*)self.layer];
+        //5、检索renderbuffer的颜色高度和宽度
         glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &_backingWidth);
         glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &_backingHeight);
-        glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _renderbuffer);
         
+        glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _renderbuffer);
+        //6、测试缓冲区完整性
         GLenum status = glCheckFramebufferStatus(GL_FRAMEBUFFER);
         if (status != GL_FRAMEBUFFER_COMPLETE) {
             
@@ -563,14 +594,19 @@ exit:
     return result;
 }
 
+//调整播放视频的大小
 - (void)updateVertices
 {
     const BOOL fit      = (self.contentMode == UIViewContentModeScaleAspectFit);
-    const float width   = _frameWidth;
+    const float width   = _frameWidth;//视频的宽高
     const float height  = _frameheight;
+    NSLog(@"vh %f  vw  %f",(float)_backingHeight,(float)_backingWidth);
     const float dH      = (float)_backingHeight / height;
     const float dW      = (float)_backingWidth	  / width;
+    //确定缩放比例
     const float dd      = fit ? MIN(dH, dW) : MAX(dH, dW);
+    
+    //当视频比例和宽高比例不一致的时候需要调整
     const float h       = (height * dd / (float)_backingHeight);
     const float w       = (width  * dd / (float)_backingWidth );
     
@@ -600,7 +636,7 @@ exit:
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT);
 	glUseProgram(_program);
-        
+
     if (frame) {
         [_renderer setFrame:frame];        
     }

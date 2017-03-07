@@ -51,7 +51,7 @@
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(100, 100, 100, 100);
     btn.backgroundColor = kOrangeColor;
-    [btn addTarget:self action:@selector(testAlertViewBtnCLick) forControlEvents:UIControlEventTouchUpInside];
+    [btn addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
     
@@ -70,9 +70,28 @@
     
 }
 
+-(void)test{
+    
+    for (int i = 0; i < 20; i++) {
+        NSString *url;
+        if (i%2==1) {
+            url = kJointString(@"https://www.baidu.com/%d",i);
+        }else{
+            url = kJointString(@"https://www.sina.com/%d",i);
+        }
+        [[CQAFNetworkHelper shareInstance]cqPostParameter:nil URL:url CompleteBlock:^(CQResponseResult *result) {
+            NSLog(@"%d",result.isSuccess);
+        }];
+    }
+    
+    
+    //[self.navigationController pushViewController:[NSClassFromString(@"TestDBOViewController") new] animated:YES];
+}
+
 -(void)testAlertViewBtnClick2{
     
-    [self.navigationController pushViewController:[ViewController new] animated:YES];
+   
+    //[self.navigationController pushViewController:[ViewController new] animated:YES];
     
 }
 

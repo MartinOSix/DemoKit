@@ -77,7 +77,21 @@
 		A06CCFFF1DD08C15002ECAA9 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A06CCFF51DD08C15002ECAA9 /* ViewController+MASAdditions.m */; };
 		A06CD0031DD15E8E002ECAA9 /* checkbox_no@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A06CD0011DD15E8E002ECAA9 /* checkbox_no@2x.png */; };
 		A06CD0041DD15E8E002ECAA9 /* checkbox_yes@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A06CD0021DD15E8E002ECAA9 /* checkbox_yes@2x.png */; };
+		A07576031E5E79CB0056F939 /* TestImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A07576021E5E79CB0056F939 /* TestImageViewController.m */; };
+		A07576051E5E7A760056F939 /* QQ20170223.png in Resources */ = {isa = PBXBuildFile; fileRef = A07576041E5E7A760056F939 /* QQ20170223.png */; };
 		A09C32871DEC1D390025FBF9 /* NSDate+CQExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = A09C32861DEC1D390025FBF9 /* NSDate+CQExtention.m */; };
+		A0A8F8991E63B90600B44148 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A8F88E1E63B90600B44148 /* FMDatabase.m */; };
+		A0A8F89A1E63B90600B44148 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A8F8901E63B90600B44148 /* FMDatabaseAdditions.m */; };
+		A0A8F89B1E63B90600B44148 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A8F8921E63B90600B44148 /* FMDatabasePool.m */; };
+		A0A8F89C1E63B90600B44148 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A8F8941E63B90600B44148 /* FMDatabaseQueue.m */; };
+		A0A8F89D1E63B90600B44148 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A8F8971E63B90600B44148 /* FMResultSet.m */; };
+		A0A8F89E1E63B90600B44148 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A0A8F8981E63B90600B44148 /* Info.plist */; };
+		A0A8F8A11E63B95900B44148 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A0A8F8A01E63B95900B44148 /* libsqlite3.0.tbd */; };
+		A0A8F8A41E63BA2200B44148 /* CQDBOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A8F8A31E63BA2200B44148 /* CQDBOperator.m */; };
+		A0A8F8A81E63FF2100B44148 /* testModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A8F8A71E63FF2100B44148 /* testModel.m */; };
+		A0A8F8AC1E65107700B44148 /* HahaABC.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A8F8AB1E65107700B44148 /* HahaABC.m */; };
+		A0A8F8AF1E654D3C00B44148 /* TestDBOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A8F8AE1E654D3C00B44148 /* TestDBOViewController.m */; };
+		A0A8F8B21E65746800B44148 /* TestModel1.m in Sources */ = {isa = PBXBuildFile; fileRef = A0A8F8B11E65746800B44148 /* TestModel1.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +164,7 @@
 		A007C7511DEFD0FA00765E4C /* CQBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQBaseViewController.m; sourceTree = "<group>"; };
 		A007C7531DEFD21900765E4C /* CQCustomNavigationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQCustomNavigationView.h; sourceTree = "<group>"; };
 		A007C7541DEFD21900765E4C /* CQCustomNavigationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQCustomNavigationView.m; sourceTree = "<group>"; };
+		A00B13231E603F8900518D4D /* CQCacheKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CQCacheKit.h; sourceTree = "<group>"; };
 		A04F225C1DC2FEAE000FE5DA /* CQFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CQFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A04F22601DC2FEAE000FE5DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A04F22621DC2FEAE000FE5DA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -245,8 +260,35 @@
 		A06CCFF51DD08C15002ECAA9 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		A06CD0011DD15E8E002ECAA9 /* checkbox_no@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_no@2x.png"; sourceTree = "<group>"; };
 		A06CD0021DD15E8E002ECAA9 /* checkbox_yes@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkbox_yes@2x.png"; sourceTree = "<group>"; };
+		A07576011E5E79CB0056F939 /* TestImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestImageViewController.h; sourceTree = "<group>"; };
+		A07576021E5E79CB0056F939 /* TestImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestImageViewController.m; sourceTree = "<group>"; };
+		A07576041E5E7A760056F939 /* QQ20170223.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QQ20170223.png; sourceTree = "<group>"; };
 		A09C32851DEC1D390025FBF9 /* NSDate+CQExtention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+CQExtention.h"; sourceTree = "<group>"; };
 		A09C32861DEC1D390025FBF9 /* NSDate+CQExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+CQExtention.m"; sourceTree = "<group>"; };
+		A0A8F88D1E63B90600B44148 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		A0A8F88E1E63B90600B44148 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		A0A8F88F1E63B90600B44148 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		A0A8F8901E63B90600B44148 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		A0A8F8911E63B90600B44148 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		A0A8F8921E63B90600B44148 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		A0A8F8931E63B90600B44148 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		A0A8F8941E63B90600B44148 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		A0A8F8951E63B90600B44148 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		A0A8F8961E63B90600B44148 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		A0A8F8971E63B90600B44148 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		A0A8F8981E63B90600B44148 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0A8F8A01E63B95900B44148 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		A0A8F8A21E63BA2200B44148 /* CQDBOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQDBOperator.h; sourceTree = "<group>"; };
+		A0A8F8A31E63BA2200B44148 /* CQDBOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CQDBOperator.m; sourceTree = "<group>"; };
+		A0A8F8A61E63FF2100B44148 /* testModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testModel.h; sourceTree = "<group>"; };
+		A0A8F8A71E63FF2100B44148 /* testModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testModel.m; sourceTree = "<group>"; };
+		A0A8F8A91E65103A00B44148 /* CQDBOperatorSettingInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CQDBOperatorSettingInterface.h; sourceTree = "<group>"; };
+		A0A8F8AA1E65107700B44148 /* HahaABC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HahaABC.h; sourceTree = "<group>"; };
+		A0A8F8AB1E65107700B44148 /* HahaABC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HahaABC.m; sourceTree = "<group>"; };
+		A0A8F8AD1E654D3C00B44148 /* TestDBOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDBOViewController.h; sourceTree = "<group>"; };
+		A0A8F8AE1E654D3C00B44148 /* TestDBOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDBOViewController.m; sourceTree = "<group>"; };
+		A0A8F8B01E65746800B44148 /* TestModel1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestModel1.h; sourceTree = "<group>"; };
+		A0A8F8B11E65746800B44148 /* TestModel1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestModel1.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +296,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A8F8A11E63B95900B44148 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,10 +422,13 @@
 		A007C7411DEEC25200765E4C /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				A0A8F8A51E63FF0700B44148 /* TestDBOperator */,
 				A007C7421DEEC26B00765E4C /* testAlert.h */,
 				A007C7431DEEC26B00765E4C /* testAlert.m */,
 				A007C7491DEECCEB00765E4C /* ViewControllerB.h */,
 				A007C74A1DEECCEB00765E4C /* ViewControllerB.m */,
+				A07576011E5E79CB0056F939 /* TestImageViewController.h */,
+				A07576021E5E79CB0056F939 /* TestImageViewController.m */,
 			);
 			name = Test;
 			sourceTree = "<group>";
@@ -409,6 +455,17 @@
 			name = AnimationTets;
 			sourceTree = "<group>";
 		};
+		A00B13221E603EEF00518D4D /* CacheKit */ = {
+			isa = PBXGroup;
+			children = (
+				A00B13231E603F8900518D4D /* CQCacheKit.h */,
+				A0A8F8A21E63BA2200B44148 /* CQDBOperator.h */,
+				A0A8F8A31E63BA2200B44148 /* CQDBOperator.m */,
+				A0A8F8A91E65103A00B44148 /* CQDBOperatorSettingInterface.h */,
+			);
+			path = CacheKit;
+			sourceTree = "<group>";
+		};
 		A04F22531DC2FEAE000FE5DA = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +473,7 @@
 				A04F22781DC2FEAE000FE5DA /* CQFrameworkTests */,
 				A04F22831DC2FEAE000FE5DA /* CQFrameworkUITests */,
 				A04F225D1DC2FEAE000FE5DA /* Products */,
+				A0A8F89F1E63B95800B44148 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -441,6 +499,7 @@
 				A04F22661DC2FEAE000FE5DA /* ViewController.m */,
 				A007C7341DEE835300765E4C /* sys.png */,
 				A007C7321DEE6A0200765E4C /* IMG_1564.JPG */,
+				A07576041E5E7A760056F939 /* QQ20170223.png */,
 				A04F22681DC2FEAE000FE5DA /* Main.storyboard */,
 				A04F226B1DC2FEAE000FE5DA /* Assets.xcassets */,
 				A04F226D1DC2FEAE000FE5DA /* LaunchScreen.storyboard */,
@@ -479,6 +538,7 @@
 		A04F22931DC3002D000FE5DA /* CQFramework */ = {
 			isa = PBXGroup;
 			children = (
+				A00B13221E603EEF00518D4D /* CacheKit */,
 				A06CCF9B1DD0711D002ECAA9 /* SupportFiles */,
 				A04F22D01DD02EC9000FE5DA /* Utiles */,
 				A04F22941DC3002D000FE5DA /* CommonHeader */,
@@ -516,6 +576,7 @@
 		A04F22961DC3002D000FE5DA /* ThirdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				A0A8F88C1E63B90600B44148 /* fmdb */,
 				A00201531DED2B8E00192FEC /* JSONModel */,
 				A06CCFDC1DD08C15002ECAA9 /* Masonry */,
 				A04F22D41DD032A6000FE5DA /* AFNetworking */,
@@ -749,6 +810,48 @@
 			path = Date;
 			sourceTree = "<group>";
 		};
+		A0A8F88C1E63B90600B44148 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				A0A8F88D1E63B90600B44148 /* FMDatabase.h */,
+				A0A8F88E1E63B90600B44148 /* FMDatabase.m */,
+				A0A8F88F1E63B90600B44148 /* FMDatabaseAdditions.h */,
+				A0A8F8901E63B90600B44148 /* FMDatabaseAdditions.m */,
+				A0A8F8911E63B90600B44148 /* FMDatabasePool.h */,
+				A0A8F8921E63B90600B44148 /* FMDatabasePool.m */,
+				A0A8F8931E63B90600B44148 /* FMDatabaseQueue.h */,
+				A0A8F8941E63B90600B44148 /* FMDatabaseQueue.m */,
+				A0A8F8951E63B90600B44148 /* FMDB.h */,
+				A0A8F8961E63B90600B44148 /* FMResultSet.h */,
+				A0A8F8971E63B90600B44148 /* FMResultSet.m */,
+				A0A8F8981E63B90600B44148 /* Info.plist */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		A0A8F89F1E63B95800B44148 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0A8F8A01E63B95900B44148 /* libsqlite3.0.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0A8F8A51E63FF0700B44148 /* TestDBOperator */ = {
+			isa = PBXGroup;
+			children = (
+				A0A8F8A61E63FF2100B44148 /* testModel.h */,
+				A0A8F8A71E63FF2100B44148 /* testModel.m */,
+				A0A8F8AA1E65107700B44148 /* HahaABC.h */,
+				A0A8F8AB1E65107700B44148 /* HahaABC.m */,
+				A0A8F8AD1E654D3C00B44148 /* TestDBOViewController.h */,
+				A0A8F8AE1E654D3C00B44148 /* TestDBOViewController.m */,
+				A0A8F8B01E65746800B44148 /* TestModel1.h */,
+				A0A8F8B11E65746800B44148 /* TestModel1.m */,
+			);
+			name = TestDBOperator;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -858,11 +961,13 @@
 			files = (
 				A007C7351DEE835300765E4C /* sys.png in Resources */,
 				A04F226F1DC2FEAE000FE5DA /* LaunchScreen.storyboard in Resources */,
+				A07576051E5E7A760056F939 /* QQ20170223.png in Resources */,
 				A06CD0031DD15E8E002ECAA9 /* checkbox_no@2x.png in Resources */,
 				A06CCF9D1DD07156002ECAA9 /* address.plist in Resources */,
 				A06CD0041DD15E8E002ECAA9 /* checkbox_yes@2x.png in Resources */,
 				A04F226C1DC2FEAE000FE5DA /* Assets.xcassets in Resources */,
 				A04F226A1DC2FEAE000FE5DA /* Main.storyboard in Resources */,
+				A0A8F89E1E63B90600B44148 /* Info.plist in Resources */,
 				A00201691DED2B8E00192FEC /* Info.plist in Resources */,
 				A007C7331DEE6A0200765E4C /* IMG_1564.JPG in Resources */,
 			);
@@ -894,10 +999,12 @@
 				A04F22E61DD032A6000FE5DA /* AFURLResponseSerialization.m in Sources */,
 				A06CCFA51DD074FB002ECAA9 /* UILabel+CQExtension.m in Sources */,
 				A06CCFD71DD0881B002ECAA9 /* UIButton+CQButton.m in Sources */,
+				A0A8F89A1E63B90600B44148 /* FMDatabaseAdditions.m in Sources */,
 				A007C74F1DEFC61800765E4C /* CustomPushAnimation.m in Sources */,
 				A06CCFF61DD08C15002ECAA9 /* MASCompositeConstraint.m in Sources */,
 				A007C7481DEECC9200765E4C /* ViewControllerUtiles.m in Sources */,
 				A06CCFFA1DD08C15002ECAA9 /* MASViewAttribute.m in Sources */,
+				A0A8F8B21E65746800B44148 /* TestModel1.m in Sources */,
 				A04F22671DC2FEAE000FE5DA /* ViewController.m in Sources */,
 				A04F22641DC2FEAE000FE5DA /* AppDelegate.m in Sources */,
 				A002016D1DED2B8E00192FEC /* JSONAPI.m in Sources */,
@@ -907,10 +1014,12 @@
 				A007C7271DED6BDF00765E4C /* CQAFHttpSessionManagerConfigurator.m in Sources */,
 				A06CCFC01DD081EB002ECAA9 /* NSObject+CQObject.m in Sources */,
 				A09C32871DEC1D390025FBF9 /* NSDate+CQExtention.m in Sources */,
+				A0A8F8A81E63FF2100B44148 /* testModel.m in Sources */,
 				A06CCFFF1DD08C15002ECAA9 /* ViewController+MASAdditions.m in Sources */,
 				A06CCFFD1DD08C15002ECAA9 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				A007C72A1DED6F0000765E4C /* CQResponseResult.m in Sources */,
 				A04F22E21DD032A6000FE5DA /* AFHTTPSessionManager.m in Sources */,
+				A0A8F8AF1E654D3C00B44148 /* TestDBOViewController.m in Sources */,
 				A007C7401DEEB4F300765E4C /* BaseAlert.m in Sources */,
 				A007C73C1DEEAC1800765E4C /* UITextField+CQExtension.m in Sources */,
 				A06CCFF91DD08C15002ECAA9 /* MASLayoutConstraint.m in Sources */,
@@ -918,8 +1027,11 @@
 				A007C7381DEEA83800765E4C /* UIImage+QRCode.m in Sources */,
 				A06CCFC41DD08309002ECAA9 /* CQNUD.m in Sources */,
 				A002016F1DED2B8E00192FEC /* JSONModel+networking.m in Sources */,
+				A0A8F89D1E63B90600B44148 /* FMResultSet.m in Sources */,
+				A0A8F89C1E63B90600B44148 /* FMDatabaseQueue.m in Sources */,
 				A06CCFDB1DD08BB2002ECAA9 /* CQCheckButton.m in Sources */,
 				A06CCFC81DD08498002ECAA9 /* NSDictionary+CQExtension.m in Sources */,
+				A0A8F8A41E63BA2200B44148 /* CQDBOperator.m in Sources */,
 				A06CCFD21DD08688002ECAA9 /* UIView+YSTextInputKeyboard.m in Sources */,
 				A002016B1DED2B8E00192FEC /* JSONModelClassProperty.m in Sources */,
 				A06CCFB11DD0770A002ECAA9 /* GTMBase64.m in Sources */,
@@ -932,13 +1044,17 @@
 				A007C72D1DED770F00765E4C /* RunoAFHelper.m in Sources */,
 				A04F22E31DD032A6000FE5DA /* AFNetworkReachabilityManager.m in Sources */,
 				A007C7201DED5C8800765E4C /* ResponseResult.m in Sources */,
+				A0A8F8AC1E65107700B44148 /* HahaABC.m in Sources */,
 				A00201771DED317100192FEC /* CQJSONParser.m in Sources */,
+				A0A8F89B1E63B90600B44148 /* FMDatabasePool.m in Sources */,
 				A06CCFF71DD08C15002ECAA9 /* MASConstraint.m in Sources */,
 				A06CCFF81DD08C15002ECAA9 /* MASConstraintMaker.m in Sources */,
 				A007C7311DEE616300765E4C /* UIImage+CQExtention.m in Sources */,
 				A04F22611DC2FEAE000FE5DA /* main.m in Sources */,
 				A06CCFB81DD0806B002ECAA9 /* NSNumber+CQExtension.m in Sources */,
 				A007C7551DEFD21900765E4C /* CQCustomNavigationView.m in Sources */,
+				A07576031E5E79CB0056F939 /* TestImageViewController.m in Sources */,
+				A0A8F8991E63B90600B44148 /* FMDatabase.m in Sources */,
 				A06CCFFB1DD08C15002ECAA9 /* MASViewConstraint.m in Sources */,
 				A04F22E51DD032A6000FE5DA /* AFURLRequestSerialization.m in Sources */,
 				A06CCFFC1DD08C15002ECAA9 /* NSArray+MASAdditions.m in Sources */,

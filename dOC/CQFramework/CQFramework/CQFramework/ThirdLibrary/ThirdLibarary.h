@@ -12,5 +12,6 @@
 #import "AFNetworking.h"
 #import "Masonry.h"
 #import "JSONModelLib.h"
+#import "fmdb/FMDB.h"   //导入该库需导入系统库 sqlite3
 
 #endif /* ThirdLibarary_h */

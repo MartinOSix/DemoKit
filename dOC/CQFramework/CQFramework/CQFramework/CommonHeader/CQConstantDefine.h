@@ -100,6 +100,7 @@ str==NULL || \
 /**引用定义*/
 #define WEAKSELF typeof(self) __weak weakSelf = self
 #define WEAKOBJECT(obj) typeof(obj) __weak weakObj = obj
+#define STRONGOBJECT(obj) typeof(obj) __strong strongObj = obj
 
 //GCD - 一次性执行
 #define kDISPATCH_ONCE_BLOCK(onceBlock) static dispatch_once_t onceToken;\

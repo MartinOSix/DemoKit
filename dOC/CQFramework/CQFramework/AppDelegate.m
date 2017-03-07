@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "CQDBOperator.h"
+#import "testModel.h"
+#import "HahaABC.h"
 @interface AppDelegate ()
 
 @end
@@ -21,12 +24,18 @@
     UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:[ViewController new]];
     self.window.rootViewController = nav;
     
+    
+    
     return YES;
 }
 
--(void)changeRootController:(UIViewController *)vc Animate:(BOOL)animal{
+-(void)testDBOperator{
     
-   
+    
+       
+}
+
+-(void)changeRootController:(UIViewController *)vc Animate:(BOOL)animal{
     
     CATransition *transition = [CATransition animation];
     transition.duration = animal?10:0;

@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "avformat.h"
+#import "avcodec.h"
 #import "swresample.h"
 #import "swscale.h"
 #import "pixdesc.h"
@@ -16,6 +17,10 @@
 return;\
 }
 
+/**屏幕尺寸*/
+#define kScreenBounds ([[UIScreen mainScreen] bounds])
+#define kScreenWidth (kScreenBounds.size.width)
+#define kScreenHeight (kScreenBounds.size.height)
 
 @implementation MovieFrame
 @end
@@ -30,6 +35,101 @@ return;\
 - (VideoFrameType) format { return VideoFrameTypeYUV; }
 @end
 
+@implementation KxMovieSubtitleASSParser
+
++ (NSArray *) parseEvents: (NSString *) events
+{
+    NSRange r = [events rangeOfString:@"[Events]"];
+    if (r.location != NSNotFound) {
+        
+        NSUInteger pos = r.location + r.length;
+        
+        r = [events rangeOfString:@"Format:"
+                          options:0
+                            range:NSMakeRange(pos, events.length - pos)];
+        
+        if (r.location != NSNotFound) {
+            
+            pos = r.location + r.length;
+            r = [events rangeOfCharacterFromSet:[NSCharacterSet newlineCharacterSet]
+                                        options:0
+                                          range:NSMakeRange(pos, events.length - pos)];
+            
+            if (r.location != NSNotFound) {
+                
+                NSString *format = [events substringWithRange:NSMakeRange(pos, r.location - pos)];
+                NSArray *fields = [format componentsSeparatedByString:@","];
+                if (fields.count > 0) {
+                    
+                    NSCharacterSet *ws = [NSCharacterSet whitespaceCharacterSet];
+                    NSMutableArray *ma = [NSMutableArray array];
+                    for (NSString *s in fields) {
+                        [ma addObject:[s stringByTrimmingCharactersInSet:ws]];
+                    }
+                    return ma;
+                }
+            }
+        }
+    }
+    
+    return nil;
+}
+
++ (NSArray *) parseDialogue: (NSString *) dialogue
+                  numFields: (NSUInteger) numFields
+{
+    if ([dialogue hasPrefix:@"Dialogue:"]) {
+        
+        NSMutableArray *ma = [NSMutableArray array];
+        
+        NSRange r = {@"Dialogue:".length, 0};
+        NSUInteger n = 0;
+        
+        while (r.location != NSNotFound && n++ < numFields) {
+            
+            const NSUInteger pos = r.location + r.length;
+            
+            r = [dialogue rangeOfString:@","
+                                options:0
+                                  range:NSMakeRange(pos, dialogue.length - pos)];
+            
+            const NSUInteger len = r.location == NSNotFound ? dialogue.length - pos : r.location - pos;
+            NSString *p = [dialogue substringWithRange:NSMakeRange(pos, len)];
+            p = [p stringByReplacingOccurrencesOfString:@"\\N" withString:@"\n"];
+            [ma addObject: p];
+        }
+        
+        return ma;
+    }
+    
+    return nil;
+}
+
++ (NSString *) removeCommandsFromEventText: (NSString *) text
+{
+    NSMutableString *ms = [NSMutableString string];
+    
+    NSScanner *scanner = [NSScanner scannerWithString:text];
+    while (!scanner.isAtEnd) {
+        
+        NSString *s;
+        if ([scanner scanUpToString:@"{\\" intoString:&s]) {
+            
+            [ms appendString:s];
+        }
+        
+        if (!([scanner scanString:@"{\\" intoString:nil] &&
+              [scanner scanUpToString:@"}" intoString:nil] &&
+              [scanner scanString:@"}" intoString:nil])) {
+            
+            break;
+        }
+    }
+    
+    return ms;
+}
+
+@end
 
 @implementation VideoFrameRGB
 - (VideoFrameType) format { return VideoFrameTypeRGB; }
@@ -88,6 +188,11 @@ return;\
     
     NSInteger           _audioStream;//!<正在打开的a音频流
     NSArray             *_audioStreams;//!<能打开的音频流
+    NSArray             *_subtitleStreams;//!<文件流中所有字幕流中的位置
+    
+    NSUInteger          _subtitleStream;
+    AVCodecContext      *_subtitleCodeCtx;
+    NSInteger           _subtitleASSEvents;
     
     NSUInteger          _artworkStream;//!<v视频流中的插图流？，反正不是正在读的
     BOOL                _hasError;
@@ -114,13 +219,68 @@ return;\
     [super viewDidLoad];
     [self setupFFmpegTool];
     
+    NSLog(@"%s",avcodec_configuration());
+    
     _hasError = NO;
     NSString *path = @"rtmp://live.hkstv.hk.lxdns.com/live/hks";
+    
     //path = @"rtsp://admin:admin@192.168.100.1:554/cam1/h264";
     //path = [[NSBundle mainBundle]pathForResource:@"static" ofType:@"mov"];
     
     [self openFileWithPath:path];
-    [self openVideoStream];
+    
+    if([self openVideoStream] == CQMovieErrorNone){
+        //如果打得了开视频就找字幕流
+        _subtitleStreams = collectStreams(_formatCtx, AVMEDIA_TYPE_SUBTITLE);
+        NSLog(@"%@",_subtitleStreams);
+    }
+    
+}
+
+-(CQMovieError)openSubTitleStream:(NSInteger)subtitleStream{
+    
+    AVCodecContext *codeCtx = _formatCtx->streams[subtitleStream]->codec;
+    AVCodec *codec = avcodec_find_decoder(codeCtx->codec_id);
+    if (!codec) {
+        return CQMovieErrorCodecNotFount;
+    }
+    const AVCodecDescriptor *codecDesc = avcodec_descriptor_get(codeCtx->codec_id);
+    if (codecDesc && (codecDesc->props & AV_CODEC_PROP_BITMAP_SUB)) {
+        return CQMovieErrorStreamInfoNotFound;
+    }
+    if (avcodec_open2(codeCtx, codec, NULL)<0) {
+        return CQMovieErrorOpenCodec;
+    }
+    _subtitleStream = subtitleStream;
+    _subtitleCodeCtx = codeCtx;
+    _subtitleASSEvents = -1;
+    
+    if (codeCtx->subtitle_header_size) {
+        NSString *s = [[NSString alloc]initWithBytes:codeCtx->subtitle_header length:codeCtx->subtitle_header_size encoding:NSASCIIStringEncoding];
+        if (s.length) {
+            NSArray *fields = [KxMovieSubtitleASSParser parseEvents:s];
+            if (fields.count && [fields.lastObject isEqualToString:@"Text"]) {
+                _subtitleASSEvents = fields.count;
+                NSLog(@"subtitle ass events: %@",[fields componentsJoinedByString:@","]);
+            }
+        }
+    }
+    return CQMovieErrorNone;
+}
+
+-(CQMovieError)openAudioStream{
+    
+    CQMovieError errorCode = CQMovieErrorStreamNotFount;
+    _audioStreams = collectStreams(_formatCtx, AVMEDIA_TYPE_AUDIO);
+    for (NSNumber *loc in _audioStreams) {
+        const NSUInteger iStream = loc.integerValue;
+        if (0==(_formatCtx->streams[iStream]->disposition & AV_DISPOSITION_ATTACHED_PIC)) {
+            errorCode = [self openVideoStreamAt:iStream];
+        }else{
+            _artworkStream = iStream;
+        }
+    }
+    
 }
 
 -(CQMovieError)openVideoStream{
@@ -176,7 +336,10 @@ return;\
     }
     
     //在解码工作做完的时候创建播放view
-    _glView = [[KxMovieGLView alloc]initWithFrame:self.view.bounds decoderIsYUV:YES FrameWidth:_videoCodecCtx->width FrameHeight:_videoCodecCtx->height];
+    _glView = [[KxMovieGLView alloc]initWithFrame:CGRectMake(0, 64, kScreenWidth, 200) decoderIsYUV:YES FrameWidth:_videoCodecCtx->width FrameHeight:_videoCodecCtx->height];
+    _glView.contentMode = UIViewContentModeScaleAspectFit;
+    NSLog(@"%d  %d",_videoCodecCtx->width,_videoCodecCtx->height);
+    _glView.backgroundColor = [UIColor redColor];
     [self.view addSubview:_glView];
     
     
@@ -261,7 +424,7 @@ return;\
                     break;
                 }
                 if (gotframe) {
-                    NSLog(@"getframe--");
+                    //NSLog(@"getframe--");
                     VideoFrame *frame = [self handleVideoFrame];
                     if (frame) {
                         [result addObject:frame];
@@ -314,10 +477,7 @@ return;\
     }else{
         frame.duration = 1.0 / _fps;
     }
-    NSLog(@"VFD: %.4f %.4f | %lld ",
-          frame.position,
-          frame.duration,
-          av_frame_get_pkt_pos(_videoFrame));
+    //NSLog(@"VFD: %.4f %.4f | %lld ",frame.position,frame.duration,av_frame_get_pkt_pos(_videoFrame));
     return frame;//cq
 }
 
@@ -502,5 +662,6 @@ static void FFLog(void* context, int level, const char* format, va_list args) {
         }
     }
 }
+
 
 @end

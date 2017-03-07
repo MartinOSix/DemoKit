@@ -61,6 +61,15 @@ typedef NS_ENUM(NSUInteger, CQMovieError) {
 - (UIImage *) asImage;
 @end
 
+@interface KxMovieSubtitleASSParser : NSObject
+
++ (NSArray *) parseEvents: (NSString *) events;
++ (NSArray *) parseDialogue: (NSString *) dialogue
+                  numFields: (NSUInteger) numFields;
++ (NSString *) removeCommandsFromEventText: (NSString *) text;
+
+@end
+
 @interface ViewController : UIViewController
 
 
