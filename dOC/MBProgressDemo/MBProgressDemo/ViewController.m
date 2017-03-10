@@ -25,8 +25,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(100, 100, 100, 30);
+    btn.frame = CGRectMake(100, 50, 100, 30);
     [btn setTitle:@"btntitle" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(btnclick) forControlEvents:UIControlEventTouchUpInside];
     btn.backgroundColor = [UIColor redColor];

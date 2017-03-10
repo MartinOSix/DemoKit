@@ -142,7 +142,6 @@
         }else if ([[dic objectForKey:key] isKindOfClass:[NSArray class]]){
             [mstr appendFormat:@"@property(nonatomic,strong) NSArray *%@;//!<\n",key];
         }else if ([[dic objectForKey:key] isKindOfClass:[NSDictionary class]]){
-            
             [mstr appendFormat:@"@property(nonatomic,copy) %@ *%@Model;//!<\n",key,key];
             [mstr appendFormat:@"Class  %@\n{\n",key];
             [mstr appendString:[self serializeModel:[dic objectForKey:key]]];

@@ -16,6 +16,8 @@
 		A007CF191DFE3EF800765E4C /* MBProgressDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A007CF181DFE3EF800765E4C /* MBProgressDemoTests.m */; };
 		A007CF241DFE3EF800765E4C /* MBProgressDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A007CF231DFE3EF800765E4C /* MBProgressDemoUITests.m */; };
 		A007CF361DFE403A00765E4C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A007CF351DFE403A00765E4C /* MBProgressHUD.m */; };
+		A070058D1E7000B30009DB18 /* UIView+HUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A070058C1E7000B30009DB18 /* UIView+HUD.m */; };
+		A07005901E70049D0009DB18 /* hudViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A070058F1E70049D0009DB18 /* hudViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		A007CF251DFE3EF800765E4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A007CF341DFE403A00765E4C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		A007CF351DFE403A00765E4C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		A070058B1E7000B30009DB18 /* UIView+HUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+HUD.h"; sourceTree = "<group>"; };
+		A070058C1E7000B30009DB18 /* UIView+HUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+HUD.m"; sourceTree = "<group>"; };
+		A070058E1E70049D0009DB18 /* hudViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hudViewController.h; sourceTree = "<group>"; };
+		A070058F1E70049D0009DB18 /* hudViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = hudViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,10 @@
 				A007CF0C1DFE3EF800765E4C /* LaunchScreen.storyboard */,
 				A007CF0F1DFE3EF800765E4C /* Info.plist */,
 				A007CEFE1DFE3EF800765E4C /* Supporting Files */,
+				A070058B1E7000B30009DB18 /* UIView+HUD.h */,
+				A070058C1E7000B30009DB18 /* UIView+HUD.m */,
+				A070058E1E70049D0009DB18 /* hudViewController.h */,
+				A070058F1E70049D0009DB18 /* hudViewController.m */,
 			);
 			path = MBProgressDemo;
 			sourceTree = "<group>";
@@ -283,6 +293,8 @@
 			files = (
 				A007CF061DFE3EF800765E4C /* ViewController.m in Sources */,
 				A007CF031DFE3EF800765E4C /* AppDelegate.m in Sources */,
+				A07005901E70049D0009DB18 /* hudViewController.m in Sources */,
+				A070058D1E7000B30009DB18 /* UIView+HUD.m in Sources */,
 				A007CF001DFE3EF800765E4C /* main.m in Sources */,
 				A007CF361DFE403A00765E4C /* MBProgressHUD.m in Sources */,
 			);
@@ -522,6 +534,7 @@
 				A007CF2A1DFE3EF800765E4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A007CF2B1DFE3EF800765E4C /* Build configuration list for PBXNativeTarget "MBProgressDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +543,7 @@
 				A007CF2D1DFE3EF800765E4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A007CF2E1DFE3EF800765E4C /* Build configuration list for PBXNativeTarget "MBProgressDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +552,7 @@
 				A007CF301DFE3EF800765E4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -54,8 +54,6 @@
     [btn addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
     
-    
-    
     alert = [[testAlert alloc]initWithFrame:CGRectMake(100, 0, 200, 200)];
     alert.center = self.view.cqFrame_cornerCenter;
     alert.cqCanClickBackgroundExit = YES;
@@ -164,7 +162,8 @@
     [dic setObject:[CQJSONParser objToJsonString:@"123123"] forKey:@"password"];
     [dic setObject:[CQJSONParser objToJsonString:@""] forKey:@"tokenID"];
     [dic setObject:@"Login" forKey:@"svcName"];
-    
+    UIView *view;
+    [view makeToastActivity];
     /*
      self.helper = [RunoAFHelper rnPostParameter:dic Result:^(ResponseResult *result) {
        
@@ -378,7 +377,6 @@
             kDISPATCH_MAIN_THREAD(^{
                 [[[[UIApplication sharedApplication] keyWindow] rootViewController] setNeedsStatusBarAppearanceUpdate];
             });
-            
         }
     });
     
