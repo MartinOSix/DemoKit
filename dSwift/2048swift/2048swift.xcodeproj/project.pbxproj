@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A03534941E76397E007D7810 /* GameboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03534931E76397E007D7810 /* GameboardView.swift */; };
+		A03534961E7639EF007D7810 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03534951E7639EF007D7810 /* TitleView.swift */; };
+		A03534981E763A5E007D7810 /* AppearanceProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03534971E763A5E007D7810 /* AppearanceProviderProtocol.swift */; };
+		A035349A1E764C2B007D7810 /* AuxiliaryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03534991E764C2B007D7810 /* AuxiliaryModels.swift */; };
+		A035349C1E767283007D7810 /* AccessoryViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A035349B1E767283007D7810 /* AccessoryViews.swift */; };
+		A03534A21E779331007D7810 /* CQGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03534A11E779331007D7810 /* CQGameViewController.swift */; };
 		A07166B51E72A61C00BDBBF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07166B41E72A61C00BDBBF0 /* AppDelegate.swift */; };
 		A07166B71E72A61C00BDBBF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07166B61E72A61C00BDBBF0 /* ViewController.swift */; };
 		A07166BA1E72A61D00BDBBF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07166B81E72A61D00BDBBF0 /* Main.storyboard */; };
@@ -16,6 +22,8 @@
 		A07166D51E72A61D00BDBBF0 /* _048swiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07166D41E72A61D00BDBBF0 /* _048swiftUITests.swift */; };
 		A07166E31E72AB8600BDBBF0 /* NumberTitleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07166E21E72AB8600BDBBF0 /* NumberTitleGameViewController.swift */; };
 		A07166E51E72ABC900BDBBF0 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07166E41E72ABC900BDBBF0 /* GameModel.swift */; };
+		A0D8A4C11E77998C00E5C46B /* CQTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D8A4C01E77998C00E5C46B /* CQTileView.swift */; };
+		A0D8A4C31E77CABA00E5C46B /* CQGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D8A4C21E77CABA00E5C46B /* CQGameModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A03534931E76397E007D7810 /* GameboardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameboardView.swift; sourceTree = "<group>"; };
+		A03534951E7639EF007D7810 /* TitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
+		A03534971E763A5E007D7810 /* AppearanceProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppearanceProviderProtocol.swift; sourceTree = "<group>"; };
+		A03534991E764C2B007D7810 /* AuxiliaryModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuxiliaryModels.swift; sourceTree = "<group>"; };
+		A035349B1E767283007D7810 /* AccessoryViews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessoryViews.swift; sourceTree = "<group>"; };
+		A03534A11E779331007D7810 /* CQGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CQGameViewController.swift; sourceTree = "<group>"; };
 		A07166B11E72A61C00BDBBF0 /* 2048swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2048swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07166B41E72A61C00BDBBF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A07166B61E72A61C00BDBBF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +65,8 @@
 		A07166D61E72A61D00BDBBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A07166E21E72AB8600BDBBF0 /* NumberTitleGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberTitleGameViewController.swift; sourceTree = "<group>"; };
 		A07166E41E72ABC900BDBBF0 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		A0D8A4C01E77998C00E5C46B /* CQTileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CQTileView.swift; sourceTree = "<group>"; };
+		A0D8A4C21E77CABA00E5C46B /* CQGameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CQGameModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +94,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A03534A01E779311007D7810 /* cqSwift */ = {
+			isa = PBXGroup;
+			children = (
+				A03534A11E779331007D7810 /* CQGameViewController.swift */,
+				A0D8A4C01E77998C00E5C46B /* CQTileView.swift */,
+				A0D8A4C21E77CABA00E5C46B /* CQGameModel.swift */,
+			);
+			name = cqSwift;
+			sourceTree = "<group>";
+		};
 		A07166A81E72A61C00BDBBF0 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +127,7 @@
 		A07166B31E72A61C00BDBBF0 /* 2048swift */ = {
 			isa = PBXGroup;
 			children = (
+				A03534A01E779311007D7810 /* cqSwift */,
 				A07166B41E72A61C00BDBBF0 /* AppDelegate.swift */,
 				A07166B61E72A61C00BDBBF0 /* ViewController.swift */,
 				A07166B81E72A61D00BDBBF0 /* Main.storyboard */,
@@ -109,6 +136,11 @@
 				A07166C01E72A61D00BDBBF0 /* Info.plist */,
 				A07166E21E72AB8600BDBBF0 /* NumberTitleGameViewController.swift */,
 				A07166E41E72ABC900BDBBF0 /* GameModel.swift */,
+				A03534991E764C2B007D7810 /* AuxiliaryModels.swift */,
+				A035349B1E767283007D7810 /* AccessoryViews.swift */,
+				A03534931E76397E007D7810 /* GameboardView.swift */,
+				A03534951E7639EF007D7810 /* TitleView.swift */,
+				A03534971E763A5E007D7810 /* AppearanceProviderProtocol.swift */,
 			);
 			path = 2048swift;
 			sourceTree = "<group>";
@@ -270,8 +302,16 @@
 			files = (
 				A07166B71E72A61C00BDBBF0 /* ViewController.swift in Sources */,
 				A07166E51E72ABC900BDBBF0 /* GameModel.swift in Sources */,
+				A03534941E76397E007D7810 /* GameboardView.swift in Sources */,
+				A0D8A4C11E77998C00E5C46B /* CQTileView.swift in Sources */,
 				A07166B51E72A61C00BDBBF0 /* AppDelegate.swift in Sources */,
+				A03534A21E779331007D7810 /* CQGameViewController.swift in Sources */,
+				A035349C1E767283007D7810 /* AccessoryViews.swift in Sources */,
+				A035349A1E764C2B007D7810 /* AuxiliaryModels.swift in Sources */,
 				A07166E31E72AB8600BDBBF0 /* NumberTitleGameViewController.swift in Sources */,
+				A03534961E7639EF007D7810 /* TitleView.swift in Sources */,
+				A03534981E763A5E007D7810 /* AppearanceProviderProtocol.swift in Sources */,
+				A0D8A4C31E77CABA00E5C46B /* CQGameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +562,7 @@
 				A07166DB1E72A61D00BDBBF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A07166DC1E72A61D00BDBBF0 /* Build configuration list for PBXNativeTarget "2048swiftTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +571,7 @@
 				A07166DE1E72A61D00BDBBF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A07166DF1E72A61D00BDBBF0 /* Build configuration list for PBXNativeTarget "2048swiftUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +580,7 @@
 				A07166E11E72A61D00BDBBF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

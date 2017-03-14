@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:swiftreflect/swiftreflect.xcodeproj">
+   </FileRef>
+   <Group
+      location = "group:SwiftSyntaxDemo"
+      name = "SwiftSyntaxDemo">
+      <Group
+         location = "group:swiftreflact"
+         name = "swiftreflact">
+         <Group
+            location = "group:swiftreflact"
+            name = "swiftreflact">
+            <FileRef
+               location = "group:AppDelegate.swift">
+            </FileRef>
+            <Group
+               location = "group:Assets.xcassets"
+               name = "Assets.xcassets">
+               <Group
+                  location = "group:AppIcon.appiconset"
+                  name = "AppIcon.appiconset">
+                  <FileRef
+                     location = "group:Contents.json">
+                  </FileRef>
+               </Group>
+            </Group>
+            <Group
+               location = "group:Base.lproj"
+               name = "Base.lproj">
+               <FileRef
+                  location = "group:LaunchScreen.storyboard">
+               </FileRef>
+               <FileRef
+                  location = "group:Main.storyboard">
+               </FileRef>
+            </Group>
+            <FileRef
+               location = "group:Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:ViewController.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:swiftreflactTests"
+            name = "swiftreflactTests">
+            <FileRef
+               location = "group:Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:swiftreflactTests.swift">
+            </FileRef>
+         </Group>
+         <Group
+            location = "group:swiftreflactUITests"
+            name = "swiftreflactUITests">
+            <FileRef
+               location = "group:Info.plist">
+            </FileRef>
+            <FileRef
+               location = "group:swiftreflactUITests.swift">
+            </FileRef>
+         </Group>
+      </Group>
+      <Group
+         location = "group:SwiftSyntaxDemo"
+         name = "SwiftSyntaxDemo">
+         <FileRef
+            location = "group:AppDelegate.swift">
+         </FileRef>
+         <Group
+            location = "group:Assets.xcassets"
+            name = "Assets.xcassets">
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+         </Group>
+         <Group
+            location = "group:Base.lproj"
+            name = "Base.lproj">
+            <FileRef
+               location = "group:LaunchScreen.storyboard">
+            </FileRef>
+            <FileRef
+               location = "group:Main.storyboard">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:NSObject_SharInstance.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController_AnyObject.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController_Array.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController_Class.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController_closure.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController_controlFlow.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController_Dictonary.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController_enum_Struct_class_protocol.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController_Function.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController_MultThread.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController_ViewA.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController_ViewB.swift">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:SwiftSyntaxDemo.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:SwiftSyntaxDemoTests"
+         name = "SwiftSyntaxDemoTests">
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:SwiftSyntaxDemoTests.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:SwiftSyntaxDemoUITests"
+         name = "SwiftSyntaxDemoUITests">
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:SwiftSyntaxDemoUITests.swift">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:2048swift"
+      name = "2048swift">
+      <Group
+         location = "group:2048swift"
+         name = "2048swift">
+         <FileRef
+            location = "group:AccessoryViews.swift">
+         </FileRef>
+         <FileRef
+            location = "group:AppDelegate.swift">
+         </FileRef>
+         <FileRef
+            location = "group:AppearanceProviderProtocol.swift">
+         </FileRef>
+         <Group
+            location = "group:Assets.xcassets"
+            name = "Assets.xcassets">
+            <Group
+               location = "group:AppIcon.appiconset"
+               name = "AppIcon.appiconset">
+               <FileRef
+                  location = "group:Contents.json">
+               </FileRef>
+            </Group>
+         </Group>
+         <FileRef
+            location = "group:AuxiliaryModels.swift">
+         </FileRef>
+         <Group
+            location = "group:Base.lproj"
+            name = "Base.lproj">
+            <FileRef
+               location = "group:LaunchScreen.storyboard">
+            </FileRef>
+            <FileRef
+               location = "group:Main.storyboard">
+            </FileRef>
+         </Group>
+         <FileRef
+            location = "group:CQGameModel.swift">
+         </FileRef>
+         <FileRef
+            location = "group:CQGameViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:CQTileView.swift">
+         </FileRef>
+         <FileRef
+            location = "group:GameboardView.swift">
+         </FileRef>
+         <FileRef
+            location = "group:GameModel.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+         <FileRef
+            location = "group:NumberTitleGameViewController.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TitleView.swift">
+         </FileRef>
+         <FileRef
+            location = "group:ViewController.swift">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:2048swift.xcodeproj">
+      </FileRef>
+      <Group
+         location = "group:2048swiftTests"
+         name = "2048swiftTests">
+         <FileRef
+            location = "group:_048swiftTests.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:2048swiftUITests"
+         name = "2048swiftUITests">
+         <FileRef
+            location = "group:_048swiftUITests.swift">
+         </FileRef>
+         <FileRef
+            location = "group:Info.plist">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>

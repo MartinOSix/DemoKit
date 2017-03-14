@@ -26,13 +26,30 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
     
     func startBtnClick() {
-        print("hahaha")
+        let game = CQGameViewController(dimension: 4, threshold: 2048)
+        //let game = NumberTitleGameViewController(dimension: 4, threshold: 2048)
+        self.present(game, animated: true, completion: nil)
     }
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
