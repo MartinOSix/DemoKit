@@ -17,7 +17,7 @@ enum CQOperation {
 }
 
 class CQGameModel: NSObject {
-    
+    //MyEvaluationViewController
     var hasChangeBlock : ((_ result: Bool) -> Void)?
     
     override init() {

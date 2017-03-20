@@ -15,6 +15,7 @@
 		A0D8A5661E77F1D300E5C46B /* swiftreflectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D8A5651E77F1D300E5C46B /* swiftreflectTests.swift */; };
 		A0D8A5711E77F1D300E5C46B /* swiftreflectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D8A5701E77F1D300E5C46B /* swiftreflectUITests.swift */; };
 		A0D8A57F1E77F2C400E5C46B /* QiniuHostInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D8A57E1E77F2C400E5C46B /* QiniuHostInfo.swift */; };
+		A0D8A5861E78CF3400E5C46B /* BaseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D8A5851E78CF3400E5C46B /* BaseInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		A0D8A5701E77F1D300E5C46B /* swiftreflectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swiftreflectUITests.swift; sourceTree = "<group>"; };
 		A0D8A5721E77F1D300E5C46B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0D8A57E1E77F2C400E5C46B /* QiniuHostInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QiniuHostInfo.swift; sourceTree = "<group>"; };
+		A0D8A5851E78CF3400E5C46B /* BaseInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				A0D8A5591E77F1D300E5C46B /* LaunchScreen.storyboard */,
 				A0D8A55C1E77F1D300E5C46B /* Info.plist */,
 				A0D8A57E1E77F2C400E5C46B /* QiniuHostInfo.swift */,
+				A0D8A5851E78CF3400E5C46B /* BaseInfo.swift */,
 			);
 			path = swiftreflect;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0D8A5861E78CF3400E5C46B /* BaseInfo.swift in Sources */,
 				A0D8A5531E77F1D200E5C46B /* ViewController.swift in Sources */,
 				A0D8A57F1E77F2C400E5C46B /* QiniuHostInfo.swift in Sources */,
 				A0D8A5511E77F1D200E5C46B /* AppDelegate.swift in Sources */,
@@ -518,6 +522,7 @@
 				A0D8A5771E77F1D300E5C46B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0D8A5781E77F1D300E5C46B /* Build configuration list for PBXNativeTarget "swiftreflectTests" */ = {
 			isa = XCConfigurationList;
@@ -526,6 +531,7 @@
 				A0D8A57A1E77F1D300E5C46B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A0D8A57B1E77F1D300E5C46B /* Build configuration list for PBXNativeTarget "swiftreflectUITests" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +540,7 @@
 				A0D8A57D1E77F1D300E5C46B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

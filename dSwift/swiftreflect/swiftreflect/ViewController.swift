@@ -24,6 +24,14 @@ class ViewController: UIViewController {
         UserDefaults.standard.set(qiniudata, forKey: "qiniu")
         
         
+        let testA = TestA()
+        testA.name = "testA"
+        testA.accessKey = "accA"
+        testA.secretKey = "secret"
+        
+        let testAdata = NSKeyedArchiver.archivedData(withRootObject: testA)
+        
+        
     }
 
 }
