@@ -15,7 +15,7 @@ let kScreenHeight = UIScreen.main.bounds.size.height
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let tableView = UITableView.init(frame: CGRect.zero, style: UITableViewStyle.plain)
-    let dataSource = ["CollectionDemoViewController","LocationViewController","SystemDownUpPullRefreshViewController","GradientColorViewController","ImageScaleViewController","VideoBackgroundController","ColorProgressViewController","TableHeadViewController","AnimateTableViewController"]
+    let dataSource = ["CollectionDemoViewController","LocationViewController","SystemDownUpPullRefreshViewController","GradientColorViewController","ImageScaleViewController","VideoBackgroundController","ColorProgressViewController","TableHeadViewController","AnimateTableViewController","WaveViewController"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -24,12 +24,13 @@
     //开始准备输出
     const char * _outPutName;
     const char * _inPutName;
-    NSString *inputName = @"http://ivi.bupt.edu.cn/hls/cctv6hd.m3u8";
+    NSString *inputName = @"rtsp://admin:admin@192.168.100.1:554/cam1/h264";
+    //NSString *inputName = @"rtmp://live.hkstv.hk.lxdns.com/live/hks";
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"YYYY-MM-dd hh:mm:ss";
     NSString *date = [formatter stringFromDate:[NSDate date]];
     
-    _outPutName = [[NSString stringWithFormat:@"%@/%@.mp4", [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] ,date] cStringUsingEncoding:NSASCIIStringEncoding];//Output file URL
+    _outPutName = [[NSString stringWithFormat:@"%@/%@.mov", [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] ,date] cStringUsingEncoding:NSASCIIStringEncoding];//Output file URL
     
     _inPutName = [inputName cStringUsingEncoding:NSASCIIStringEncoding];
     

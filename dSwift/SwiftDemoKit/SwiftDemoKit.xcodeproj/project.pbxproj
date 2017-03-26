@@ -26,6 +26,7 @@
 		A0DB847B1E7FBFDF007C7828 /* TableHeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB847A1E7FBFDF007C7828 /* TableHeadViewController.swift */; };
 		A0DB847D1E7FCCB5007C7828 /* AnimateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB847C1E7FCCB5007C7828 /* AnimateTableViewController.swift */; };
 		A0DB847F1E7FD12A007C7828 /* WaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB847E1E7FD12A007C7828 /* WaveViewController.swift */; };
+		A0FA50971E811C17008B296C /* DrawPaintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA50961E811C17008B296C /* DrawPaintViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		A0DB847A1E7FBFDF007C7828 /* TableHeadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeadViewController.swift; sourceTree = "<group>"; };
 		A0DB847C1E7FCCB5007C7828 /* AnimateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateTableViewController.swift; sourceTree = "<group>"; };
 		A0DB847E1E7FD12A007C7828 /* WaveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveViewController.swift; sourceTree = "<group>"; };
+		A0FA50961E811C17008B296C /* DrawPaintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawPaintViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				A0DB847A1E7FBFDF007C7828 /* TableHeadViewController.swift */,
 				A0DB847C1E7FCCB5007C7828 /* AnimateTableViewController.swift */,
 				A0DB847E1E7FD12A007C7828 /* WaveViewController.swift */,
+				A0FA50961E811C17008B296C /* DrawPaintViewController.swift */,
 			);
 			path = SwiftDemoKit;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0FA50971E811C17008B296C /* DrawPaintViewController.swift in Sources */,
 				A0D8A7391E7BB54700E5C46B /* ImageScaleViewController.swift in Sources */,
 				A0DB847B1E7FBFDF007C7828 /* TableHeadViewController.swift in Sources */,
 				A0D8A7371E7B8F7200E5C46B /* GradientColorViewController.swift in Sources */,

@@ -61,13 +61,15 @@ static int open_input_file(const char *filename)
             }
         }
     }
-    printf("-----inputfile info ----");
+    printf("-----inputfile info ----\n");
     av_dump_format(ifmt_ctx, 0, filename, 0);
-    printf("-----end inputfile info----");
+    printf("-----end inputfile info----\n");
     return 0;
 }
 static int open_output_file(const char *filename)
 {
+    
+    
     AVStream*out_stream;
     AVStream*in_stream;
     AVCodecContext*dec_ctx, *enc_ctx;
@@ -90,34 +92,50 @@ static int open_output_file(const char *filename)
         dec_ctx =in_stream->codec;
         enc_ctx =out_stream->codec;
         
+        //
         if (dec_ctx->codec_type == AVMEDIA_TYPE_VIDEO
-            ||dec_ctx->codec_type == AVMEDIA_TYPE_AUDIO) {
-            /* in this example, we choose transcoding to same codec */
+            ||dec_ctx->codec_type == AVMEDIA_TYPE_AUDIO
+             ) {
+             // in this example, we choose transcoding to same codec
             
-            /* In this example, we transcode to same properties(picture size,
-             * sample rate etc.). These properties can be changed for output
-             * streams easily using filters */
+             // In this example, we transcode to same properties(picture size,
+             // sample rate etc.). These properties can be changed for output
+             // streams easily using filters
             if (dec_ctx->codec_type == AVMEDIA_TYPE_VIDEO) {
                 encoder = avcodec_find_encoder(AV_CODEC_ID_MPEG4);
                 enc_ctx->height = dec_ctx->height;
                 enc_ctx->width = dec_ctx->width;
                 enc_ctx->sample_aspect_ratio = dec_ctx->sample_aspect_ratio;
-                /* take first format from list of supported formats */
+                // take first format from list of supported formats
                 enc_ctx->pix_fmt = encoder->pix_fmts[0];
-                /* video time_base can be set to whatever is handy andsupported by encoder */
-                enc_ctx->time_base = dec_ctx->time_base;
-            } else {
-                encoder = avcodec_find_encoder(AV_CODEC_ID_AAC);
-                enc_ctx->sample_rate = dec_ctx->sample_rate;
-                enc_ctx->channel_layout = dec_ctx->channel_layout;
-                enc_ctx->channels = av_get_channel_layout_nb_channels(enc_ctx->channel_layout);
-                /* take first format from list of supported formats */
-                enc_ctx->sample_fmt = encoder->sample_fmts[0];
-                AVRational time_base = {1, enc_ctx->sample_rate};
+                // video time_base can be set to whatever is handy andsupported by encoder
+                enc_ctx->bit_rate = 6000000;
+                //enc_ctx->time_base = dec_ctx->time_base;
+                AVRational time_base = (AVRational){1, 10};
                 enc_ctx->time_base = time_base;
+                out_stream->time_base = time_base;
+                enc_ctx->gop_size = 10 / 2;
+                
+            } else {
+
+                encoder = avcodec_find_encoder(AV_CODEC_ID_PCM_ALAW);
+                enc_ctx->sample_fmt = AV_SAMPLE_FMT_S16;
+                enc_ctx->bit_rate = 48000;
+                enc_ctx->sample_rate = 8000;
+                enc_ctx->channel_layout = AV_CH_LAYOUT_MONO;
+                enc_ctx->channels = av_get_channel_layout_nb_channels(enc_ctx->channel_layout);
+                out_stream->time_base = (AVRational){1, enc_ctx->sample_rate};
+//                encoder = avcodec_find_encoder(AV_CODEC_ID_AAC);
+//                enc_ctx->sample_rate = dec_ctx->sample_rate;
+//                enc_ctx->channel_layout = dec_ctx->channel_layout;
+//                enc_ctx->channels = av_get_channel_layout_nb_channels(enc_ctx->channel_layout);
+//                // take first format from list of supported formats
+//                enc_ctx->sample_fmt = encoder->sample_fmts[0];
+//                AVRational time_base = {1, enc_ctx->sample_rate};//
+//                enc_ctx->time_base = time_base;
             }
             
-            /* Third parameter can be used to pass settings to encoder*/
+            // Third parameter can be used to pass settings to encoder
             ret =avcodec_open2(enc_ctx, encoder, NULL);
             if (ret < 0) {
                 av_log(NULL, AV_LOG_ERROR, "Cannot openvideo encoder for stream #%u\n", i);
@@ -127,7 +145,7 @@ static int open_output_file(const char *filename)
             av_log(NULL, AV_LOG_FATAL, "Elementarystream #%d is of unknown type, cannot proceed\n", i);
             return AVERROR_INVALIDDATA;
         } else {
-            /* if this stream must be remuxed */
+            // if this stream must be remuxed
             ret =avcodec_copy_context(ofmt_ctx->streams[i]->codec,
                                       ifmt_ctx->streams[i]->codec);
             if (ret < 0) {
@@ -148,7 +166,8 @@ static int open_output_file(const char *filename)
             return ret;
         }
     }
-    /* init muxer, write output file header */
+    
+    // init muxer, write output file header
     ret =avformat_write_header(ofmt_ctx, NULL);
     if (ret < 0) {
         av_log(NULL,AV_LOG_ERROR, "Error occurred when openingoutput file\n");
