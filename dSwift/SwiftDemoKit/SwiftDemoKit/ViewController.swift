@@ -28,7 +28,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                       "DrawPaintViewController",
                       "ShapeLayerAnimationViewController",
                       "TransitionViewController",
-                      "CollectionViewAnimationController"
+                      "CollectionViewAnimationController",
+                      "ThreeTouchViewController"
     ]
     
     override func viewDidLoad() {

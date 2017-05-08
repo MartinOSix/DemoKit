@@ -37,7 +37,12 @@ class CollectionDemoViewController: UIViewController, UICollectionViewDelegate, 
         self.collectionView.backgroundColor = .clear
         
         self.collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        
+
+        if self.traitCollection.forceTouchCapability == .available {
+            print("有效")
+        }else{
+            print("无效")
+        }
         view.addSubview(self.collectionView)
     }
     
@@ -54,7 +59,7 @@ class CollectionDemoViewController: UIViewController, UICollectionViewDelegate, 
             cell.backgroundView = imageView
             imageView.image = self.bgImageArr[indexPath.row]
         }
-        self .registerForPreviewing(with: self, sourceView: cell.contentView)
+        self .registerForPreviewing(with: self, sourceView: cell)
         return cell
     }
     
@@ -65,11 +70,15 @@ extension CollectionDemoViewController: UIViewControllerPreviewingDelegate {
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
         
-            self.showDetailViewController(viewControllerToCommit, sender: self)
+        self.navigationController?.pushViewController(viewControllerToCommit, animated: true)
     }
     
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
-        return nil;
+        
+        let shapVC = ImageScaleViewController()
+        let sourceView = previewingContext.sourceView as! UICollectionViewCell
+        shapVC.showimage = (sourceView.backgroundView as! UIImageView).image
+        return shapVC
     }
     
     

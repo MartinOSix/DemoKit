@@ -12,6 +12,11 @@ class ImageScaleViewController: UIViewController {
 
     let scrollview = UIScrollView.init(frame: kScreenBounds)
     let imageView = UIImageView(image: #imageLiteral(resourceName: "blue"))
+    var showimage :UIImage? {
+        didSet{
+            imageView.image = showimage
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

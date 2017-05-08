@@ -19,6 +19,7 @@
 		A00C7FD41EBC74AA00439AAA /* CCTeeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FC81EBC74AA00439AAA /* CCTeeController.m */; };
 		A00C7FD51EBC74AA00439AAA /* NSObject+CCReverseComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FCA1EBC74AA00439AAA /* NSObject+CCReverseComparison.m */; };
 		A00C7FDB1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FDA1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift */; };
+		A00C80231EC053E900439AAA /* ThreeTouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C80221EC053E900439AAA /* ThreeTouchViewController.swift */; };
 		A09F2DF11EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F2DF01EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift */; };
 		A09F2DF41EBB294900E37355 /* TAManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F2DF31EBB294900E37355 /* TAManager.swift */; };
 		A09F2DF61EBB2B4300E37355 /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F2DF51EBB2B4300E37355 /* TransitionViewController.swift */; };
@@ -93,6 +94,7 @@
 		A00C7FCA1EBC74AA00439AAA /* NSObject+CCReverseComparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CCReverseComparison.m"; sourceTree = "<group>"; };
 		A00C7FD91EBC75E000439AAA /* SwiftDemoKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftDemoKit-Bridging-Header.h"; sourceTree = "<group>"; };
 		A00C7FDA1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDemoDetailViewController.swift; sourceTree = "<group>"; };
+		A00C80221EC053E900439AAA /* ThreeTouchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeTouchViewController.swift; sourceTree = "<group>"; };
 		A09F2DF01EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeLayerAnimationViewController.swift; sourceTree = "<group>"; };
 		A09F2DF31EBB294900E37355 /* TAManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAManager.swift; sourceTree = "<group>"; };
 		A09F2DF51EBB2B4300E37355 /* TransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				A09F2DF51EBB2B4300E37355 /* TransitionViewController.swift */,
 				A09F2DF91EBC2C6400E37355 /* CollectionViewAnimationController.swift */,
 				A09F2DFB1EBC507300E37355 /* CollectionViewAnimationCell.swift */,
+				A00C80221EC053E900439AAA /* ThreeTouchViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				A0D8A72E1E7A8C5600E5C46B /* CollectionDemoViewController.swift in Sources */,
 				A0DB847F1E7FD12A007C7828 /* WaveViewController.swift in Sources */,
 				A09F2DF41EBB294900E37355 /* TAManager.swift in Sources */,
+				A00C80231EC053E900439AAA /* ThreeTouchViewController.swift in Sources */,
 				A00C7FD31EBC74AA00439AAA /* CCSimpleFileOutputRedirectionController.m in Sources */,
 				A00C7FDB1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift in Sources */,
 				A0D8A7021E7A791700E5C46B /* ViewController.swift in Sources */,
