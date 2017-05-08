@@ -15,7 +15,21 @@ let kScreenHeight = UIScreen.main.bounds.size.height
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let tableView = UITableView.init(frame: CGRect.zero, style: UITableViewStyle.plain)
-    let dataSource = ["CollectionDemoViewController","LocationViewController","SystemDownUpPullRefreshViewController","GradientColorViewController","ImageScaleViewController","VideoBackgroundController","ColorProgressViewController","TableHeadViewController","AnimateTableViewController","WaveViewController"]
+    let dataSource = ["CollectionDemoViewController",
+                      "LocationViewController",
+                      "SystemDownUpPullRefreshViewController",
+                      "GradientColorViewController",
+                      "ImageScaleViewController",
+                      "VideoBackgroundController",
+                      "ColorProgressViewController",
+                      "TableHeadViewController",
+                      "AnimateTableViewController",
+                      "WaveViewController",
+                      "DrawPaintViewController",
+                      "ShapeLayerAnimationViewController",
+                      "TransitionViewController",
+                      "CollectionViewAnimationController"
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,10 +71,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         vc.title = dataSource[indexPath.row]
         vc.view.backgroundColor = UIColor.white
         self.navigationController?.pushViewController(vc, animated: true)
-        
     }
-    
-
-
 }
 

@@ -16,14 +16,13 @@ class SystemDownUpPullRefreshViewController: UIViewController, UITableViewDelega
     var dataSourceArr = ["first"]
     
     override var prefersStatusBarHidden: Bool{
-        return true
+        return false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
-        tableview.frame = CGRect.init(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight-44)
+        tableview.frame = CGRect.init(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight)
         
         tableview.separatorStyle = .none
         tableview.delegate = self
@@ -38,11 +37,12 @@ class SystemDownUpPullRefreshViewController: UIViewController, UITableViewDelega
         view.addSubview(tableview)
     }
     
+    
     func refreshData() {
         
         
         DispatchQueue.global().async {
-            sleep(3)
+            sleep(1)
             print("refreshData")
             self.dataSourceArr.append("\(NSDate())")
             self.refreshControl.endRefreshing()

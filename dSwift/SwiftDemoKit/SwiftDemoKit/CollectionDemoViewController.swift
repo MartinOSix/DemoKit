@@ -54,8 +54,24 @@ class CollectionDemoViewController: UIViewController, UICollectionViewDelegate, 
             cell.backgroundView = imageView
             imageView.image = self.bgImageArr[indexPath.row]
         }
+        self .registerForPreviewing(with: self, sourceView: cell.contentView)
         return cell
     }
+    
+}
+
+
+extension CollectionDemoViewController: UIViewControllerPreviewingDelegate {
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, commit viewControllerToCommit: UIViewController) {
+        
+            self.showDetailViewController(viewControllerToCommit, sender: self)
+    }
+    
+    func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        return nil;
+    }
+    
     
     
 }

@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A00C7FEA1EC0127F00439AAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FE91EC0127F00439AAA /* main.m */; };
+		A00C7FED1EC0127F00439AAA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FEC1EC0127F00439AAA /* AppDelegate.m */; };
+		A00C7FF01EC0127F00439AAA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FEF1EC0127F00439AAA /* ViewController.m */; };
+		A00C7FF31EC0127F00439AAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00C7FF11EC0127F00439AAA /* Main.storyboard */; };
+		A00C7FF51EC0127F00439AAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00C7FF41EC0127F00439AAA /* Assets.xcassets */; };
+		A00C7FF81EC0127F00439AAA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A00C7FF61EC0127F00439AAA /* LaunchScreen.storyboard */; };
+		A00C80031EC0127F00439AAA /* DisableEmojiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C80021EC0127F00439AAA /* DisableEmojiTests.m */; };
+		A00C800E1EC0127F00439AAA /* DisableEmojiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C800D1EC0127F00439AAA /* DisableEmojiUITests.m */; };
+		A00C801C1EC0129A00439AAA /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A00C801B1EC0129A00439AAA /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A00C7FFF1EC0127F00439AAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A00C7FDD1EC0127F00439AAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A00C7FE41EC0127F00439AAA;
+			remoteInfo = DisableEmoji;
+		};
+		A00C800A1EC0127F00439AAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A00C7FDD1EC0127F00439AAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A00C7FE41EC0127F00439AAA;
+			remoteInfo = DisableEmoji;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A00C7FE51EC0127F00439AAA /* DisableEmoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisableEmoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00C7FE91EC0127F00439AAA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A00C7FEB1EC0127F00439AAA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A00C7FEC1EC0127F00439AAA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A00C7FEE1EC0127F00439AAA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		A00C7FEF1EC0127F00439AAA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A00C7FF21EC0127F00439AAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A00C7FF41EC0127F00439AAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A00C7FF71EC0127F00439AAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A00C7FF91EC0127F00439AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A00C7FFE1EC0127F00439AAA /* DisableEmojiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisableEmojiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00C80021EC0127F00439AAA /* DisableEmojiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisableEmojiTests.m; sourceTree = "<group>"; };
+		A00C80041EC0127F00439AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A00C80091EC0127F00439AAA /* DisableEmojiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DisableEmojiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00C800D1EC0127F00439AAA /* DisableEmojiUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisableEmojiUITests.m; sourceTree = "<group>"; };
+		A00C800F1EC0127F00439AAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A00C801B1EC0129A00439AAA /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A00C7FE21EC0127F00439AAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A00C7FFB1EC0127F00439AAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A00C80061EC0127F00439AAA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A00C7FDC1EC0127F00439AAA = {
+			isa = PBXGroup;
+			children = (
+				A00C7FE71EC0127F00439AAA /* DisableEmoji */,
+				A00C80011EC0127F00439AAA /* DisableEmojiTests */,
+				A00C800C1EC0127F00439AAA /* DisableEmojiUITests */,
+				A00C7FE61EC0127F00439AAA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A00C7FE61EC0127F00439AAA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A00C7FE51EC0127F00439AAA /* DisableEmoji.app */,
+				A00C7FFE1EC0127F00439AAA /* DisableEmojiTests.xctest */,
+				A00C80091EC0127F00439AAA /* DisableEmojiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A00C7FE71EC0127F00439AAA /* DisableEmoji */ = {
+			isa = PBXGroup;
+			children = (
+				A00C7FEB1EC0127F00439AAA /* AppDelegate.h */,
+				A00C7FEC1EC0127F00439AAA /* AppDelegate.m */,
+				A00C7FEE1EC0127F00439AAA /* ViewController.h */,
+				A00C7FEF1EC0127F00439AAA /* ViewController.m */,
+				A00C801B1EC0129A00439AAA /* ViewController.xib */,
+				A00C7FF11EC0127F00439AAA /* Main.storyboard */,
+				A00C7FF41EC0127F00439AAA /* Assets.xcassets */,
+				A00C7FF61EC0127F00439AAA /* LaunchScreen.storyboard */,
+				A00C7FF91EC0127F00439AAA /* Info.plist */,
+				A00C7FE81EC0127F00439AAA /* Supporting Files */,
+			);
+			path = DisableEmoji;
+			sourceTree = "<group>";
+		};
+		A00C7FE81EC0127F00439AAA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A00C7FE91EC0127F00439AAA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A00C80011EC0127F00439AAA /* DisableEmojiTests */ = {
+			isa = PBXGroup;
+			children = (
+				A00C80021EC0127F00439AAA /* DisableEmojiTests.m */,
+				A00C80041EC0127F00439AAA /* Info.plist */,
+			);
+			path = DisableEmojiTests;
+			sourceTree = "<group>";
+		};
+		A00C800C1EC0127F00439AAA /* DisableEmojiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A00C800D1EC0127F00439AAA /* DisableEmojiUITests.m */,
+				A00C800F1EC0127F00439AAA /* Info.plist */,
+			);
+			path = DisableEmojiUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A00C7FE41EC0127F00439AAA /* DisableEmoji */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A00C80121EC0127F00439AAA /* Build configuration list for PBXNativeTarget "DisableEmoji" */;
+			buildPhases = (
+				A00C7FE11EC0127F00439AAA /* Sources */,
+				A00C7FE21EC0127F00439AAA /* Frameworks */,
+				A00C7FE31EC0127F00439AAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DisableEmoji;
+			productName = DisableEmoji;
+			productReference = A00C7FE51EC0127F00439AAA /* DisableEmoji.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A00C7FFD1EC0127F00439AAA /* DisableEmojiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A00C80151EC0127F00439AAA /* Build configuration list for PBXNativeTarget "DisableEmojiTests" */;
+			buildPhases = (
+				A00C7FFA1EC0127F00439AAA /* Sources */,
+				A00C7FFB1EC0127F00439AAA /* Frameworks */,
+				A00C7FFC1EC0127F00439AAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A00C80001EC0127F00439AAA /* PBXTargetDependency */,
+			);
+			name = DisableEmojiTests;
+			productName = DisableEmojiTests;
+			productReference = A00C7FFE1EC0127F00439AAA /* DisableEmojiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A00C80081EC0127F00439AAA /* DisableEmojiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A00C80181EC0127F00439AAA /* Build configuration list for PBXNativeTarget "DisableEmojiUITests" */;
+			buildPhases = (
+				A00C80051EC0127F00439AAA /* Sources */,
+				A00C80061EC0127F00439AAA /* Frameworks */,
+				A00C80071EC0127F00439AAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A00C800B1EC0127F00439AAA /* PBXTargetDependency */,
+			);
+			name = DisableEmojiUITests;
+			productName = DisableEmojiUITests;
+			productReference = A00C80091EC0127F00439AAA /* DisableEmojiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A00C7FDD1EC0127F00439AAA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = com.runo;
+				TargetAttributes = {
+					A00C7FE41EC0127F00439AAA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = XUCTDNYC49;
+						ProvisioningStyle = Automatic;
+					};
+					A00C7FFD1EC0127F00439AAA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = XUCTDNYC49;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A00C7FE41EC0127F00439AAA;
+					};
+					A00C80081EC0127F00439AAA = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = XUCTDNYC49;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A00C7FE41EC0127F00439AAA;
+					};
+				};
+			};
+			buildConfigurationList = A00C7FE01EC0127F00439AAA /* Build configuration list for PBXProject "DisableEmoji" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A00C7FDC1EC0127F00439AAA;
+			productRefGroup = A00C7FE61EC0127F00439AAA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A00C7FE41EC0127F00439AAA /* DisableEmoji */,
+				A00C7FFD1EC0127F00439AAA /* DisableEmojiTests */,
+				A00C80081EC0127F00439AAA /* DisableEmojiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A00C7FE31EC0127F00439AAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00C801C1EC0129A00439AAA /* ViewController.xib in Resources */,
+				A00C7FF81EC0127F00439AAA /* LaunchScreen.storyboard in Resources */,
+				A00C7FF51EC0127F00439AAA /* Assets.xcassets in Resources */,
+				A00C7FF31EC0127F00439AAA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A00C7FFC1EC0127F00439AAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A00C80071EC0127F00439AAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A00C7FE11EC0127F00439AAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00C7FF01EC0127F00439AAA /* ViewController.m in Sources */,
+				A00C7FED1EC0127F00439AAA /* AppDelegate.m in Sources */,
+				A00C7FEA1EC0127F00439AAA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A00C7FFA1EC0127F00439AAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00C80031EC0127F00439AAA /* DisableEmojiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A00C80051EC0127F00439AAA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A00C800E1EC0127F00439AAA /* DisableEmojiUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A00C80001EC0127F00439AAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A00C7FE41EC0127F00439AAA /* DisableEmoji */;
+			targetProxy = A00C7FFF1EC0127F00439AAA /* PBXContainerItemProxy */;
+		};
+		A00C800B1EC0127F00439AAA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A00C7FE41EC0127F00439AAA /* DisableEmoji */;
+			targetProxy = A00C800A1EC0127F00439AAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A00C7FF11EC0127F00439AAA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A00C7FF21EC0127F00439AAA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A00C7FF61EC0127F00439AAA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A00C7FF71EC0127F00439AAA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A00C80101EC0127F00439AAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A00C80111EC0127F00439AAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A00C80131EC0127F00439AAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XUCTDNYC49;
+				INFOPLIST_FILE = DisableEmoji/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.runo.DisableEmoji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A00C80141EC0127F00439AAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = XUCTDNYC49;
+				INFOPLIST_FILE = DisableEmoji/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.runo.DisableEmoji;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A00C80161EC0127F00439AAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = XUCTDNYC49;
+				INFOPLIST_FILE = DisableEmojiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.runo.DisableEmojiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DisableEmoji.app/DisableEmoji";
+			};
+			name = Debug;
+		};
+		A00C80171EC0127F00439AAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = XUCTDNYC49;
+				INFOPLIST_FILE = DisableEmojiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.runo.DisableEmojiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DisableEmoji.app/DisableEmoji";
+			};
+			name = Release;
+		};
+		A00C80191EC0127F00439AAA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = XUCTDNYC49;
+				INFOPLIST_FILE = DisableEmojiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.runo.DisableEmojiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DisableEmoji;
+			};
+			name = Debug;
+		};
+		A00C801A1EC0127F00439AAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = XUCTDNYC49;
+				INFOPLIST_FILE = DisableEmojiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.runo.DisableEmojiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DisableEmoji;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A00C7FE01EC0127F00439AAA /* Build configuration list for PBXProject "DisableEmoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00C80101EC0127F00439AAA /* Debug */,
+				A00C80111EC0127F00439AAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A00C80121EC0127F00439AAA /* Build configuration list for PBXNativeTarget "DisableEmoji" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00C80131EC0127F00439AAA /* Debug */,
+				A00C80141EC0127F00439AAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A00C80151EC0127F00439AAA /* Build configuration list for PBXNativeTarget "DisableEmojiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00C80161EC0127F00439AAA /* Debug */,
+				A00C80171EC0127F00439AAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A00C80181EC0127F00439AAA /* Build configuration list for PBXNativeTarget "DisableEmojiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A00C80191EC0127F00439AAA /* Debug */,
+				A00C801A1EC0127F00439AAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A00C7FDD1EC0127F00439AAA /* Project object */;
+}

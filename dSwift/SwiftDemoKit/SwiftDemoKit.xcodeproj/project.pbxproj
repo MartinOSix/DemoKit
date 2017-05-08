@@ -7,6 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A00C7FCB1EBC74AA00439AAA /* CCLocationMake.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FB61EBC74AA00439AAA /* CCLocationMake.m */; };
+		A00C7FCC1EBC74AA00439AAA /* CCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FB81EBC74AA00439AAA /* CCLog.m */; };
+		A00C7FCD1EBC74AA00439AAA /* CCLogController+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FBA1EBC74AA00439AAA /* CCLogController+Utility.m */; };
+		A00C7FCE1EBC74AA00439AAA /* CCLogController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FBC1EBC74AA00439AAA /* CCLogController.m */; };
+		A00C7FCF1EBC74AA00439AAA /* CCLogReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FBE1EBC74AA00439AAA /* CCLogReviewViewController.m */; };
+		A00C7FD01EBC74AA00439AAA /* CCLogStringImp.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FC01EBC74AA00439AAA /* CCLogStringImp.m */; };
+		A00C7FD11EBC74AA00439AAA /* CCLogSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FC21EBC74AA00439AAA /* CCLogSystem.m */; };
+		A00C7FD21EBC74AA00439AAA /* CCLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FC41EBC74AA00439AAA /* CCLogViewController.m */; };
+		A00C7FD31EBC74AA00439AAA /* CCSimpleFileOutputRedirectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FC61EBC74AA00439AAA /* CCSimpleFileOutputRedirectionController.m */; };
+		A00C7FD41EBC74AA00439AAA /* CCTeeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FC81EBC74AA00439AAA /* CCTeeController.m */; };
+		A00C7FD51EBC74AA00439AAA /* NSObject+CCReverseComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FCA1EBC74AA00439AAA /* NSObject+CCReverseComparison.m */; };
+		A00C7FDB1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FDA1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift */; };
+		A09F2DF11EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F2DF01EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift */; };
+		A09F2DF41EBB294900E37355 /* TAManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F2DF31EBB294900E37355 /* TAManager.swift */; };
+		A09F2DF61EBB2B4300E37355 /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F2DF51EBB2B4300E37355 /* TransitionViewController.swift */; };
+		A09F2DF81EBB35CE00E37355 /* MidleNavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F2DF71EBB35CE00E37355 /* MidleNavViewController.swift */; };
+		A09F2DFA1EBC2C6400E37355 /* CollectionViewAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F2DF91EBC2C6400E37355 /* CollectionViewAnimationController.swift */; };
+		A09F2DFC1EBC507300E37355 /* CollectionViewAnimationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F2DFB1EBC507300E37355 /* CollectionViewAnimationCell.swift */; };
+		A09F2DFE1EBC6DCC00E37355 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09F2DFD1EBC6DCC00E37355 /* AVFoundation.framework */; };
+		A09F2E001EBC6E4100E37355 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09F2DFF1EBC6E4100E37355 /* AVKit.framework */; };
+		A09F2E021EBC6E4700E37355 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09F2E011EBC6E4700E37355 /* MediaPlayer.framework */; };
 		A0D8A7001E7A791700E5C46B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D8A6FF1E7A791700E5C46B /* AppDelegate.swift */; };
 		A0D8A7021E7A791700E5C46B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D8A7011E7A791700E5C46B /* ViewController.swift */; };
 		A0D8A7051E7A791700E5C46B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D8A7031E7A791700E5C46B /* Main.storyboard */; };
@@ -47,6 +68,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A00C7FB41EBC74AA00439AAA /* CCFileOutputRedirectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFileOutputRedirectionController.h; sourceTree = "<group>"; };
+		A00C7FB51EBC74AA00439AAA /* CCLocationMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocationMake.h; sourceTree = "<group>"; };
+		A00C7FB61EBC74AA00439AAA /* CCLocationMake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLocationMake.m; sourceTree = "<group>"; };
+		A00C7FB71EBC74AA00439AAA /* CCLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLog.h; sourceTree = "<group>"; };
+		A00C7FB81EBC74AA00439AAA /* CCLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLog.m; sourceTree = "<group>"; };
+		A00C7FB91EBC74AA00439AAA /* CCLogController+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCLogController+Utility.h"; sourceTree = "<group>"; };
+		A00C7FBA1EBC74AA00439AAA /* CCLogController+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCLogController+Utility.m"; sourceTree = "<group>"; };
+		A00C7FBB1EBC74AA00439AAA /* CCLogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLogController.h; sourceTree = "<group>"; };
+		A00C7FBC1EBC74AA00439AAA /* CCLogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLogController.m; sourceTree = "<group>"; };
+		A00C7FBD1EBC74AA00439AAA /* CCLogReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLogReviewViewController.h; sourceTree = "<group>"; };
+		A00C7FBE1EBC74AA00439AAA /* CCLogReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLogReviewViewController.m; sourceTree = "<group>"; };
+		A00C7FBF1EBC74AA00439AAA /* CCLogStringImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLogStringImp.h; sourceTree = "<group>"; };
+		A00C7FC01EBC74AA00439AAA /* CCLogStringImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLogStringImp.m; sourceTree = "<group>"; };
+		A00C7FC11EBC74AA00439AAA /* CCLogSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLogSystem.h; sourceTree = "<group>"; };
+		A00C7FC21EBC74AA00439AAA /* CCLogSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLogSystem.m; sourceTree = "<group>"; };
+		A00C7FC31EBC74AA00439AAA /* CCLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLogViewController.h; sourceTree = "<group>"; };
+		A00C7FC41EBC74AA00439AAA /* CCLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLogViewController.m; sourceTree = "<group>"; };
+		A00C7FC51EBC74AA00439AAA /* CCSimpleFileOutputRedirectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSimpleFileOutputRedirectionController.h; sourceTree = "<group>"; };
+		A00C7FC61EBC74AA00439AAA /* CCSimpleFileOutputRedirectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSimpleFileOutputRedirectionController.m; sourceTree = "<group>"; };
+		A00C7FC71EBC74AA00439AAA /* CCTeeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTeeController.h; sourceTree = "<group>"; };
+		A00C7FC81EBC74AA00439AAA /* CCTeeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTeeController.m; sourceTree = "<group>"; };
+		A00C7FC91EBC74AA00439AAA /* NSObject+CCReverseComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CCReverseComparison.h"; sourceTree = "<group>"; };
+		A00C7FCA1EBC74AA00439AAA /* NSObject+CCReverseComparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CCReverseComparison.m"; sourceTree = "<group>"; };
+		A00C7FD91EBC75E000439AAA /* SwiftDemoKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftDemoKit-Bridging-Header.h"; sourceTree = "<group>"; };
+		A00C7FDA1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDemoDetailViewController.swift; sourceTree = "<group>"; };
+		A09F2DF01EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeLayerAnimationViewController.swift; sourceTree = "<group>"; };
+		A09F2DF31EBB294900E37355 /* TAManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAManager.swift; sourceTree = "<group>"; };
+		A09F2DF51EBB2B4300E37355 /* TransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
+		A09F2DF71EBB35CE00E37355 /* MidleNavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MidleNavViewController.swift; sourceTree = "<group>"; };
+		A09F2DF91EBC2C6400E37355 /* CollectionViewAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAnimationController.swift; sourceTree = "<group>"; };
+		A09F2DFB1EBC507300E37355 /* CollectionViewAnimationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewAnimationCell.swift; sourceTree = "<group>"; };
+		A09F2DFD1EBC6DCC00E37355 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A09F2DFF1EBC6E4100E37355 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		A09F2E011EBC6E4700E37355 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		A0D8A6FC1E7A791700E5C46B /* SwiftDemoKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemoKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D8A6FF1E7A791700E5C46B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0D8A7011E7A791700E5C46B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +136,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A09F2E021EBC6E4700E37355 /* MediaPlayer.framework in Frameworks */,
+				A09F2E001EBC6E4100E37355 /* AVKit.framework in Frameworks */,
+				A09F2DFE1EBC6DCC00E37355 /* AVFoundation.framework in Frameworks */,
 				A0D8A7331E7B757200E5C46B /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,6 +160,84 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A00C7FB31EBC74AA00439AAA /* CCLogSystem */ = {
+			isa = PBXGroup;
+			children = (
+				A00C7FB41EBC74AA00439AAA /* CCFileOutputRedirectionController.h */,
+				A00C7FB51EBC74AA00439AAA /* CCLocationMake.h */,
+				A00C7FB61EBC74AA00439AAA /* CCLocationMake.m */,
+				A00C7FB71EBC74AA00439AAA /* CCLog.h */,
+				A00C7FB81EBC74AA00439AAA /* CCLog.m */,
+				A00C7FB91EBC74AA00439AAA /* CCLogController+Utility.h */,
+				A00C7FBA1EBC74AA00439AAA /* CCLogController+Utility.m */,
+				A00C7FBB1EBC74AA00439AAA /* CCLogController.h */,
+				A00C7FBC1EBC74AA00439AAA /* CCLogController.m */,
+				A00C7FBD1EBC74AA00439AAA /* CCLogReviewViewController.h */,
+				A00C7FBE1EBC74AA00439AAA /* CCLogReviewViewController.m */,
+				A00C7FBF1EBC74AA00439AAA /* CCLogStringImp.h */,
+				A00C7FC01EBC74AA00439AAA /* CCLogStringImp.m */,
+				A00C7FC11EBC74AA00439AAA /* CCLogSystem.h */,
+				A00C7FC21EBC74AA00439AAA /* CCLogSystem.m */,
+				A00C7FC31EBC74AA00439AAA /* CCLogViewController.h */,
+				A00C7FC41EBC74AA00439AAA /* CCLogViewController.m */,
+				A00C7FC51EBC74AA00439AAA /* CCSimpleFileOutputRedirectionController.h */,
+				A00C7FC61EBC74AA00439AAA /* CCSimpleFileOutputRedirectionController.m */,
+				A00C7FC71EBC74AA00439AAA /* CCTeeController.h */,
+				A00C7FC81EBC74AA00439AAA /* CCTeeController.m */,
+				A00C7FC91EBC74AA00439AAA /* NSObject+CCReverseComparison.h */,
+				A00C7FCA1EBC74AA00439AAA /* NSObject+CCReverseComparison.m */,
+			);
+			path = CCLogSystem;
+			sourceTree = "<group>";
+		};
+		A09F2DEE1EBABFB500E37355 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A09F2DF21EBB22D800E37355 /* TranctionAnimation */,
+				A0D8A72D1E7A8C5600E5C46B /* CollectionDemoViewController.swift */,
+				A00C7FDA1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift */,
+				A0D8A72F1E7B723A00E5C46B /* LocationViewController.swift */,
+				A0D8A7341E7B889E00E5C46B /* SystemDownUpPullRefreshViewController.swift */,
+				A0D8A7361E7B8F7200E5C46B /* GradientColorViewController.swift */,
+				A0D8A7381E7BB54700E5C46B /* ImageScaleViewController.swift */,
+				A0DB84731E7F6BB3007C7828 /* VideoBackgroundController.swift */,
+				A0DB847A1E7FBFDF007C7828 /* TableHeadViewController.swift */,
+				A0DB847C1E7FCCB5007C7828 /* AnimateTableViewController.swift */,
+				A0DB847E1E7FD12A007C7828 /* WaveViewController.swift */,
+				A0FA50961E811C17008B296C /* DrawPaintViewController.swift */,
+				A0DB84771E7FAFE5007C7828 /* ColorProgressViewController.swift */,
+				A09F2DF01EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift */,
+				A09F2DF51EBB2B4300E37355 /* TransitionViewController.swift */,
+				A09F2DF91EBC2C6400E37355 /* CollectionViewAnimationController.swift */,
+				A09F2DFB1EBC507300E37355 /* CollectionViewAnimationCell.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		A09F2DEF1EBAC03000E37355 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				A00C7FB31EBC74AA00439AAA /* CCLogSystem */,
+				A0D8A7031E7A791700E5C46B /* Main.storyboard */,
+				A0D8A7061E7A791700E5C46B /* Assets.xcassets */,
+				A0D8A7081E7A791700E5C46B /* LaunchScreen.storyboard */,
+				A0D8A70B1E7A791700E5C46B /* Info.plist */,
+				A0DB84751E7F85BB007C7828 /* moments.mp4 */,
+				A0DB84791E7FBD16007C7828 /* swift.playground */,
+				A00C7FD91EBC75E000439AAA /* SwiftDemoKit-Bridging-Header.h */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		A09F2DF21EBB22D800E37355 /* TranctionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				A09F2DF31EBB294900E37355 /* TAManager.swift */,
+				A09F2DF71EBB35CE00E37355 /* MidleNavViewController.swift */,
+			);
+			name = TranctionAnimation;
+			sourceTree = "<group>";
+		};
 		A0D8A6F31E7A791700E5C46B = {
 			isa = PBXGroup;
 			children = (
@@ -126,25 +262,10 @@
 		A0D8A6FE1E7A791700E5C46B /* SwiftDemoKit */ = {
 			isa = PBXGroup;
 			children = (
+				A09F2DEF1EBAC03000E37355 /* Source */,
+				A09F2DEE1EBABFB500E37355 /* ViewController */,
 				A0D8A6FF1E7A791700E5C46B /* AppDelegate.swift */,
 				A0D8A7011E7A791700E5C46B /* ViewController.swift */,
-				A0D8A7031E7A791700E5C46B /* Main.storyboard */,
-				A0D8A7061E7A791700E5C46B /* Assets.xcassets */,
-				A0D8A7081E7A791700E5C46B /* LaunchScreen.storyboard */,
-				A0D8A70B1E7A791700E5C46B /* Info.plist */,
-				A0D8A72D1E7A8C5600E5C46B /* CollectionDemoViewController.swift */,
-				A0D8A72F1E7B723A00E5C46B /* LocationViewController.swift */,
-				A0D8A7341E7B889E00E5C46B /* SystemDownUpPullRefreshViewController.swift */,
-				A0D8A7361E7B8F7200E5C46B /* GradientColorViewController.swift */,
-				A0D8A7381E7BB54700E5C46B /* ImageScaleViewController.swift */,
-				A0DB84731E7F6BB3007C7828 /* VideoBackgroundController.swift */,
-				A0DB84751E7F85BB007C7828 /* moments.mp4 */,
-				A0DB84771E7FAFE5007C7828 /* ColorProgressViewController.swift */,
-				A0DB84791E7FBD16007C7828 /* swift.playground */,
-				A0DB847A1E7FBFDF007C7828 /* TableHeadViewController.swift */,
-				A0DB847C1E7FCCB5007C7828 /* AnimateTableViewController.swift */,
-				A0DB847E1E7FD12A007C7828 /* WaveViewController.swift */,
-				A0FA50961E811C17008B296C /* DrawPaintViewController.swift */,
 			);
 			path = SwiftDemoKit;
 			sourceTree = "<group>";
@@ -170,6 +291,9 @@
 		A0D8A7311E7B757200E5C46B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A09F2E011EBC6E4700E37355 /* MediaPlayer.framework */,
+				A09F2DFF1EBC6E4100E37355 /* AVKit.framework */,
+				A09F2DFD1EBC6DCC00E37355 /* AVFoundation.framework */,
 				A0D8A7321E7B757200E5C46B /* CoreLocation.framework */,
 			);
 			name = Frameworks;
@@ -316,16 +440,34 @@
 				A0FA50971E811C17008B296C /* DrawPaintViewController.swift in Sources */,
 				A0D8A7391E7BB54700E5C46B /* ImageScaleViewController.swift in Sources */,
 				A0DB847B1E7FBFDF007C7828 /* TableHeadViewController.swift in Sources */,
+				A09F2DF61EBB2B4300E37355 /* TransitionViewController.swift in Sources */,
+				A09F2DF11EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift in Sources */,
 				A0D8A7371E7B8F7200E5C46B /* GradientColorViewController.swift in Sources */,
 				A0DB84781E7FAFE5007C7828 /* ColorProgressViewController.swift in Sources */,
+				A00C7FD11EBC74AA00439AAA /* CCLogSystem.m in Sources */,
+				A00C7FD41EBC74AA00439AAA /* CCTeeController.m in Sources */,
+				A09F2DFA1EBC2C6400E37355 /* CollectionViewAnimationController.swift in Sources */,
+				A00C7FD01EBC74AA00439AAA /* CCLogStringImp.m in Sources */,
+				A00C7FD51EBC74AA00439AAA /* NSObject+CCReverseComparison.m in Sources */,
+				A09F2DF81EBB35CE00E37355 /* MidleNavViewController.swift in Sources */,
+				A00C7FCC1EBC74AA00439AAA /* CCLog.m in Sources */,
+				A09F2DFC1EBC507300E37355 /* CollectionViewAnimationCell.swift in Sources */,
+				A00C7FD21EBC74AA00439AAA /* CCLogViewController.m in Sources */,
 				A0D8A72E1E7A8C5600E5C46B /* CollectionDemoViewController.swift in Sources */,
 				A0DB847F1E7FD12A007C7828 /* WaveViewController.swift in Sources */,
+				A09F2DF41EBB294900E37355 /* TAManager.swift in Sources */,
+				A00C7FD31EBC74AA00439AAA /* CCSimpleFileOutputRedirectionController.m in Sources */,
+				A00C7FDB1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift in Sources */,
 				A0D8A7021E7A791700E5C46B /* ViewController.swift in Sources */,
 				A0DB847D1E7FCCB5007C7828 /* AnimateTableViewController.swift in Sources */,
 				A0D8A7351E7B889E00E5C46B /* SystemDownUpPullRefreshViewController.swift in Sources */,
+				A00C7FCB1EBC74AA00439AAA /* CCLocationMake.m in Sources */,
 				A0DB84741E7F6BB3007C7828 /* VideoBackgroundController.swift in Sources */,
+				A00C7FCD1EBC74AA00439AAA /* CCLogController+Utility.m in Sources */,
 				A0D8A7001E7A791700E5C46B /* AppDelegate.swift in Sources */,
 				A0D8A7301E7B723A00E5C46B /* LocationViewController.swift in Sources */,
+				A00C7FCE1EBC74AA00439AAA /* CCLogController.m in Sources */,
+				A00C7FCF1EBC74AA00439AAA /* CCLogReviewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +567,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/runo/Desktop/DemoKit/dSwift/SwiftDemoKit/SwiftDemoKit/SwiftDemoKit-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -467,6 +610,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/runo/Desktop/DemoKit/dSwift/SwiftDemoKit/SwiftDemoKit/SwiftDemoKit-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
