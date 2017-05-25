@@ -20,4 +20,7 @@ func testgurar() {
 testgurar()
 print("hehe")
 
+let 🐶 = "狗"
+print(🐶)
+
 

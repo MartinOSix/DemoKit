@@ -58,10 +58,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CAAnimationDelegate {
         let finalBoudns = NSValue(cgRect: CGRect(x: 0, y: 0, width: 1100, height: 1100))
         keyFrameAnimation.values = [firstBounds,secondBounds,finalBoudns];
         keyFrameAnimation.keyTimes = [0,0.8,1]
+        //下面两项加起来可以代表动画执行完之后可以不还原
+        keyFrameAnimation.fillMode = kCAFillModeForwards
+        keyFrameAnimation.isRemovedOnCompletion = false;
         mask.add(keyFrameAnimation, forKey: "bounds")
     }
-    
-    
     
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
         window?.rootViewController?.view.layer.mask?.isHidden = true
@@ -85,11 +86,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CAAnimationDelegate {
         let icon = UIApplicationShortcutIcon(type: .home)
         let item = UIApplicationShortcutItem(type: "main", localizedTitle: "主页", localizedSubtitle: nil, icon: icon, userInfo: nil)
         
-        let icon2 = UIApplicationShortcutIcon(templateImageName: "darkvarder")
-        let item2 = UIApplicationShortcutItem(type: "secon", localizedTitle: "海潮", localizedSubtitle: "小海潮", icon: icon2, userInfo: nil)
+        let icon2 = UIApplicationShortcutIcon(templateImageName: "lightning.png")
+        let item2 = UIApplicationShortcutItem(type: "secon", localizedTitle: "大海潮", localizedSubtitle: "大海潮", icon: icon2, userInfo: nil)
+        
+        let icon3 = UIApplicationShortcutIcon(templateImageName: "lightning.png")
+        let item3 = UIApplicationShortcutItem(type: "secon", localizedTitle: "小海潮", localizedSubtitle: "小海潮", icon: icon3, userInfo: nil)
         
         UIApplication.shared.shortcutItems?.append(item)
         UIApplication.shared.shortcutItems?.append(item2)
+        UIApplication.shared.shortcutItems?.append(item3)
         
     }
     

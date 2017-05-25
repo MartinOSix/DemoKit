@@ -16,6 +16,23 @@ class ShapeLayerAnimationViewController: UIViewController, CAAnimationDelegate {
     
     private let shapeLayer = CAShapeLayer()
     
+    override var previewActionItems: [UIPreviewActionItem] {
+        get{
+            var marr = [UIPreviewActionItem]()
+            
+            let item1 = UIPreviewAction.init(title: "333", style: .default) { (act, vc) in
+                print("\(vc) \(act)")
+            }
+            let item2 = UIPreviewAction.init(title: "555", style: .destructive) { (act, vc) in
+                print("\(vc)  \(act)")
+            }
+            marr.append(item1)
+            marr.append(item2)
+            
+            return marr
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.edgesForExtendedLayout = .init(rawValue: 0)
@@ -43,7 +60,9 @@ class ShapeLayerAnimationViewController: UIViewController, CAAnimationDelegate {
         animation.toValue = 0.0
         shapeLayer.autoreverses = true
         animation.duration = 3.0
-        
+        //下面两项加起来可以代表动画执行完之后可以不还原
+        animation.fillMode = kCAFillModeForwards
+        animation.isRemovedOnCompletion = false
         //设置动画
         animation.delegate = self
         shapeLayer.add(animation, forKey: nil)
@@ -66,7 +85,7 @@ class ShapeLayerAnimationViewController: UIViewController, CAAnimationDelegate {
             path2.move(to: CGPoint.init(x: x, y: y))
             path2.addLine(to: CGPoint(x: x+Double(len)*cos(2*M_PI/Double(count)*Double(i)), y: y-Double(len)*sin(2*M_PI/Double(count)*Double(i))))
             line.path = path2.cgPath
-            //line.add(animation, forKey: nil)
+            line.add(animation, forKey: nil)
             
         }
     }

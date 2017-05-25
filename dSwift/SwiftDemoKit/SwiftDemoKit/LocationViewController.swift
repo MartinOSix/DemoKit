@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreLocation
+import AVFoundation
+import AVKit
 
 class LocationViewController: UIViewController, CLLocationManagerDelegate {
 
@@ -49,6 +51,8 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
     
     func btnclick() {
         
+        
+        
         switch CLLocationManager.authorizationStatus() {
         case .authorizedAlways:
             print("authorizedAlways")
@@ -60,6 +64,7 @@ class LocationViewController: UIViewController, CLLocationManagerDelegate {
             return
         case .notDetermined:
             print("notDetermined")
+            self.locationManager.requestWhenInUseAuthorization()
         case .restricted:
             print("restricted")
         }

@@ -15,22 +15,28 @@ let kScreenHeight = UIScreen.main.bounds.size.height
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let tableView = UITableView.init(frame: CGRect.zero, style: UITableViewStyle.plain)
-    let dataSource = ["CollectionDemoViewController",
-                      "LocationViewController",
-                      "SystemDownUpPullRefreshViewController",
-                      "GradientColorViewController",
-                      "ImageScaleViewController",
-                      "VideoBackgroundController",
-                      "ColorProgressViewController",
-                      "TableHeadViewController",
-                      "AnimateTableViewController",
-                      "WaveViewController",
-                      "DrawPaintViewController",
-                      "ShapeLayerAnimationViewController",
-                      "TransitionViewController",
-                      "CollectionViewAnimationController",
-                      "ThreeTouchViewController"
-    ]
+    let dataSource = [("Collection创建使用","CollectionDemoViewController"),
+                      ("定位框架只定位","LocationViewController"),
+                      ("系统的下拉刷新控件","SystemDownUpPullRefreshViewController"),
+                      ("线性颜色变换","GradientColorViewController"),
+                      ("Scrollview查看Image","ImageScaleViewController"),
+                      ("以视频为背景的view","VideoBackgroundController"),
+                      ("颜色变换进度条","ColorProgressViewController"),
+                      ("可以拉伸的tableviewHead","TableHeadViewController"),
+                      ("tableViewCell刷新动画","AnimateTableViewController"),
+                      ("shaplayer刷新动画","WaveViewController"),
+                      ("画基本图型","DrawPaintViewController"),
+                      ("基本动画,转圈","ShapeLayerAnimationViewController"),
+                      ("转场动画","TransitionViewController"),
+                      ("collectionviewcell点击动画","CollectionViewAnimationController"),
+                      ("3dtouch","ThreeTouchViewController"),
+                      ("session下载","URLImageViewController"),
+                      ("cell左滑菜单，编辑状态","CellMenuViewController"),
+                      ("colletion改变位置","CollectionChangePositionViewController"),
+                      ("自定义collectionView布局","CustomeCollectionViewController"),
+                      ("扫描和长按识别二维码","QRCodeViewController")
+    ] as [(String,String)]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +55,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") ?? UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "cell")
         
-        cell.textLabel?.text = dataSource[indexPath.row]
+        cell.textLabel?.text = dataSource[indexPath.row].0
         return cell
     }
     
@@ -59,8 +65,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             print("命名空间不存在")
             return
         }
+        
+        let classString = dataSource[indexPath.row].1
         // 2.通过命名空间和类名转换成类
-        let cls : AnyClass? = NSClassFromString((clsName as! String) + "." + dataSource[indexPath.row])
+        let cls : AnyClass? = NSClassFromString((clsName as! String) + "." + classString)
         
         // swift 中通过Class创建一个对象,必须告诉系统Class的类型
         guard let clsType = cls as? UIViewController.Type else {
@@ -69,7 +77,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         
         let vc = clsType.init()
-        vc.title = dataSource[indexPath.row]
+        vc.title = dataSource[indexPath.row].0
         vc.view.backgroundColor = UIColor.white
         self.navigationController?.pushViewController(vc, animated: true)
     }

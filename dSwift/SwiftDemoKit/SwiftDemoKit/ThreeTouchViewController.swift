@@ -11,6 +11,25 @@ import UIKit
 class ThreeTouchViewController: UIViewController {
 
     let tabView = UITableView.init(frame: CGRect.init(x: 0, y: 164, width: kScreenWidth, height: kScreenHeight-164), style: .plain)
+    /*
+    lazy var previewActions: [UIPreviewActionItem] = {
+        func previewActionForTitle(title: String, style: UIPreviewActionStyle = .default) -> UIPreviewAction {
+            
+            return UIPreviewAction.init(title: title, style: style, handler: { (act, vc) in
+                print("\(vc)")
+            })
+            
+        }
+        
+        let action1 = previewActionForTitle(title: "default Action")
+        let action2 = previewActionForTitle(title: "destruction Action", style: .destructive)
+        
+        let subAction1 = previewActionForTitle(title: "sub action1")
+        let subAction2 = previewActionForTitle(title: "sub action2")
+        let groupedActions = UIPreviewActionGroup(title: "subactions", style: .default, actions: [subAction1,subAction2])
+        return [action1,action2,groupedActions]
+    }()
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +37,7 @@ class ThreeTouchViewController: UIViewController {
         touc.frame.size.height = 164;
         self.view.addSubview(touc)
         
+        self .registerForPreviewing(with: self, sourceView: touc)
         self.view.addSubview(tabView)
         tabView.delegate = self
         tabView.dataSource = self
@@ -61,7 +81,7 @@ extension ThreeTouchViewController: UIViewControllerPreviewingDelegate{
     func previewingContext(_ previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
         return ShapeLayerAnimationViewController()
     }
-
+    
 }
 
 class touchView: UIView {

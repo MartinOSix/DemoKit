@@ -20,6 +20,16 @@
 		A00C7FD51EBC74AA00439AAA /* NSObject+CCReverseComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FCA1EBC74AA00439AAA /* NSObject+CCReverseComparison.m */; };
 		A00C7FDB1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C7FDA1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift */; };
 		A00C80231EC053E900439AAA /* ThreeTouchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C80221EC053E900439AAA /* ThreeTouchViewController.swift */; };
+		A00C80251EC0768F00439AAA /* lightning.png in Resources */ = {isa = PBXBuildFile; fileRef = A00C80241EC0768F00439AAA /* lightning.png */; };
+		A00C80A91EC5A62600439AAA /* URLImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C80A81EC5A62600439AAA /* URLImageViewController.swift */; };
+		A00C80AB1EC5BEEB00439AAA /* CellMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C80AA1EC5BEEB00439AAA /* CellMenuViewController.swift */; };
+		A00C80DA1EC9B00F00439AAA /* CollectionChangePositionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C80D91EC9B00F00439AAA /* CollectionChangePositionViewController.swift */; };
+		A00C80DC1ECA908C00439AAA /* SortCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C80DB1ECA908C00439AAA /* SortCollectionView.swift */; };
+		A00C80DF1ECAD7D400439AAA /* CustomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C80DE1ECAD7D400439AAA /* CustomeCollectionViewController.swift */; };
+		A00C80E11ECADA2E00439AAA /* ShowCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C80E01ECADA2E00439AAA /* ShowCollectionViewController.swift */; };
+		A00C80E31ECAE63900439AAA /* LinerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C80E21ECAE63900439AAA /* LinerLayout.swift */; };
+		A00C80E51ECAFD9E00439AAA /* FlowWaterLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C80E41ECAFD9E00439AAA /* FlowWaterLayout.swift */; };
+		A00C81251ECD2F5800439AAA /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C81241ECD2F5800439AAA /* QRCodeViewController.swift */; };
 		A09F2DF11EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F2DF01EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift */; };
 		A09F2DF41EBB294900E37355 /* TAManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F2DF31EBB294900E37355 /* TAManager.swift */; };
 		A09F2DF61EBB2B4300E37355 /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F2DF51EBB2B4300E37355 /* TransitionViewController.swift */; };
@@ -95,6 +105,16 @@
 		A00C7FD91EBC75E000439AAA /* SwiftDemoKit-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftDemoKit-Bridging-Header.h"; sourceTree = "<group>"; };
 		A00C7FDA1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDemoDetailViewController.swift; sourceTree = "<group>"; };
 		A00C80221EC053E900439AAA /* ThreeTouchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreeTouchViewController.swift; sourceTree = "<group>"; };
+		A00C80241EC0768F00439AAA /* lightning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lightning.png; sourceTree = "<group>"; };
+		A00C80A81EC5A62600439AAA /* URLImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImageViewController.swift; sourceTree = "<group>"; };
+		A00C80AA1EC5BEEB00439AAA /* CellMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellMenuViewController.swift; sourceTree = "<group>"; };
+		A00C80D91EC9B00F00439AAA /* CollectionChangePositionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionChangePositionViewController.swift; sourceTree = "<group>"; };
+		A00C80DB1ECA908C00439AAA /* SortCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortCollectionView.swift; sourceTree = "<group>"; };
+		A00C80DE1ECAD7D400439AAA /* CustomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomeCollectionViewController.swift; sourceTree = "<group>"; };
+		A00C80E01ECADA2E00439AAA /* ShowCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowCollectionViewController.swift; sourceTree = "<group>"; };
+		A00C80E21ECAE63900439AAA /* LinerLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinerLayout.swift; sourceTree = "<group>"; };
+		A00C80E41ECAFD9E00439AAA /* FlowWaterLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowWaterLayout.swift; sourceTree = "<group>"; };
+		A00C81241ECD2F5800439AAA /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
 		A09F2DF01EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeLayerAnimationViewController.swift; sourceTree = "<group>"; };
 		A09F2DF31EBB294900E37355 /* TAManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAManager.swift; sourceTree = "<group>"; };
 		A09F2DF51EBB2B4300E37355 /* TransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
@@ -192,9 +212,21 @@
 			path = CCLogSystem;
 			sourceTree = "<group>";
 		};
+		A00C80DD1ECAD7B700439AAA /* CollectionViewCustomStyle */ = {
+			isa = PBXGroup;
+			children = (
+				A00C80DE1ECAD7D400439AAA /* CustomeCollectionViewController.swift */,
+				A00C80E01ECADA2E00439AAA /* ShowCollectionViewController.swift */,
+				A00C80E21ECAE63900439AAA /* LinerLayout.swift */,
+				A00C80E41ECAFD9E00439AAA /* FlowWaterLayout.swift */,
+			);
+			name = CollectionViewCustomStyle;
+			sourceTree = "<group>";
+		};
 		A09F2DEE1EBABFB500E37355 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A00C80DD1ECAD7B700439AAA /* CollectionViewCustomStyle */,
 				A09F2DF21EBB22D800E37355 /* TranctionAnimation */,
 				A0D8A72D1E7A8C5600E5C46B /* CollectionDemoViewController.swift */,
 				A00C7FDA1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift */,
@@ -213,6 +245,11 @@
 				A09F2DF91EBC2C6400E37355 /* CollectionViewAnimationController.swift */,
 				A09F2DFB1EBC507300E37355 /* CollectionViewAnimationCell.swift */,
 				A00C80221EC053E900439AAA /* ThreeTouchViewController.swift */,
+				A00C80A81EC5A62600439AAA /* URLImageViewController.swift */,
+				A00C80AA1EC5BEEB00439AAA /* CellMenuViewController.swift */,
+				A00C80D91EC9B00F00439AAA /* CollectionChangePositionViewController.swift */,
+				A00C80DB1ECA908C00439AAA /* SortCollectionView.swift */,
+				A00C81241ECD2F5800439AAA /* QRCodeViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -225,6 +262,7 @@
 				A0D8A7061E7A791700E5C46B /* Assets.xcassets */,
 				A0D8A7081E7A791700E5C46B /* LaunchScreen.storyboard */,
 				A0D8A70B1E7A791700E5C46B /* Info.plist */,
+				A00C80241EC0768F00439AAA /* lightning.png */,
 				A0DB84751E7F85BB007C7828 /* moments.mp4 */,
 				A0DB84791E7FBD16007C7828 /* swift.playground */,
 				A00C7FD91EBC75E000439AAA /* SwiftDemoKit-Bridging-Header.h */,
@@ -414,6 +452,7 @@
 			files = (
 				A0D8A70A1E7A791700E5C46B /* LaunchScreen.storyboard in Resources */,
 				A0DB84761E7F85BB007C7828 /* moments.mp4 in Resources */,
+				A00C80251EC0768F00439AAA /* lightning.png in Resources */,
 				A0D8A7071E7A791700E5C46B /* Assets.xcassets in Resources */,
 				A0D8A7051E7A791700E5C46B /* Main.storyboard in Resources */,
 			);
@@ -443,8 +482,10 @@
 				A0FA50971E811C17008B296C /* DrawPaintViewController.swift in Sources */,
 				A0D8A7391E7BB54700E5C46B /* ImageScaleViewController.swift in Sources */,
 				A0DB847B1E7FBFDF007C7828 /* TableHeadViewController.swift in Sources */,
+				A00C80DF1ECAD7D400439AAA /* CustomeCollectionViewController.swift in Sources */,
 				A09F2DF61EBB2B4300E37355 /* TransitionViewController.swift in Sources */,
 				A09F2DF11EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift in Sources */,
+				A00C80AB1EC5BEEB00439AAA /* CellMenuViewController.swift in Sources */,
 				A0D8A7371E7B8F7200E5C46B /* GradientColorViewController.swift in Sources */,
 				A0DB84781E7FAFE5007C7828 /* ColorProgressViewController.swift in Sources */,
 				A00C7FD11EBC74AA00439AAA /* CCLogSystem.m in Sources */,
@@ -455,15 +496,22 @@
 				A09F2DF81EBB35CE00E37355 /* MidleNavViewController.swift in Sources */,
 				A00C7FCC1EBC74AA00439AAA /* CCLog.m in Sources */,
 				A09F2DFC1EBC507300E37355 /* CollectionViewAnimationCell.swift in Sources */,
+				A00C80E51ECAFD9E00439AAA /* FlowWaterLayout.swift in Sources */,
 				A00C7FD21EBC74AA00439AAA /* CCLogViewController.m in Sources */,
 				A0D8A72E1E7A8C5600E5C46B /* CollectionDemoViewController.swift in Sources */,
+				A00C80E11ECADA2E00439AAA /* ShowCollectionViewController.swift in Sources */,
 				A0DB847F1E7FD12A007C7828 /* WaveViewController.swift in Sources */,
+				A00C80A91EC5A62600439AAA /* URLImageViewController.swift in Sources */,
+				A00C80DA1EC9B00F00439AAA /* CollectionChangePositionViewController.swift in Sources */,
 				A09F2DF41EBB294900E37355 /* TAManager.swift in Sources */,
+				A00C80E31ECAE63900439AAA /* LinerLayout.swift in Sources */,
+				A00C80DC1ECA908C00439AAA /* SortCollectionView.swift in Sources */,
 				A00C80231EC053E900439AAA /* ThreeTouchViewController.swift in Sources */,
 				A00C7FD31EBC74AA00439AAA /* CCSimpleFileOutputRedirectionController.m in Sources */,
 				A00C7FDB1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift in Sources */,
 				A0D8A7021E7A791700E5C46B /* ViewController.swift in Sources */,
 				A0DB847D1E7FCCB5007C7828 /* AnimateTableViewController.swift in Sources */,
+				A00C81251ECD2F5800439AAA /* QRCodeViewController.swift in Sources */,
 				A0D8A7351E7B889E00E5C46B /* SystemDownUpPullRefreshViewController.swift in Sources */,
 				A00C7FCB1EBC74AA00439AAA /* CCLocationMake.m in Sources */,
 				A0DB84741E7F6BB3007C7828 /* VideoBackgroundController.swift in Sources */,

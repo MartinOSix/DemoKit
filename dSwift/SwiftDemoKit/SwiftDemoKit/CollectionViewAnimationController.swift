@@ -16,7 +16,7 @@ class CollectionViewAnimationController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.edgesForExtendedLayout = [.bottom,.left,.right]
+        self.edgesForExtendedLayout = []
         self.navigationController?.navigationBar.isTranslucent = false
         let collectoinLayout = UICollectionViewFlowLayout()
         collectoinLayout.scrollDirection = .vertical
@@ -28,6 +28,7 @@ class CollectionViewAnimationController: UIViewController {
         collectionView?.backgroundColor = UIColor.orange
         collectionView?.dataSource = self
         collectionView?.delegate = self
+        collectionView?.contentInset = UIEdgeInsetsMake(64, 0, 0, 0)
         collectionView?.register(CollectionViewAnimationCell.self, forCellWithReuseIdentifier: "cell")
         view.addSubview(collectionView!)
         
@@ -69,7 +70,7 @@ extension CollectionViewAnimationController: UICollectionViewDataSource,UICollec
         }
         
         UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: [], animations: { 
-            cell.frame = CGRect(x: 0, y: (self.collectionView?.contentOffset.y)!, width: kScreenWidth, height: kScreenHeight)
+            cell.frame = CGRect(x: 0, y: (self.collectionView?.contentOffset.y)!+64, width: kScreenWidth, height: kScreenHeight-64)
             }) { (finish) in
                 print("animation end")
         }
