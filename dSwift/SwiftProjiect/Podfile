@@ -1,0 +1,10 @@
+platform :ios, "8.0"
+use_frameworks!
+
+target "SwiftProjiect" do
+
+pod 'SVProgressHUD'
+pod 'FDFullscreenPopGesture', '1.1'
+pod 'Alamofire', '4.3.0'
+
+end

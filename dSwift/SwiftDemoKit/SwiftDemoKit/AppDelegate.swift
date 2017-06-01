@@ -7,17 +7,22 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, CAAnimationDelegate {
 
+    var bgIndetify = UIBackgroundTaskInvalid
     var window: UIWindow?
     let mask = CALayer()
+    var timeCount = 0
     var rootNav:MidleNavViewController? = nil
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-
+        
+        registerNotification()
         CCLogSystem.setupDefaultLogConfigure()
-        CCLogSystem.makeLog("first")
+        CCLogSystem.makeLog("first \(launchOptions)")
         self.window = UIWindow.init(frame: kScreenBounds)
         self.window?.makeKeyAndVisible()
         self.rootNav = MidleNavViewController.init(rootViewController: ViewController())
@@ -32,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CAAnimationDelegate {
         window?.backgroundColor = UIColor(red: 31/255.0, green: 150/255.0, blue: 1, alpha: 1)
         
         let tap = UITapGestureRecognizer.init(target: self, action: #selector(navClick))
-        tap.numberOfTapsRequired = 2
+        tap.numberOfTapsRequired = 1
         tap.numberOfTouchesRequired = 2
         self.rootNav?.navigationBar .addGestureRecognizer(tap)
         
@@ -100,27 +105,91 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CAAnimationDelegate {
     
     
     func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+        print("applicationWillResignActive")
     }
-
+    //MARK:进入后台任务
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+        
+        print("applicationDidEnterBackground")
+        application.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
+        //进入后台拖延挂起时间任务
+        /*
+        bgIndetify = application.beginBackgroundTask {
+            application.endBackgroundTask(self.bgIndetify)
+            self.bgIndetify = UIBackgroundTaskInvalid
+        }
+        
+        DispatchQueue.global().async {
+            
+            while true {
+                
+                print("\(self.timeCount)  remaint\(application.backgroundTimeRemaining)")
+                sleep(1)
+                self.timeCount += 1
+            }
+        }
+         */
     }
-
+    
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        print("applicationWillEnterForeground")
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        print("applicationDidBecomeActive")
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        print("applicationWillTerminate")
     }
 
-
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        let currentDate = NSDate.init()
+        CCLogSystem.makeLog("get currentDate \(currentDate)")
+        completionHandler(.newData)
+    }
+    
+    //MARK:ios10通知
+    func registerNotification() {
+        let center = UNUserNotificationCenter.current()
+        center.delegate = self
+        center.requestAuthorization(options: [.alert,.badge,.sound]) { (ispermission, error) in
+            if ispermission {
+                print("授权成功")
+            }else{
+                print("授权失败 :\(error?.localizedDescription)")
+            }
+        }
+        UIApplication.shared.registerForRemoteNotifications()
+    }
 }
+
+extension AppDelegate: UNUserNotificationCenterDelegate{
+ 
+    //前台收到推送
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        print("收到通知 \(notification.request.content.userInfo)")
+        completionHandler(.badge)
+    }
+    /*
+     if UIApplication.shared.canOpenURL(URL.init(string: "dingtalk-open://")!){
+     UIApplication.shared.openURL(URL.init(string: "dingtalk-open://")!)
+     }
+     */
+    //后台点击推送
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        
+        CCLogSystem.makeLog("get notification \(NSDate.init())")
+        completionHandler()
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any], fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        
+        print("notification received \(userInfo)")
+        completionHandler(.newData)
+    }
+}
+
 

@@ -1,9 +1,9 @@
 //
 //  AppDelegate.swift
-//  SwiftSyntaxDemo
+//  SwiftProjiect
 //
-//  Created by runo on 16/12/5.
-//  Copyright © 2016年 com.runo. All rights reserved.
+//  Created by runo on 17/5/26.
+//  Copyright © 2017年 com.runo. All rights reserved.
 //
 
 import UIKit
@@ -12,13 +12,10 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
+
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        let nav = UINavigationController.init(rootViewController: TableViewController())
-        self.window?.rootViewController = nav
-        
+        // Override point for customization after application launch.
         return true
     }
 

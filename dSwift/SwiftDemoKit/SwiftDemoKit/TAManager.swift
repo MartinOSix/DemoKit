@@ -35,7 +35,7 @@ class TAManager: NSObject, UIViewControllerAnimatedTransitioning, CAAnimationDel
     }
     
     func pushAnimateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        print(" push ")
+        //print(" push ")
         //该参数包含了控制转场动画必要的信息
         self.transitionContext = transitionContext
         //目标VC
@@ -63,7 +63,7 @@ class TAManager: NSObject, UIViewControllerAnimatedTransitioning, CAAnimationDel
     }
     
     func popAnimateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        print(" pop ")
+        //print(" pop ")
         //该参数包含了控制转场动画必要的信息
         self.transitionContext = transitionContext
         //目标VC

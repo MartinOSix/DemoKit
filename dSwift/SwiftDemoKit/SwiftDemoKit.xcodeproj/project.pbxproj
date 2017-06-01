@@ -30,6 +30,18 @@
 		A00C80E31ECAE63900439AAA /* LinerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C80E21ECAE63900439AAA /* LinerLayout.swift */; };
 		A00C80E51ECAFD9E00439AAA /* FlowWaterLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C80E41ECAFD9E00439AAA /* FlowWaterLayout.swift */; };
 		A00C81251ECD2F5800439AAA /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00C81241ECD2F5800439AAA /* QRCodeViewController.swift */; };
+		A0610BC61ED90C4D008EE872 /* TransactionAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0610BC51ED90C4D008EE872 /* TransactionAnimationViewController.swift */; };
+		A0610BC81ED914F6008EE872 /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0610BC71ED914F6008EE872 /* MyCollectionViewController.swift */; };
+		A0610C0F1ED9501C008EE872 /* KeyFrameAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0610C0E1ED9501C008EE872 /* KeyFrameAnimationViewController.swift */; };
+		A0610C111ED97263008EE872 /* UserNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0610C101ED97263008EE872 /* UserNotificationViewController.swift */; };
+		A072E5CF1ED667C500547596 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072E5CE1ED667C500547596 /* TabbarViewController.swift */; };
+		A072E5D11ED667E400547596 /* TabAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072E5D01ED667E400547596 /* TabAViewController.swift */; };
+		A072E5D31ED667ED00547596 /* TabBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072E5D21ED667ED00547596 /* TabBViewController.swift */; };
+		A072E5D51ED667F600547596 /* TabCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072E5D41ED667F600547596 /* TabCViewController.swift */; };
+		A072E5D81ED66E4B00547596 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072E5D71ED66E4B00547596 /* SearchViewController.swift */; };
+		A072E5DA1ED6759A00547596 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072E5D91ED6759A00547596 /* SearchResultViewController.swift */; };
+		A072E61C1ED8112700547596 /* CoreAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072E61B1ED8112700547596 /* CoreAnimationViewController.swift */; };
+		A072E61E1ED8118200547596 /* BaseAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072E61D1ED8118200547596 /* BaseAnimationViewController.swift */; };
 		A09F2DF11EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F2DF01EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift */; };
 		A09F2DF41EBB294900E37355 /* TAManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F2DF31EBB294900E37355 /* TAManager.swift */; };
 		A09F2DF61EBB2B4300E37355 /* TransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F2DF51EBB2B4300E37355 /* TransitionViewController.swift */; };
@@ -115,6 +127,18 @@
 		A00C80E21ECAE63900439AAA /* LinerLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinerLayout.swift; sourceTree = "<group>"; };
 		A00C80E41ECAFD9E00439AAA /* FlowWaterLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowWaterLayout.swift; sourceTree = "<group>"; };
 		A00C81241ECD2F5800439AAA /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		A0610BC51ED90C4D008EE872 /* TransactionAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionAnimationViewController.swift; sourceTree = "<group>"; };
+		A0610BC71ED914F6008EE872 /* MyCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
+		A0610C0E1ED9501C008EE872 /* KeyFrameAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyFrameAnimationViewController.swift; sourceTree = "<group>"; };
+		A0610C101ED97263008EE872 /* UserNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationViewController.swift; sourceTree = "<group>"; };
+		A072E5CE1ED667C500547596 /* TabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
+		A072E5D01ED667E400547596 /* TabAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabAViewController.swift; sourceTree = "<group>"; };
+		A072E5D21ED667ED00547596 /* TabBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBViewController.swift; sourceTree = "<group>"; };
+		A072E5D41ED667F600547596 /* TabCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCViewController.swift; sourceTree = "<group>"; };
+		A072E5D71ED66E4B00547596 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		A072E5D91ED6759A00547596 /* SearchResultViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		A072E61B1ED8112700547596 /* CoreAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreAnimationViewController.swift; sourceTree = "<group>"; };
+		A072E61D1ED8118200547596 /* BaseAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseAnimationViewController.swift; sourceTree = "<group>"; };
 		A09F2DF01EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShapeLayerAnimationViewController.swift; sourceTree = "<group>"; };
 		A09F2DF31EBB294900E37355 /* TAManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TAManager.swift; sourceTree = "<group>"; };
 		A09F2DF51EBB2B4300E37355 /* TransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionViewController.swift; sourceTree = "<group>"; };
@@ -223,13 +247,64 @@
 			name = CollectionViewCustomStyle;
 			sourceTree = "<group>";
 		};
+		A0610BC41ED90C34008EE872 /* TransactionAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				A0610BC51ED90C4D008EE872 /* TransactionAnimationViewController.swift */,
+			);
+			name = TransactionAnimation;
+			sourceTree = "<group>";
+		};
+		A072E5CA1ED6674100547596 /* TabbarController */ = {
+			isa = PBXGroup;
+			children = (
+				A072E5CE1ED667C500547596 /* TabbarViewController.swift */,
+				A072E5D01ED667E400547596 /* TabAViewController.swift */,
+				A072E5D21ED667ED00547596 /* TabBViewController.swift */,
+				A072E5D41ED667F600547596 /* TabCViewController.swift */,
+			);
+			name = TabbarController;
+			sourceTree = "<group>";
+		};
+		A072E5D61ED66E3E00547596 /* SearchVC */ = {
+			isa = PBXGroup;
+			children = (
+				A072E5D71ED66E4B00547596 /* SearchViewController.swift */,
+				A072E5D91ED6759A00547596 /* SearchResultViewController.swift */,
+			);
+			name = SearchVC;
+			sourceTree = "<group>";
+		};
+		A072E6191ED810E800547596 /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				A0610BC41ED90C34008EE872 /* TransactionAnimation */,
+				A072E61A1ED8110D00547596 /* BaseAnimation */,
+				A072E61B1ED8112700547596 /* CoreAnimationViewController.swift */,
+				A0610C0E1ED9501C008EE872 /* KeyFrameAnimationViewController.swift */,
+			);
+			name = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		A072E61A1ED8110D00547596 /* BaseAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				A072E61D1ED8118200547596 /* BaseAnimationViewController.swift */,
+			);
+			name = BaseAnimation;
+			sourceTree = "<group>";
+		};
 		A09F2DEE1EBABFB500E37355 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A072E6191ED810E800547596 /* CoreAnimation */,
+				A072E5D61ED66E3E00547596 /* SearchVC */,
+				A072E5CA1ED6674100547596 /* TabbarController */,
 				A00C80DD1ECAD7B700439AAA /* CollectionViewCustomStyle */,
 				A09F2DF21EBB22D800E37355 /* TranctionAnimation */,
 				A0D8A72D1E7A8C5600E5C46B /* CollectionDemoViewController.swift */,
 				A00C7FDA1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift */,
+				A0610BC71ED914F6008EE872 /* MyCollectionViewController.swift */,
 				A0D8A72F1E7B723A00E5C46B /* LocationViewController.swift */,
 				A0D8A7341E7B889E00E5C46B /* SystemDownUpPullRefreshViewController.swift */,
 				A0D8A7361E7B8F7200E5C46B /* GradientColorViewController.swift */,
@@ -250,6 +325,7 @@
 				A00C80D91EC9B00F00439AAA /* CollectionChangePositionViewController.swift */,
 				A00C80DB1ECA908C00439AAA /* SortCollectionView.swift */,
 				A00C81241ECD2F5800439AAA /* QRCodeViewController.swift */,
+				A0610C101ED97263008EE872 /* UserNotificationViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -410,6 +486,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = XUCTDNYC49;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					A0D8A70F1E7A791700E5C46B = {
 						CreatedOnToolsVersion = 8.0;
@@ -481,25 +562,33 @@
 			files = (
 				A0FA50971E811C17008B296C /* DrawPaintViewController.swift in Sources */,
 				A0D8A7391E7BB54700E5C46B /* ImageScaleViewController.swift in Sources */,
+				A072E5CF1ED667C500547596 /* TabbarViewController.swift in Sources */,
 				A0DB847B1E7FBFDF007C7828 /* TableHeadViewController.swift in Sources */,
 				A00C80DF1ECAD7D400439AAA /* CustomeCollectionViewController.swift in Sources */,
 				A09F2DF61EBB2B4300E37355 /* TransitionViewController.swift in Sources */,
 				A09F2DF11EBAC8CE00E37355 /* ShapeLayerAnimationViewController.swift in Sources */,
+				A0610C0F1ED9501C008EE872 /* KeyFrameAnimationViewController.swift in Sources */,
 				A00C80AB1EC5BEEB00439AAA /* CellMenuViewController.swift in Sources */,
 				A0D8A7371E7B8F7200E5C46B /* GradientColorViewController.swift in Sources */,
 				A0DB84781E7FAFE5007C7828 /* ColorProgressViewController.swift in Sources */,
 				A00C7FD11EBC74AA00439AAA /* CCLogSystem.m in Sources */,
+				A072E5D51ED667F600547596 /* TabCViewController.swift in Sources */,
+				A072E61C1ED8112700547596 /* CoreAnimationViewController.swift in Sources */,
+				A072E5D31ED667ED00547596 /* TabBViewController.swift in Sources */,
 				A00C7FD41EBC74AA00439AAA /* CCTeeController.m in Sources */,
 				A09F2DFA1EBC2C6400E37355 /* CollectionViewAnimationController.swift in Sources */,
+				A0610BC61ED90C4D008EE872 /* TransactionAnimationViewController.swift in Sources */,
 				A00C7FD01EBC74AA00439AAA /* CCLogStringImp.m in Sources */,
 				A00C7FD51EBC74AA00439AAA /* NSObject+CCReverseComparison.m in Sources */,
 				A09F2DF81EBB35CE00E37355 /* MidleNavViewController.swift in Sources */,
 				A00C7FCC1EBC74AA00439AAA /* CCLog.m in Sources */,
 				A09F2DFC1EBC507300E37355 /* CollectionViewAnimationCell.swift in Sources */,
 				A00C80E51ECAFD9E00439AAA /* FlowWaterLayout.swift in Sources */,
+				A0610C111ED97263008EE872 /* UserNotificationViewController.swift in Sources */,
 				A00C7FD21EBC74AA00439AAA /* CCLogViewController.m in Sources */,
 				A0D8A72E1E7A8C5600E5C46B /* CollectionDemoViewController.swift in Sources */,
 				A00C80E11ECADA2E00439AAA /* ShowCollectionViewController.swift in Sources */,
+				A0610BC81ED914F6008EE872 /* MyCollectionViewController.swift in Sources */,
 				A0DB847F1E7FD12A007C7828 /* WaveViewController.swift in Sources */,
 				A00C80A91EC5A62600439AAA /* URLImageViewController.swift in Sources */,
 				A00C80DA1EC9B00F00439AAA /* CollectionChangePositionViewController.swift in Sources */,
@@ -507,13 +596,17 @@
 				A00C80E31ECAE63900439AAA /* LinerLayout.swift in Sources */,
 				A00C80DC1ECA908C00439AAA /* SortCollectionView.swift in Sources */,
 				A00C80231EC053E900439AAA /* ThreeTouchViewController.swift in Sources */,
+				A072E5D11ED667E400547596 /* TabAViewController.swift in Sources */,
 				A00C7FD31EBC74AA00439AAA /* CCSimpleFileOutputRedirectionController.m in Sources */,
 				A00C7FDB1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift in Sources */,
 				A0D8A7021E7A791700E5C46B /* ViewController.swift in Sources */,
 				A0DB847D1E7FCCB5007C7828 /* AnimateTableViewController.swift in Sources */,
+				A072E5D81ED66E4B00547596 /* SearchViewController.swift in Sources */,
 				A00C81251ECD2F5800439AAA /* QRCodeViewController.swift in Sources */,
 				A0D8A7351E7B889E00E5C46B /* SystemDownUpPullRefreshViewController.swift in Sources */,
 				A00C7FCB1EBC74AA00439AAA /* CCLocationMake.m in Sources */,
+				A072E61E1ED8118200547596 /* BaseAnimationViewController.swift in Sources */,
+				A072E5DA1ED6759A00547596 /* SearchResultViewController.swift in Sources */,
 				A0DB84741E7F6BB3007C7828 /* VideoBackgroundController.swift in Sources */,
 				A00C7FCD1EBC74AA00439AAA /* CCLogController+Utility.m in Sources */,
 				A0D8A7001E7A791700E5C46B /* AppDelegate.swift in Sources */,

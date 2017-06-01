@@ -18,6 +18,8 @@
 		A05BA7E71E0A34B30065E4EF /* ViewController_enum_Struct_class_protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A05BA7E61E0A34B30065E4EF /* ViewController_enum_Struct_class_protocol.swift */; };
 		A07216C11E026ED7007AC6DB /* ViewController_MultThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07216C01E026ED7007AC6DB /* ViewController_MultThread.swift */; };
 		A07216C31E076CB7007AC6DB /* ViewController_closure.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07216C21E076CB7007AC6DB /* ViewController_closure.swift */; };
+		A072E5DC1ED6C32D00547596 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072E5DB1ED6C32D00547596 /* TableViewController.swift */; };
+		A072E5DE1ED6CB5A00547596 /* DeepProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072E5DD1ED6CB5A00547596 /* DeepProtocolViewController.swift */; };
 		A0AC9A711E10B8E4005626C8 /* ViewController_Dictonary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC9A701E10B8E4005626C8 /* ViewController_Dictonary.swift */; };
 		A0AC9A731E10CA60005626C8 /* ViewController_controlFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC9A721E10CA60005626C8 /* ViewController_controlFlow.swift */; };
 		A0AC9A751E11FB26005626C8 /* ViewController_AnyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AC9A741E11FB26005626C8 /* ViewController_AnyObject.swift */; };
@@ -63,6 +65,8 @@
 		A05BA7E61E0A34B30065E4EF /* ViewController_enum_Struct_class_protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_enum_Struct_class_protocol.swift; sourceTree = "<group>"; };
 		A07216C01E026ED7007AC6DB /* ViewController_MultThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_MultThread.swift; sourceTree = "<group>"; };
 		A07216C21E076CB7007AC6DB /* ViewController_closure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_closure.swift; sourceTree = "<group>"; };
+		A072E5DB1ED6C32D00547596 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		A072E5DD1ED6CB5A00547596 /* DeepProtocolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeepProtocolViewController.swift; sourceTree = "<group>"; };
 		A0AC9A701E10B8E4005626C8 /* ViewController_Dictonary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Dictonary.swift; sourceTree = "<group>"; };
 		A0AC9A721E10CA60005626C8 /* ViewController_controlFlow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_controlFlow.swift; sourceTree = "<group>"; };
 		A0AC9A741E11FB26005626C8 /* ViewController_AnyObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_AnyObject.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 				A0C3134E1E0BE50500A72F11 /* NSObject_SharInstance.swift */,
 				A0AC9A741E11FB26005626C8 /* ViewController_AnyObject.swift */,
 				A0AC9A761E120C9F005626C8 /* ViewController_Class.swift */,
+				A072E5DB1ED6C32D00547596 /* TableViewController.swift */,
+				A072E5DD1ED6CB5A00547596 /* DeepProtocolViewController.swift */,
 			);
 			path = SwiftSyntaxDemo;
 			sourceTree = "<group>";
@@ -318,6 +324,7 @@
 				A0C3134B1E0BD55100A72F11 /* ViewController_ViewA.swift in Sources */,
 				A0AC9A711E10B8E4005626C8 /* ViewController_Dictonary.swift in Sources */,
 				A007C7D61DF54D8700765E4C /* ViewController_Function.swift in Sources */,
+				A072E5DE1ED6CB5A00547596 /* DeepProtocolViewController.swift in Sources */,
 				A007C7AA1DF54D5700765E4C /* ViewController.swift in Sources */,
 				A0C313521E0D1CE900A72F11 /* ViewController_Array.swift in Sources */,
 				A07216C31E076CB7007AC6DB /* ViewController_closure.swift in Sources */,
@@ -327,6 +334,7 @@
 				A0C3134F1E0BE50500A72F11 /* NSObject_SharInstance.swift in Sources */,
 				A007C7A81DF54D5700765E4C /* AppDelegate.swift in Sources */,
 				A05BA7E71E0A34B30065E4EF /* ViewController_enum_Struct_class_protocol.swift in Sources */,
+				A072E5DC1ED6C32D00547596 /* TableViewController.swift in Sources */,
 				A0AC9A771E120C9F005626C8 /* ViewController_Class.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

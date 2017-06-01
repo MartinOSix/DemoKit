@@ -34,7 +34,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                       ("cell左滑菜单，编辑状态","CellMenuViewController"),
                       ("colletion改变位置","CollectionChangePositionViewController"),
                       ("自定义collectionView布局","CustomeCollectionViewController"),
-                      ("扫描和长按识别二维码","QRCodeViewController")
+                      ("扫描和长按识别二维码","QRCodeViewController"),
+                      ("tabbar示例","TabbarViewController"),
+                      ("搜索viewcontroller","SearchViewController"),
+                      ("动画集合","CoreAnimationViewController"),
+                      ("collection自定义的section背景","MyCollectionViewController"),
+                      ("用户通知","UserNotificationViewController")
     ] as [(String,String)]
     
     

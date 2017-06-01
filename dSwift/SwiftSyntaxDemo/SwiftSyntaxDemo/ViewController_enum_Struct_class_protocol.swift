@@ -56,6 +56,12 @@ struct StudentType3 {
     }
 }
 
+struct StudentScore {
+    var chinese: Int
+    var math: Int
+    var english: Int
+}
+
 
 class ViewController_enum_Struct_class_protocol: UIViewController {
 
@@ -64,6 +70,8 @@ class ViewController_enum_Struct_class_protocol: UIViewController {
 
         self.view.backgroundColor = UIColor.white
         
+        
+        let s1 = StudentScore.init(chinese: 10, math: 20, english: 30)
         
         let student1 = StudentType.pupil.rawValue;//rawValue 表示枚举成员的原始值 5
         print(student1)
