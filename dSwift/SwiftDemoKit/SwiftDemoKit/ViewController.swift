@@ -16,6 +16,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     let tableView = UITableView.init(frame: CGRect.zero, style: UITableViewStyle.plain)
     let dataSource = [("Collection创建使用","CollectionDemoViewController"),
+                      ("时间处理","DateViewController"),
+                      ("重力行为","UIDynamicMenuViewController"),
+                      ("提示框","AlertViewController"),
+                      ("图片选择","ImagePickerViewController"),
                       ("定位框架只定位","LocationViewController"),
                       ("系统的下拉刷新控件","SystemDownUpPullRefreshViewController"),
                       ("线性颜色变换","GradientColorViewController"),
@@ -77,13 +81,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // swift 中通过Class创建一个对象,必须告诉系统Class的类型
         guard let clsType = cls as? UIViewController.Type else {
-            print("无法转换成UITableViewController")
+            print("无法转换成UIViewController")
             return
         }
-        
-        let vc = clsType.init()
-        vc.title = dataSource[indexPath.row].0
+        var vc = clsType.init()
         vc.view.backgroundColor = UIColor.white
+        if classString.compare("ImagePickerViewController") == ComparisonResult.orderedSame {
+            vc = ImagePickerViewController(nibName: "ImagePickerVC", bundle: nil)
+        }
+        vc.title = dataSource[indexPath.row].0
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

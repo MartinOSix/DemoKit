@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CAAnimationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         registerNotification()
-        CCLogSystem.setupDefaultLogConfigure()
-        CCLogSystem.makeLog("first \(launchOptions)")
+        //CCLogSystem.setupDefaultLogConfigure()
+        //CCLogSystem.makeLog("first \(launchOptions)")
         self.window = UIWindow.init(frame: kScreenBounds)
         self.window?.makeKeyAndVisible()
         self.rootNav = MidleNavViewController.init(rootViewController: ViewController())
@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CAAnimationDelegate {
 
     
     func navClick() {
-        CCLogSystem.activeDeveloperUI()
+        //CCLogSystem.activeDeveloperUI()
     }
     
     func animateMask() {
@@ -76,7 +76,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CAAnimationDelegate {
     
     //3Dtouch响应
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-        CCLogSystem.makeLog("second")
+        //CCLogSystem.makeLog("second")
         print(shortcutItem.type)
         if shortcutItem.type.compare("UIApplicationShortcutItemTypeMessage") == ComparisonResult.orderedSame {
             self.rootNav?.pushViewController(CollectionDemoViewController(), animated: true)
@@ -146,7 +146,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CAAnimationDelegate {
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         
         let currentDate = NSDate.init()
-        CCLogSystem.makeLog("get currentDate \(currentDate)")
+        //CCLogSystem.makeLog("get currentDate \(currentDate)")
         completionHandler(.newData)
     }
     
@@ -181,7 +181,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate{
     //后台点击推送
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         
-        CCLogSystem.makeLog("get notification \(NSDate.init())")
+        //CCLogSystem.makeLog("get notification \(NSDate.init())")
         completionHandler()
     }
     

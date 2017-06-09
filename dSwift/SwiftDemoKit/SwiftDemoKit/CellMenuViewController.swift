@@ -43,7 +43,7 @@ class CellMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     func rightbtnclick() {
-        /*
+        
         self.tableview.setEditing(!self.tableviewEditing, animated: true)
         self.tableviewEditing = !self.tableviewEditing
         if self.tableviewEditing {
@@ -51,8 +51,8 @@ class CellMenuViewController: UIViewController,UITableViewDelegate,UITableViewDa
         }else{
             self.rightbtn?.title = "编辑"
         }
-         */
-        tableview.deselectRow(at: IndexPath.init(row: 5, section: 0), animated: true)
+ 
+        //tableview.deselectRow(at: IndexPath.init(row: 5, section: 0), animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

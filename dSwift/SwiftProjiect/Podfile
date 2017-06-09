@@ -6,5 +6,8 @@ target "SwiftProjiect" do
 pod 'SVProgressHUD'
 pod 'FDFullscreenPopGesture', '1.1'
 pod 'Alamofire', '4.3.0'
+pod 'SnapKit', '~> 3.1.2'
+pod 'Kingfisher', '~>3.3.4'
+pod 'SwiftyJSON', '~> 3.1.4'
 
 end

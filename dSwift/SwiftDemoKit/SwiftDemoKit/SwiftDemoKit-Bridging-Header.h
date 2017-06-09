@@ -9,7 +9,7 @@
 #ifndef SwiftDemoKit_Bridging_Header_h
 #define SwiftDemoKit_Bridging_Header_h
 
-#import "CCLogSystem.h"
+//#import "CCLogSystem.h"
 
 
 #endif /* SwiftDemoKit_Bridging_Header_h */

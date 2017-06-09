@@ -34,6 +34,13 @@
 		A0610BC81ED914F6008EE872 /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0610BC71ED914F6008EE872 /* MyCollectionViewController.swift */; };
 		A0610C0F1ED9501C008EE872 /* KeyFrameAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0610C0E1ED9501C008EE872 /* KeyFrameAnimationViewController.swift */; };
 		A0610C111ED97263008EE872 /* UserNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0610C101ED97263008EE872 /* UserNotificationViewController.swift */; };
+		A0610C171EE002A4008EE872 /* DateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0610C161EE002A4008EE872 /* DateViewController.swift */; };
+		A0610C1A1EE1030E008EE872 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0610C191EE1030E008EE872 /* ImagePickerViewController.swift */; };
+		A0610C1E1EE103AD008EE872 /* ImagePickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0610C1D1EE103AD008EE872 /* ImagePickerVC.xib */; };
+		A0610C201EE115F9008EE872 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0610C1F1EE115F9008EE872 /* MobileCoreServices.framework */; };
+		A0610C241EE152BB008EE872 /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0610C221EE152BB008EE872 /* AlertViewController.swift */; };
+		A0610C251EE152BB008EE872 /* AlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0610C231EE152BB008EE872 /* AlertViewController.xib */; };
+		A0610C281EE16860008EE872 /* UIDynamicMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0610C271EE16860008EE872 /* UIDynamicMenuViewController.swift */; };
 		A072E5CF1ED667C500547596 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072E5CE1ED667C500547596 /* TabbarViewController.swift */; };
 		A072E5D11ED667E400547596 /* TabAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072E5D01ED667E400547596 /* TabAViewController.swift */; };
 		A072E5D31ED667ED00547596 /* TabBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A072E5D21ED667ED00547596 /* TabBViewController.swift */; };
@@ -131,6 +138,13 @@
 		A0610BC71ED914F6008EE872 /* MyCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
 		A0610C0E1ED9501C008EE872 /* KeyFrameAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyFrameAnimationViewController.swift; sourceTree = "<group>"; };
 		A0610C101ED97263008EE872 /* UserNotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotificationViewController.swift; sourceTree = "<group>"; };
+		A0610C161EE002A4008EE872 /* DateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateViewController.swift; sourceTree = "<group>"; };
+		A0610C191EE1030E008EE872 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
+		A0610C1D1EE103AD008EE872 /* ImagePickerVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImagePickerVC.xib; sourceTree = "<group>"; };
+		A0610C1F1EE115F9008EE872 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		A0610C221EE152BB008EE872 /* AlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		A0610C231EE152BB008EE872 /* AlertViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlertViewController.xib; sourceTree = "<group>"; };
+		A0610C271EE16860008EE872 /* UIDynamicMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIDynamicMenuViewController.swift; sourceTree = "<group>"; };
 		A072E5CE1ED667C500547596 /* TabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		A072E5D01ED667E400547596 /* TabAViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabAViewController.swift; sourceTree = "<group>"; };
 		A072E5D21ED667ED00547596 /* TabBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBViewController.swift; sourceTree = "<group>"; };
@@ -182,6 +196,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0610C201EE115F9008EE872 /* MobileCoreServices.framework in Frameworks */,
 				A09F2E021EBC6E4700E37355 /* MediaPlayer.framework in Frameworks */,
 				A09F2E001EBC6E4100E37355 /* AVKit.framework in Frameworks */,
 				A09F2DFE1EBC6DCC00E37355 /* AVFoundation.framework in Frameworks */,
@@ -255,6 +270,40 @@
 			name = TransactionAnimation;
 			sourceTree = "<group>";
 		};
+		A0610C151EE0028D008EE872 /* DateHandle */ = {
+			isa = PBXGroup;
+			children = (
+				A0610C161EE002A4008EE872 /* DateViewController.swift */,
+			);
+			name = DateHandle;
+			sourceTree = "<group>";
+		};
+		A0610C181EE102FA008EE872 /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				A0610C191EE1030E008EE872 /* ImagePickerViewController.swift */,
+				A0610C1D1EE103AD008EE872 /* ImagePickerVC.xib */,
+			);
+			name = ImagePicker;
+			sourceTree = "<group>";
+		};
+		A0610C211EE152A2008EE872 /* AlertController */ = {
+			isa = PBXGroup;
+			children = (
+				A0610C221EE152BB008EE872 /* AlertViewController.swift */,
+				A0610C231EE152BB008EE872 /* AlertViewController.xib */,
+			);
+			name = AlertController;
+			sourceTree = "<group>";
+		};
+		A0610C261EE16841008EE872 /* UIDynamic */ = {
+			isa = PBXGroup;
+			children = (
+				A0610C271EE16860008EE872 /* UIDynamicMenuViewController.swift */,
+			);
+			name = UIDynamic;
+			sourceTree = "<group>";
+		};
 		A072E5CA1ED6674100547596 /* TabbarController */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +346,10 @@
 		A09F2DEE1EBABFB500E37355 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				A0610C261EE16841008EE872 /* UIDynamic */,
+				A0610C211EE152A2008EE872 /* AlertController */,
+				A0610C181EE102FA008EE872 /* ImagePicker */,
+				A0610C151EE0028D008EE872 /* DateHandle */,
 				A072E6191ED810E800547596 /* CoreAnimation */,
 				A072E5D61ED66E3E00547596 /* SearchVC */,
 				A072E5CA1ED6674100547596 /* TabbarController */,
@@ -408,6 +461,7 @@
 		A0D8A7311E7B757200E5C46B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A0610C1F1EE115F9008EE872 /* MobileCoreServices.framework */,
 				A09F2E011EBC6E4700E37355 /* MediaPlayer.framework */,
 				A09F2DFF1EBC6E4100E37355 /* AVKit.framework */,
 				A09F2DFD1EBC6DCC00E37355 /* AVFoundation.framework */,
@@ -531,11 +585,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0610C1E1EE103AD008EE872 /* ImagePickerVC.xib in Resources */,
 				A0D8A70A1E7A791700E5C46B /* LaunchScreen.storyboard in Resources */,
 				A0DB84761E7F85BB007C7828 /* moments.mp4 in Resources */,
 				A00C80251EC0768F00439AAA /* lightning.png in Resources */,
 				A0D8A7071E7A791700E5C46B /* Assets.xcassets in Resources */,
 				A0D8A7051E7A791700E5C46B /* Main.storyboard in Resources */,
+				A0610C251EE152BB008EE872 /* AlertViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,8 +632,10 @@
 				A072E61C1ED8112700547596 /* CoreAnimationViewController.swift in Sources */,
 				A072E5D31ED667ED00547596 /* TabBViewController.swift in Sources */,
 				A00C7FD41EBC74AA00439AAA /* CCTeeController.m in Sources */,
+				A0610C1A1EE1030E008EE872 /* ImagePickerViewController.swift in Sources */,
 				A09F2DFA1EBC2C6400E37355 /* CollectionViewAnimationController.swift in Sources */,
 				A0610BC61ED90C4D008EE872 /* TransactionAnimationViewController.swift in Sources */,
+				A0610C281EE16860008EE872 /* UIDynamicMenuViewController.swift in Sources */,
 				A00C7FD01EBC74AA00439AAA /* CCLogStringImp.m in Sources */,
 				A00C7FD51EBC74AA00439AAA /* NSObject+CCReverseComparison.m in Sources */,
 				A09F2DF81EBB35CE00E37355 /* MidleNavViewController.swift in Sources */,
@@ -602,6 +660,7 @@
 				A0D8A7021E7A791700E5C46B /* ViewController.swift in Sources */,
 				A0DB847D1E7FCCB5007C7828 /* AnimateTableViewController.swift in Sources */,
 				A072E5D81ED66E4B00547596 /* SearchViewController.swift in Sources */,
+				A0610C241EE152BB008EE872 /* AlertViewController.swift in Sources */,
 				A00C81251ECD2F5800439AAA /* QRCodeViewController.swift in Sources */,
 				A0D8A7351E7B889E00E5C46B /* SystemDownUpPullRefreshViewController.swift in Sources */,
 				A00C7FCB1EBC74AA00439AAA /* CCLocationMake.m in Sources */,
@@ -612,6 +671,7 @@
 				A0D8A7001E7A791700E5C46B /* AppDelegate.swift in Sources */,
 				A0D8A7301E7B723A00E5C46B /* LocationViewController.swift in Sources */,
 				A00C7FCE1EBC74AA00439AAA /* CCLogController.m in Sources */,
+				A0610C171EE002A4008EE872 /* DateViewController.swift in Sources */,
 				A00C7FCF1EBC74AA00439AAA /* CCLogReviewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -768,6 +828,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XUCTDNYC49;
 				INFOPLIST_FILE = SwiftDemoKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.runo.SwiftDemoKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -781,6 +842,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XUCTDNYC49;
 				INFOPLIST_FILE = SwiftDemoKit/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.runo.SwiftDemoKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
