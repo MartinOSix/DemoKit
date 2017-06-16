@@ -22,12 +22,41 @@ enum StudentType2 {
     case collegeStudents(Int,String)
 }
 
+//枚举类型
+enum CompassPoint: String {
+    case North, South, East, West
+}
+
+//枚举中的函数
+enum Wearable {
+    enum Weight: Int {
+        case Light = 2
+    }
+    
+    enum Armor: Int {
+        case Light = 2
+    }
+    
+    case Helmet(weight: Weight, armor: Armor)
+    
+    
+    func attributes() -> (weight: Int, armor: Int) {
+        switch self {
+        case .Helmet(let w, let a):
+            return (weight: w.rawValue * 2, armor: a.rawValue * 4)
+            
+        }
+    }
+}
+
 
 class ModelT1 {
     var name :String = "name"
     var age :Int = 0
     var height :Float = 1.65
 }
+
+
 //结构体
 //所有的结构体都有一个自动生成的成员初始化器，你可以使用它来初始化新结构体实例的成员
 //一旦我们自定义了初始化器，系统自动的初始化器就不起作用了,再要就自己写
@@ -62,7 +91,6 @@ struct StudentScore {
     var english: Int
 }
 
-
 class ViewController_enum_Struct_class_protocol: UIViewController {
 
     override func viewDidLoad() {
@@ -70,7 +98,20 @@ class ViewController_enum_Struct_class_protocol: UIViewController {
 
         self.view.backgroundColor = UIColor.white
         
+        test_enumeType()
+    }
+    
+    func test_enumeType() {
         
+        let n = CompassPoint.North
+        print(n.rawValue)
+        
+        let test = Wearable.Helmet(weight: .Light, armor: .Light).attributes()
+        print(test)
+        
+    }
+    
+    func test1() {
         let s1 = StudentScore.init(chinese: 10, math: 20, english: 30)
         
         let student1 = StudentType.pupil.rawValue;//rawValue 表示枚举成员的原始值 5
@@ -105,7 +146,6 @@ class ViewController_enum_Struct_class_protocol: UIViewController {
         if m1 !== m2 {
             print("不同实例")
         }
-        
     }
 
 }

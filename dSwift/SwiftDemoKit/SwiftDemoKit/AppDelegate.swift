@@ -75,6 +75,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CAAnimationDelegate {
     }
     
     //3Dtouch响应
+    @available(iOS 9.0, *)
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
         //CCLogSystem.makeLog("second")
         print(shortcutItem.type)

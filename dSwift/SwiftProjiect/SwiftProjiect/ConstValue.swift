@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ConstValue: NSObject {
 
-}
+let kaFirstLaunch = "firstLaunch"
+

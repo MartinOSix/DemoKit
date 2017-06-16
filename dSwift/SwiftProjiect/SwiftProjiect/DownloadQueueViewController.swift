@@ -1,3 +1,4 @@
+
 //
 //  DownloadQueueViewController.swift
 //  SwiftProjiect
@@ -10,26 +11,27 @@ import UIKit
 
 class DownloadQueueViewController: UIViewController {
 
+    
+    let queuq = OperationQueue.init()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.queuq.isSuspended = true
+        self.queuq.maxConcurrentOperationCount = 1
+        for i in 0...100 {
+            self.queuq.addOperation {
+            print("task \(i) : \(Thread.current)")
+            }
+        }
+        
+        
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func btnclick(_ sender: AnyObject) {
+        
+        self.queuq.isSuspended = false
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  
 }

@@ -15,7 +15,8 @@ import FDFullscreenPopGesture
 class ViewController: UITableViewController {
 
     
-    let dataSource = [("SVProgressHUD创建使用","SVProgressHudDemoTableViewController")
+    let dataSource = [("SVProgressHUD创建使用","SVProgressHudDemoTableViewController"),
+                      ("队列下载","DownloadQueueViewController")
                       ]
     
     override func viewDidLoad() {
@@ -47,6 +48,16 @@ class ViewController: UITableViewController {
         let classString = dataSource[indexPath.row].1
         // 2.通过命名空间和类名转换成类
         let cls : AnyClass? = NSClassFromString((clsName as! String) + "." + classString)
+        
+        if classString.compare("DownloadQueueViewController") == .orderedSame {
+            
+            let vc = DownloadQueueViewController(nibName: "Empty", bundle: nil)
+            vc.view.backgroundColor = UIColor.white
+            vc.title = dataSource[indexPath.row].0
+            self.navigationController?.pushViewController(vc, animated: true)
+            return
+        }
+        
         
         // swift 中通过Class创建一个对象,必须告诉系统Class的类型
         guard let clsType = cls as? UIViewController.Type else {

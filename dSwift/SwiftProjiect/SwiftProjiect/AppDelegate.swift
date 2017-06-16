@@ -22,8 +22,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         self.window = UIWindow.init(frame: kScreenBounds)
+        //判断是否第一次启动
+        if UserDefaults.standard.bool(forKey: kaFirstLaunch) {
+            
+            let mainNav = MainNavigationViewController(rootViewController: MainTabBarViewController())
+            self.window?.rootViewController = mainNav
+            mainNav.navigationBar.isHidden = true
+            
+        }else{
+            
+            let mainNav = MainNavigationViewController(rootViewController: NewRefreshViewController())
+            self.window?.rootViewController = mainNav
+            mainNav.navigationBar.isHidden = true
+            UserDefaults.standard.set(true, forKey: kaFirstLaunch)
+        }
+        
+        /*
         let nav = CQBaseNavigationViewController(rootViewController: ViewController())
         self.window?.rootViewController = nav
+         */
         self.window?.makeKeyAndVisible()
         
         return true

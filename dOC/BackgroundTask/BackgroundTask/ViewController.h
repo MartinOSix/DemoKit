@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property(nonatomic,readonly,assign) NSInteger age;
 
 @end
 

@@ -9,16 +9,35 @@
 import UIKit
 import UserNotifications
 
+let postTestName = "postTestName"
+
 class UserNotificationViewController: UIViewController {
     
     
+    let dataSource = ["本地通知","通知中心通知"]
+    
+    let tableView:UITableView = {
+       let tableView = UITableView.init(frame: kScreenBounds, style: .plain)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        return tableView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.view.addSubview(self.tableView)
+        
+        //本机先注册自己的
+        NotificationCenter.default.addObserver(self, selector: #selector(getNotification(notif:)), name: NSNotification.Name.init(postTestName), object: nil)
         
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    func getNotification(notif :Notification) {
+        print("get notification \(notif)")
+    }
+    
+    func localNotification() {
         
         let content = UNMutableNotificationContent()
         content.title = "本地通知"
@@ -46,8 +65,41 @@ class UserNotificationViewController: UIViewController {
             print("send complete")
         }
     }
+    
+    func notificationCenter() {
+        let not = Notification.init(name: Notification.Name.init(postTestName), object: nil, userInfo: ["name":"haha"])
+        NotificationCenter.default.post(not)
+    }
+    
+    
+    
 }
 
+
+extension UserNotificationViewController :UITableViewDelegate,UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.dataSource.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")
+        cell?.textLabel?.text = self.dataSource[indexPath.row]
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            localNotification()
+        case 1:
+            notificationCenter()
+        default:
+            break
+        }
+    }
+    
+}
 
 
 

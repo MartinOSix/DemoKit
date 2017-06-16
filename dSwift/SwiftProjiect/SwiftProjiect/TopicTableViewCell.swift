@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class TopicTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var bgImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -17,8 +22,12 @@ class TopicTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    }
+    
+    func loadItemModel(model :TopicItemModel) {
+        
+        self.bgImageView.kf.setImage(with: URL.init(string: model.cover_image_url!), placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
+        self.titleLabel.text = model.title
     }
     
 }

@@ -13,6 +13,12 @@ class WodeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        let pview = ProgressView(frame: CGRect.init(x: 0, y: 0, width: 100, height: 100))
+        pview.progress = 0.5
+        pview.backgroundColor = UIColor.white
+        self.view.addSubview(pview)
+        
         // Do any additional setup after loading the view.
     }
 
