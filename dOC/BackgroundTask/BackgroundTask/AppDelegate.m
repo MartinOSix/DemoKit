@@ -8,6 +8,13 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "HomeViewController.h"
+#import <UserNotifications/UserNotifications.h>
+#import "CCLogSystem.h"
+/**屏幕尺寸*/
+#define kScreenBounds ([[UIScreen mainScreen] bounds])
+#define kScreenWidth (kScreenBounds.size.width)
+#define kScreenHeight (kScreenBounds.size.height)
 
 @interface AppDelegate ()
 
@@ -18,9 +25,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [CCLogSystem setupDefaultLogConfigure];
+    NSLog(NSHomeDirectory());
+    self.window = [[UIWindow alloc]initWithFrame:kScreenBounds];
+    self.window.rootViewController = [[HomeViewController alloc]init];
+    [self.window makeKeyAndVisible];
     
-    ViewController *vc = [[ViewController alloc]init];
-    NSLog(@"--- %zd",vc.age);
+    //本地推送
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
+    [[UIApplication sharedApplication] registerForRemoteNotifications];
     
     return YES;
 }
@@ -51,6 +65,48 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    NSLog(@"applicationWillTerminate");
+    
+}
+
+-(void)application:(UIApplication *)application handleEventsForBackgroundURLSession:(NSString *)identifier completionHandler:(void (^)())completionHandler{
+    self.backgroundSessionCompletionHandler = completionHandler;
+    [self presentNotification:identifier];
+    NSLog(@"下载完成回调");
+}
+
+-(void)presentNotification:(NSString *)identifier{
+    //创建通知内容
+    UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc]init];
+    content.title = @"本地通知测试";
+    content.subtitle = @"本地副标题";
+    content.body = identifier;
+    content.badge = @2;
+    //设置声音
+    UNNotificationSound *sound = [UNNotificationSound defaultSound];
+    content.sound = sound;
+    
+    //设置出发模式
+    UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:4 repeats:NO];
+    //设置UNNotificationRquest
+    UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"requestIdentifer" content:content trigger:trigger];
+    [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+        NSLog(@"完成");
+    }];
+}
+
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+    
+}
+#pragma mark - ios10接收推送
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler{
+    
+    NSLog(@"willPresentNotification");
+    completionHandler(UNAuthorizationOptionBadge|UNNotificationPresentationOptionSound|UNNotificationPresentationOptionAlert);
+}
+-(void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler{
+    NSLog(@"didReceiveNotificationResponse");
+    completionHandler();//!<系统强制最后执行该方法
 }
 
 

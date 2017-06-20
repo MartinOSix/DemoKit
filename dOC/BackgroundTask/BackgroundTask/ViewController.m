@@ -134,7 +134,8 @@
     
     [son haha];
     //[son hehe2345];
-    [son performSelector:@selector(hehe2345)];
+    [son performSelector:@selector(hehe2345)];//调用不识别的方法
+    
     //BOOL isres = [son respondsToSelector:@selector(hehe)];
     //NSLog(@"isresp   %d",isres);
     

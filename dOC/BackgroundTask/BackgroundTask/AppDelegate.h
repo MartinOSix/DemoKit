@@ -11,7 +11,9 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (copy) void (^backgroundSessionCompletionHandler)();
 
+-(void)presentNotification:(NSString *)identifier;
 
 @end
 

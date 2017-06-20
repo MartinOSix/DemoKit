@@ -15,6 +15,25 @@
 		A079DEC31E1CF205005F2099 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A079DEC11E1CF205005F2099 /* LaunchScreen.storyboard */; };
 		A079DECE1E1CF205005F2099 /* BackgroundTaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A079DECD1E1CF205005F2099 /* BackgroundTaskTests.m */; };
 		A079DED91E1CF205005F2099 /* BackgroundTaskUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A079DED81E1CF205005F2099 /* BackgroundTaskUITests.m */; };
+		A09E5F8E1EF3CB5700671485 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5F8D1EF3CB5700671485 /* HomeViewController.m */; };
+		A09E5F921EF3CC6F00671485 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5F901EF3CC6F00671485 /* MovieTableViewCell.m */; };
+		A09E5F931EF3CC6F00671485 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A09E5F911EF3CC6F00671485 /* MovieTableViewCell.xib */; };
+		A09E5F961EF3CF7000671485 /* FileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5F951EF3CF7000671485 /* FileModel.m */; };
+		A09E5F991EF8C8F500671485 /* BackgroundTaskModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5F981EF8C8F500671485 /* BackgroundTaskModel.m */; };
+		A09E5F9C1EF8C91100671485 /* CommonUtile.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5F9B1EF8C91100671485 /* CommonUtile.m */; };
+		A09E5F9F1EF8FE3D00671485 /* DownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5F9E1EF8FE3D00671485 /* DownloadManager.m */; };
+		A09E5FB81EF913A400671485 /* CCLocationMake.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5FA31EF913A300671485 /* CCLocationMake.m */; };
+		A09E5FB91EF913A400671485 /* CCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5FA51EF913A400671485 /* CCLog.m */; };
+		A09E5FBA1EF913A400671485 /* CCLogController+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5FA71EF913A400671485 /* CCLogController+Utility.m */; };
+		A09E5FBB1EF913A400671485 /* CCLogController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5FA91EF913A400671485 /* CCLogController.m */; };
+		A09E5FBC1EF913A400671485 /* CCLogReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5FAB1EF913A400671485 /* CCLogReviewViewController.m */; };
+		A09E5FBD1EF913A400671485 /* CCLogStringImp.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5FAD1EF913A400671485 /* CCLogStringImp.m */; };
+		A09E5FBE1EF913A400671485 /* CCLogSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5FAF1EF913A400671485 /* CCLogSystem.m */; };
+		A09E5FBF1EF913A400671485 /* CCLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5FB11EF913A400671485 /* CCLogViewController.m */; };
+		A09E5FC01EF913A400671485 /* CCSimpleFileOutputRedirectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5FB31EF913A400671485 /* CCSimpleFileOutputRedirectionController.m */; };
+		A09E5FC11EF913A400671485 /* CCTeeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5FB51EF913A400671485 /* CCTeeController.m */; };
+		A09E5FC21EF913A400671485 /* NSObject+CCReverseComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E5FB71EF913A400671485 /* NSObject+CCReverseComparison.m */; };
+		A1E6CC9894B0DED16322135E /* libPods-BackgroundTask.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1901FB8CB4780DC210788FA0 /* libPods-BackgroundTask.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1901FB8CB4780DC210788FA0 /* libPods-BackgroundTask.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BackgroundTask.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		878860FF5FF2BA6351403FC1 /* Pods-BackgroundTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundTask/Pods-BackgroundTask.debug.xcconfig"; sourceTree = "<group>"; };
 		A079DEB01E1CF205005F2099 /* BackgroundTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A079DEB41E1CF205005F2099 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A079DEB61E1CF205005F2099 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +72,43 @@
 		A079DED41E1CF205005F2099 /* BackgroundTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A079DED81E1CF205005F2099 /* BackgroundTaskUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BackgroundTaskUITests.m; sourceTree = "<group>"; };
 		A079DEDA1E1CF205005F2099 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A09E5F8C1EF3CB5600671485 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		A09E5F8D1EF3CB5700671485 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		A09E5F8F1EF3CC6F00671485 /* MovieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
+		A09E5F901EF3CC6F00671485 /* MovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
+		A09E5F911EF3CC6F00671485 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		A09E5F941EF3CF7000671485 /* FileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileModel.h; sourceTree = "<group>"; };
+		A09E5F951EF3CF7000671485 /* FileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileModel.m; sourceTree = "<group>"; };
+		A09E5F971EF8C8F500671485 /* BackgroundTaskModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundTaskModel.h; sourceTree = "<group>"; };
+		A09E5F981EF8C8F500671485 /* BackgroundTaskModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundTaskModel.m; sourceTree = "<group>"; };
+		A09E5F9A1EF8C91100671485 /* CommonUtile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtile.h; sourceTree = "<group>"; };
+		A09E5F9B1EF8C91100671485 /* CommonUtile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtile.m; sourceTree = "<group>"; };
+		A09E5F9D1EF8FE3D00671485 /* DownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadManager.h; sourceTree = "<group>"; };
+		A09E5F9E1EF8FE3D00671485 /* DownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadManager.m; sourceTree = "<group>"; };
+		A09E5FA11EF913A300671485 /* CCFileOutputRedirectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFileOutputRedirectionController.h; sourceTree = "<group>"; };
+		A09E5FA21EF913A300671485 /* CCLocationMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocationMake.h; sourceTree = "<group>"; };
+		A09E5FA31EF913A300671485 /* CCLocationMake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLocationMake.m; sourceTree = "<group>"; };
+		A09E5FA41EF913A300671485 /* CCLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLog.h; sourceTree = "<group>"; };
+		A09E5FA51EF913A400671485 /* CCLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLog.m; sourceTree = "<group>"; };
+		A09E5FA61EF913A400671485 /* CCLogController+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCLogController+Utility.h"; sourceTree = "<group>"; };
+		A09E5FA71EF913A400671485 /* CCLogController+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCLogController+Utility.m"; sourceTree = "<group>"; };
+		A09E5FA81EF913A400671485 /* CCLogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLogController.h; sourceTree = "<group>"; };
+		A09E5FA91EF913A400671485 /* CCLogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLogController.m; sourceTree = "<group>"; };
+		A09E5FAA1EF913A400671485 /* CCLogReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLogReviewViewController.h; sourceTree = "<group>"; };
+		A09E5FAB1EF913A400671485 /* CCLogReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLogReviewViewController.m; sourceTree = "<group>"; };
+		A09E5FAC1EF913A400671485 /* CCLogStringImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLogStringImp.h; sourceTree = "<group>"; };
+		A09E5FAD1EF913A400671485 /* CCLogStringImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLogStringImp.m; sourceTree = "<group>"; };
+		A09E5FAE1EF913A400671485 /* CCLogSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLogSystem.h; sourceTree = "<group>"; };
+		A09E5FAF1EF913A400671485 /* CCLogSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLogSystem.m; sourceTree = "<group>"; };
+		A09E5FB01EF913A400671485 /* CCLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLogViewController.h; sourceTree = "<group>"; };
+		A09E5FB11EF913A400671485 /* CCLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLogViewController.m; sourceTree = "<group>"; };
+		A09E5FB21EF913A400671485 /* CCSimpleFileOutputRedirectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSimpleFileOutputRedirectionController.h; sourceTree = "<group>"; };
+		A09E5FB31EF913A400671485 /* CCSimpleFileOutputRedirectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSimpleFileOutputRedirectionController.m; sourceTree = "<group>"; };
+		A09E5FB41EF913A400671485 /* CCTeeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTeeController.h; sourceTree = "<group>"; };
+		A09E5FB51EF913A400671485 /* CCTeeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTeeController.m; sourceTree = "<group>"; };
+		A09E5FB61EF913A400671485 /* NSObject+CCReverseComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CCReverseComparison.h"; sourceTree = "<group>"; };
+		A09E5FB71EF913A400671485 /* NSObject+CCReverseComparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CCReverseComparison.m"; sourceTree = "<group>"; };
+		A7566218B9F1E36441658811 /* Pods-BackgroundTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundTask/Pods-BackgroundTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1E6CC9894B0DED16322135E /* libPods-BackgroundTask.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +137,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0204691610EBC7FCC92ED62D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1901FB8CB4780DC210788FA0 /* libPods-BackgroundTask.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5C817706B5D5FCDC6BD39AA3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				878860FF5FF2BA6351403FC1 /* Pods-BackgroundTask.debug.xcconfig */,
+				A7566218B9F1E36441658811 /* Pods-BackgroundTask.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A079DEA71E1CF204005F2099 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +161,8 @@
 				A079DECC1E1CF205005F2099 /* BackgroundTaskTests */,
 				A079DED71E1CF205005F2099 /* BackgroundTaskUITests */,
 				A079DEB11E1CF205005F2099 /* Products */,
+				5C817706B5D5FCDC6BD39AA3 /* Pods */,
+				0204691610EBC7FCC92ED62D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,8 +179,14 @@
 		A079DEB21E1CF205005F2099 /* BackgroundTask */ = {
 			isa = PBXGroup;
 			children = (
+				A09E5FA01EF913A300671485 /* CCLogSystem */,
 				A079DEB61E1CF205005F2099 /* AppDelegate.h */,
 				A079DEB71E1CF205005F2099 /* AppDelegate.m */,
+				A09E5F8C1EF3CB5600671485 /* HomeViewController.h */,
+				A09E5F8D1EF3CB5700671485 /* HomeViewController.m */,
+				A09E5F8F1EF3CC6F00671485 /* MovieTableViewCell.h */,
+				A09E5F901EF3CC6F00671485 /* MovieTableViewCell.m */,
+				A09E5F911EF3CC6F00671485 /* MovieTableViewCell.xib */,
 				A079DEB91E1CF205005F2099 /* ViewController.h */,
 				A079DEBA1E1CF205005F2099 /* ViewController.m */,
 				A079DEBC1E1CF205005F2099 /* Main.storyboard */,
@@ -110,6 +194,14 @@
 				A079DEC11E1CF205005F2099 /* LaunchScreen.storyboard */,
 				A079DEC41E1CF205005F2099 /* Info.plist */,
 				A079DEB31E1CF205005F2099 /* Supporting Files */,
+				A09E5F941EF3CF7000671485 /* FileModel.h */,
+				A09E5F951EF3CF7000671485 /* FileModel.m */,
+				A09E5F971EF8C8F500671485 /* BackgroundTaskModel.h */,
+				A09E5F981EF8C8F500671485 /* BackgroundTaskModel.m */,
+				A09E5F9A1EF8C91100671485 /* CommonUtile.h */,
+				A09E5F9B1EF8C91100671485 /* CommonUtile.m */,
+				A09E5F9D1EF8FE3D00671485 /* DownloadManager.h */,
+				A09E5F9E1EF8FE3D00671485 /* DownloadManager.m */,
 			);
 			path = BackgroundTask;
 			sourceTree = "<group>";
@@ -140,6 +232,36 @@
 			path = BackgroundTaskUITests;
 			sourceTree = "<group>";
 		};
+		A09E5FA01EF913A300671485 /* CCLogSystem */ = {
+			isa = PBXGroup;
+			children = (
+				A09E5FA11EF913A300671485 /* CCFileOutputRedirectionController.h */,
+				A09E5FA21EF913A300671485 /* CCLocationMake.h */,
+				A09E5FA31EF913A300671485 /* CCLocationMake.m */,
+				A09E5FA41EF913A300671485 /* CCLog.h */,
+				A09E5FA51EF913A400671485 /* CCLog.m */,
+				A09E5FA61EF913A400671485 /* CCLogController+Utility.h */,
+				A09E5FA71EF913A400671485 /* CCLogController+Utility.m */,
+				A09E5FA81EF913A400671485 /* CCLogController.h */,
+				A09E5FA91EF913A400671485 /* CCLogController.m */,
+				A09E5FAA1EF913A400671485 /* CCLogReviewViewController.h */,
+				A09E5FAB1EF913A400671485 /* CCLogReviewViewController.m */,
+				A09E5FAC1EF913A400671485 /* CCLogStringImp.h */,
+				A09E5FAD1EF913A400671485 /* CCLogStringImp.m */,
+				A09E5FAE1EF913A400671485 /* CCLogSystem.h */,
+				A09E5FAF1EF913A400671485 /* CCLogSystem.m */,
+				A09E5FB01EF913A400671485 /* CCLogViewController.h */,
+				A09E5FB11EF913A400671485 /* CCLogViewController.m */,
+				A09E5FB21EF913A400671485 /* CCSimpleFileOutputRedirectionController.h */,
+				A09E5FB31EF913A400671485 /* CCSimpleFileOutputRedirectionController.m */,
+				A09E5FB41EF913A400671485 /* CCTeeController.h */,
+				A09E5FB51EF913A400671485 /* CCTeeController.m */,
+				A09E5FB61EF913A400671485 /* NSObject+CCReverseComparison.h */,
+				A09E5FB71EF913A400671485 /* NSObject+CCReverseComparison.m */,
+			);
+			path = CCLogSystem;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +269,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A079DEDD1E1CF205005F2099 /* Build configuration list for PBXNativeTarget "BackgroundTask" */;
 			buildPhases = (
+				A6A3777894A2E993C2F40244 /* [CP] Check Pods Manifest.lock */,
 				A079DEAC1E1CF205005F2099 /* Sources */,
 				A079DEAD1E1CF205005F2099 /* Frameworks */,
 				A079DEAE1E1CF205005F2099 /* Resources */,
+				EBD2E14AAB865E5296F70415 /* [CP] Embed Pods Frameworks */,
+				A409371FAA92F3326B6303CC /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -209,6 +334,11 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = XUCTDNYC49;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					A079DEC81E1CF205005F2099 = {
 						CreatedOnToolsVersion = 8.0;
@@ -251,6 +381,7 @@
 			files = (
 				A079DEC31E1CF205005F2099 /* LaunchScreen.storyboard in Resources */,
 				A079DEC01E1CF205005F2099 /* Assets.xcassets in Resources */,
+				A09E5F931EF3CC6F00671485 /* MovieTableViewCell.xib in Resources */,
 				A079DEBE1E1CF205005F2099 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,14 +402,79 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A409371FAA92F3326B6303CC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundTask/Pods-BackgroundTask-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6A3777894A2E993C2F40244 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EBD2E14AAB865E5296F70415 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BackgroundTask/Pods-BackgroundTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A079DEAC1E1CF205005F2099 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A079DEBB1E1CF205005F2099 /* ViewController.m in Sources */,
+				A09E5FC21EF913A400671485 /* NSObject+CCReverseComparison.m in Sources */,
+				A09E5FBB1EF913A400671485 /* CCLogController.m in Sources */,
+				A09E5F991EF8C8F500671485 /* BackgroundTaskModel.m in Sources */,
+				A09E5FBF1EF913A400671485 /* CCLogViewController.m in Sources */,
 				A079DEB81E1CF205005F2099 /* AppDelegate.m in Sources */,
 				A079DEB51E1CF205005F2099 /* main.m in Sources */,
+				A09E5FBE1EF913A400671485 /* CCLogSystem.m in Sources */,
+				A09E5F9C1EF8C91100671485 /* CommonUtile.m in Sources */,
+				A09E5F961EF3CF7000671485 /* FileModel.m in Sources */,
+				A09E5FBC1EF913A400671485 /* CCLogReviewViewController.m in Sources */,
+				A09E5FC11EF913A400671485 /* CCTeeController.m in Sources */,
+				A09E5FB81EF913A400671485 /* CCLocationMake.m in Sources */,
+				A09E5FC01EF913A400671485 /* CCSimpleFileOutputRedirectionController.m in Sources */,
+				A09E5FBA1EF913A400671485 /* CCLogController+Utility.m in Sources */,
+				A09E5F921EF3CC6F00671485 /* MovieTableViewCell.m in Sources */,
+				A09E5F8E1EF3CB5700671485 /* HomeViewController.m in Sources */,
+				A09E5FB91EF913A400671485 /* CCLog.m in Sources */,
+				A09E5FBD1EF913A400671485 /* CCLogStringImp.m in Sources */,
+				A09E5F9F1EF8FE3D00671485 /* DownloadManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,10 +621,12 @@
 		};
 		A079DEDE1E1CF205005F2099 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 878860FF5FF2BA6351403FC1 /* Pods-BackgroundTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XUCTDNYC49;
 				INFOPLIST_FILE = BackgroundTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.runo.BackgroundTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -437,10 +635,12 @@
 		};
 		A079DEDF1E1CF205005F2099 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7566218B9F1E36441658811 /* Pods-BackgroundTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = XUCTDNYC49;
 				INFOPLIST_FILE = BackgroundTask/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.runo.BackgroundTask;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -516,6 +716,7 @@
 				A079DEDF1E1CF205005F2099 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A079DEE01E1CF205005F2099 /* Build configuration list for PBXNativeTarget "BackgroundTaskTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +725,7 @@
 				A079DEE21E1CF205005F2099 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A079DEE31E1CF205005F2099 /* Build configuration list for PBXNativeTarget "BackgroundTaskUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +734,7 @@
 				A079DEE51E1CF205005F2099 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
+            <connections>
+                <outlet property="btn" destination="afK-34-yDY" id="acG-vY-bsm"/>
+                <outlet property="downloadLabel" destination="6Pj-70-94T" id="mCJ-rK-J0D"/>
+                <outlet property="progress" destination="B12-2W-jcz" id="Jeu-r9-hnb"/>
+                <outlet property="view" destination="ObO-WB-0TC" id="fgg-NE-9Ku"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ObO-WB-0TC">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="B12-2W-jcz">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="hhJ-wU-zok"/>
+                    </constraints>
+                </progressView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="afK-34-yDY">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="GLr-9V-wAJ"/>
+                    </constraints>
+                    <state key="normal" title="btton"/>
+                    <connections>
+                        <action selector="btnclick:" destination="-1" eventType="touchUpInside" id="rkU-cY-EKw"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pj-70-94T">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="uP5-sB-uXu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="6Pj-70-94T" firstAttribute="top" secondItem="afK-34-yDY" secondAttribute="bottom" constant="26" id="2qn-tI-4Vb"/>
+                <constraint firstItem="afK-34-yDY" firstAttribute="top" secondItem="B12-2W-jcz" secondAttribute="bottom" constant="59" id="35o-h6-ABJ"/>
+                <constraint firstAttribute="trailing" secondItem="6Pj-70-94T" secondAttribute="trailing" constant="10" id="Cgk-mu-4Kj"/>
+                <constraint firstItem="B12-2W-jcz" firstAttribute="leading" secondItem="ObO-WB-0TC" secondAttribute="leading" id="OW9-U8-qBi"/>
+                <constraint firstAttribute="trailing" secondItem="B12-2W-jcz" secondAttribute="trailing" id="SL0-KY-Xre"/>
+                <constraint firstItem="B12-2W-jcz" firstAttribute="top" secondItem="ObO-WB-0TC" secondAttribute="top" constant="167" id="XA0-e1-mDu"/>
+                <constraint firstItem="afK-34-yDY" firstAttribute="leading" secondItem="ObO-WB-0TC" secondAttribute="leading" constant="10" id="gzC-GQ-gkW"/>
+                <constraint firstItem="6Pj-70-94T" firstAttribute="leading" secondItem="ObO-WB-0TC" secondAttribute="leading" constant="10" id="sAv-o3-RIo"/>
+                <constraint firstAttribute="trailing" secondItem="afK-34-yDY" secondAttribute="trailing" constant="10" id="tcF-VQ-Kaq"/>
+            </constraints>
+            <point key="canvasLocation" x="-9.5" y="80.5"/>
+        </view>
+    </objects>
+</document>

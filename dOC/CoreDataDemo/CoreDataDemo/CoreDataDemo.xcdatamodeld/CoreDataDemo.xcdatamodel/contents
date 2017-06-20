@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11232" systemVersion="15G31" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="Person" syncable="YES">
+    <entity name="Dog" representedClassName="Dog" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="master" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="dogMaster" inverseEntity="Person" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES">
         <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="dogMaster" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Dog" inverseName="master" inverseEntity="Dog" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Person" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="Person" positionX="-396" positionY="-0" width="128" height="88"/>
+        <element name="Dog" positionX="-63" positionY="0" width="128" height="88"/>
     </elements>
 </model>
