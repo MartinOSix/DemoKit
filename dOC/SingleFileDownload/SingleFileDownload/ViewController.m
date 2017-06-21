@@ -16,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *progress;
 @property (weak, nonatomic) IBOutlet UILabel *downloadLabel;
 
-@property (nonatomic,strong) DownloadFileManager *fileManger;
+@property (nonatomic,strong) DownloadFileModel *fileModel;
 
 
 @end
@@ -26,20 +26,28 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    NSString *fileUrl = @"http://get.videolan.org/vlc/2.2.5.1/macosx/vlc-2.2.5.1.dmg";
-    self.fileManger = [[DownloadFileManager alloc]initWithUrl:fileUrl];
-    self.fileManger.delegate = self;
+    
+    
     
 }
 - (IBAction)btnclick:(id)sender {
-    
-    [self.fileManger stopOrContinueDownload];
+    NSString *fileUrl = @"http://get.videolan.org/vlc/2.2.5.1/macosx/vlc-2.2.5.1.dmg";
+    self.fileModel = [[DownloadFileManager shareManager] startDownloadWithURL:fileUrl Delegate:self];
 }
 - (IBAction)logclick:(id)sender {
     [CCLogSystem activeDeveloperUI];
 }
 
--(void)downloadTask:(NSURLSessionTask *)task StateChange:(DownloadType)type{
+-(void)downloadTaskModel:(DownloadFileModel *)taskModel Progress:(CGFloat)progress{
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.progress.progress = taskModel.cqCurrentDownloadLength/(taskModel.cqTotalLength*1.0);
+        NSLog(@"task %p  %.2f",taskModel,taskModel.cqCurrentDownloadLength/(taskModel.cqTotalLength*1.0));
+        self.downloadLabel.text = [NSString stringWithFormat:@"%.2fM / %.2fM",taskModel.cqCurrentDownloadLength/(1024*1024.0),taskModel.cqTotalLength/(1024*1024.0)];
+    });
+}
+
+-(void)downloadTaskModel:(DownloadFileModel *)taskModel StateChange:(DownloadType)type{
     
     dispatch_async(dispatch_get_main_queue(), ^{
         switch (type) {
@@ -67,11 +75,7 @@
 
 -(void)downloadTask:(NSURLSessionTask *)task Progress:(NSInteger)currendData TotalData:(NSInteger)totalData{
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.progress.progress = currendData/(totalData*1.0);
-        NSLog(@"task %p  %.2f",task,currendData/(totalData*1.0));
-        self.downloadLabel.text = [NSString stringWithFormat:@"%.2fM / %.2fM",currendData/(1024*1024.0),totalData/(1024*1024.0)];
-    });
+    
 }
 
 @end

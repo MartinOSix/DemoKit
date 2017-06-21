@@ -27,6 +27,7 @@
 		A09E60501EFA0CA300671485 /* CCSimpleFileOutputRedirectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60431EFA0CA300671485 /* CCSimpleFileOutputRedirectionController.m */; };
 		A09E60511EFA0CA300671485 /* CCTeeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60451EFA0CA300671485 /* CCTeeController.m */; };
 		A09E60521EFA0CA300671485 /* NSObject+CCReverseComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60471EFA0CA300671485 /* NSObject+CCReverseComparison.m */; };
+		A09E60541EFA4EB100671485 /* QQ20170621-0.png in Resources */ = {isa = PBXBuildFile; fileRef = A09E60531EFA4EB000671485 /* QQ20170621-0.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		A09E60451EFA0CA300671485 /* CCTeeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTeeController.m; sourceTree = "<group>"; };
 		A09E60461EFA0CA300671485 /* NSObject+CCReverseComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CCReverseComparison.h"; sourceTree = "<group>"; };
 		A09E60471EFA0CA300671485 /* NSObject+CCReverseComparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CCReverseComparison.m"; sourceTree = "<group>"; };
+		A09E60531EFA4EB000671485 /* QQ20170621-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QQ20170621-0.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				A09E60301EFA0CA300671485 /* CCLogSystem */,
 				A09E60141EF9241C00671485 /* AppDelegate.h */,
+				A09E60531EFA4EB000671485 /* QQ20170621-0.png */,
 				A09E60151EF9241C00671485 /* AppDelegate.m */,
 				A09E60171EF9241C00671485 /* ViewController.h */,
 				A09E60181EF9241C00671485 /* ViewController.m */,
@@ -216,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A09E60541EFA4EB100671485 /* QQ20170621-0.png in Resources */,
 				A09E60211EF9241C00671485 /* LaunchScreen.storyboard in Resources */,
 				A09E601E1EF9241C00671485 /* Assets.xcassets in Resources */,
 				A09E602F1EF925F500671485 /* ViewController.xib in Resources */,

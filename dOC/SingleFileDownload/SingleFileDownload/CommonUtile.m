@@ -7,7 +7,8 @@
 //
 
 #import "CommonUtile.h"
-#import <UIKit/UIKit.h>
+#import <CommonCrypto/CommonDigest.h>
+#import <CommonCrypto/CommonHMAC.h>
 
 #pragma mark - C Function
 
@@ -138,6 +139,7 @@ static NSMutableDictionary *getResumeDictionary(NSData *data) {
 
 @end
 
+#pragma mark - class CommonUtile
 @implementation CommonUtile
 
 
@@ -174,6 +176,105 @@ static NSMutableDictionary *getResumeDictionary(NSData *data) {
         }
     }
     return fileLength;
+}
+
+@end
+#pragma mark - Category NSStringMD5
+@implementation NSString (MD5)
+
+- (NSString *)md5String
+{
+    const char *string = self.UTF8String;
+    int length = (int)strlen(string);
+    unsigned char bytes[CC_MD5_DIGEST_LENGTH];
+    CC_MD5(string, length, bytes);
+    return [self stringFromBytes:bytes length:CC_MD5_DIGEST_LENGTH];
+}
+
+- (NSString *)stringFromBytes:(unsigned char *)bytes length:(int)length
+{
+    NSMutableString *mutableString = @"".mutableCopy;
+    for (int i = 0; i < length; i++)
+        [mutableString appendFormat:@"%02x", bytes[i]];
+    return [NSString stringWithString:mutableString];
+}
+
+@end
+
+#pragma mark - DownloadModel
+
+@implementation DownloadFileModel
+
+-(instancetype)initWithUrl:(NSString *)url{
+    
+    NSAssert(url != nil, @"the url can't be nil");
+    if(self = [super init]){
+        
+        self.cqCurrentDownloadLength = 0;
+        self.cqTotalLength = 0;
+        self.cqDownloadUrl = url;
+        self.cqDownloadType = DownloadType_unDownload;
+        [self loadCacheFile];
+        self.cqDownloadFilePath = [[[CommonUtile downloadFileDir] stringByAppendingString:self.cqDownloadUrl.md5String]stringByAppendingPathExtension:self.cqDownloadUrl.pathExtension];
+        [self checkDownload];
+        
+    }
+    return self;
+    
+}
+
+- (void)loadCacheFile{
+    
+    NSDictionary *dic = [[NSUserDefaults standardUserDefaults] objectForKey:self.cqDownloadUrl.md5String];
+    if (dic == nil) {
+        
+        return;
+    }
+    if (dic[@"resumeData"] != [NSNull null]) {
+        self.cqResumeData = dic[@"resumeData"];
+        self.cqDownloadType = DownloadType_StopDownload;
+    }
+    self.cqCurrentDownloadLength = [dic[@"currentLength"] unsignedIntegerValue];
+    self.cqTotalLength = [dic[@"totalLength"] unsignedIntegerValue];
+}
+
+- (void)setCacheFile{
+    
+    NSMutableDictionary *cacheDic = [NSMutableDictionary dictionary];
+    if (self.cqResumeData == nil) {
+        
+        [cacheDic setObject:[NSNull null] forKey:@"resumeData"];
+    }
+    [cacheDic setObject:@(self.cqCurrentDownloadLength) forKey:@"currentLength"];
+    [cacheDic setObject:@(self.cqTotalLength) forKey:@"totalLength"];
+    [[NSUserDefaults standardUserDefaults] setObject:cacheDic forKey:self.cqDownloadUrl.md5String];
+    
+}
+
+- (void)removeCacheFile{
+    
+    [[NSUserDefaults standardUserDefaults] removeObjectForKey:self.cqDownloadUrl.md5String];
+}
+
+- (void)checkDownload{
+    
+    if([[NSFileManager defaultManager] fileExistsAtPath:self.cqDownloadFilePath]){
+        self.cqDownloadType = DownloadType_success;
+    }
+}
+
+- (void)setCqDownloadType:(DownloadType)cqDownloadType{
+    _cqDownloadType = cqDownloadType;
+    if ([self.cqDelegate respondsToSelector:@selector(downloadTaskModel:StateChange:)]) {
+        [self.cqDelegate downloadTaskModel:self StateChange:cqDownloadType];
+    }
+}
+
+- (void)setCqProgress:(CGFloat)cqProgress{
+    _cqProgress = cqProgress;
+    if ([self.cqDelegate respondsToSelector:@selector(downloadTaskModel:Progress:)]) {
+        [self.cqDelegate downloadTaskModel:self Progress:cqProgress];
+    }
 }
 
 @end
