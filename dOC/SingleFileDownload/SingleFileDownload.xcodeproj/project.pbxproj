@@ -16,6 +16,17 @@
 		A09E602A1EF9244800671485 /* DownloadFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60291EF9244800671485 /* DownloadFileManager.m */; };
 		A09E602D1EF9246100671485 /* CommonUtile.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E602C1EF9246100671485 /* CommonUtile.m */; };
 		A09E602F1EF925F500671485 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A09E602E1EF925F500671485 /* ViewController.xib */; };
+		A09E60481EFA0CA300671485 /* CCLocationMake.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60331EFA0CA300671485 /* CCLocationMake.m */; };
+		A09E60491EFA0CA300671485 /* CCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60351EFA0CA300671485 /* CCLog.m */; };
+		A09E604A1EFA0CA300671485 /* CCLogController+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60371EFA0CA300671485 /* CCLogController+Utility.m */; };
+		A09E604B1EFA0CA300671485 /* CCLogController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60391EFA0CA300671485 /* CCLogController.m */; };
+		A09E604C1EFA0CA300671485 /* CCLogReviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E603B1EFA0CA300671485 /* CCLogReviewViewController.m */; };
+		A09E604D1EFA0CA300671485 /* CCLogStringImp.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E603D1EFA0CA300671485 /* CCLogStringImp.m */; };
+		A09E604E1EFA0CA300671485 /* CCLogSystem.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E603F1EFA0CA300671485 /* CCLogSystem.m */; };
+		A09E604F1EFA0CA300671485 /* CCLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60411EFA0CA300671485 /* CCLogViewController.m */; };
+		A09E60501EFA0CA300671485 /* CCSimpleFileOutputRedirectionController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60431EFA0CA300671485 /* CCSimpleFileOutputRedirectionController.m */; };
+		A09E60511EFA0CA300671485 /* CCTeeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60451EFA0CA300671485 /* CCTeeController.m */; };
+		A09E60521EFA0CA300671485 /* NSObject+CCReverseComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60471EFA0CA300671485 /* NSObject+CCReverseComparison.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +45,29 @@
 		A09E602B1EF9246100671485 /* CommonUtile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtile.h; sourceTree = "<group>"; };
 		A09E602C1EF9246100671485 /* CommonUtile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtile.m; sourceTree = "<group>"; };
 		A09E602E1EF925F500671485 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		A09E60311EFA0CA300671485 /* CCFileOutputRedirectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFileOutputRedirectionController.h; sourceTree = "<group>"; };
+		A09E60321EFA0CA300671485 /* CCLocationMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocationMake.h; sourceTree = "<group>"; };
+		A09E60331EFA0CA300671485 /* CCLocationMake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLocationMake.m; sourceTree = "<group>"; };
+		A09E60341EFA0CA300671485 /* CCLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLog.h; sourceTree = "<group>"; };
+		A09E60351EFA0CA300671485 /* CCLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLog.m; sourceTree = "<group>"; };
+		A09E60361EFA0CA300671485 /* CCLogController+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCLogController+Utility.h"; sourceTree = "<group>"; };
+		A09E60371EFA0CA300671485 /* CCLogController+Utility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCLogController+Utility.m"; sourceTree = "<group>"; };
+		A09E60381EFA0CA300671485 /* CCLogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLogController.h; sourceTree = "<group>"; };
+		A09E60391EFA0CA300671485 /* CCLogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLogController.m; sourceTree = "<group>"; };
+		A09E603A1EFA0CA300671485 /* CCLogReviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLogReviewViewController.h; sourceTree = "<group>"; };
+		A09E603B1EFA0CA300671485 /* CCLogReviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLogReviewViewController.m; sourceTree = "<group>"; };
+		A09E603C1EFA0CA300671485 /* CCLogStringImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLogStringImp.h; sourceTree = "<group>"; };
+		A09E603D1EFA0CA300671485 /* CCLogStringImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLogStringImp.m; sourceTree = "<group>"; };
+		A09E603E1EFA0CA300671485 /* CCLogSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLogSystem.h; sourceTree = "<group>"; };
+		A09E603F1EFA0CA300671485 /* CCLogSystem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLogSystem.m; sourceTree = "<group>"; };
+		A09E60401EFA0CA300671485 /* CCLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLogViewController.h; sourceTree = "<group>"; };
+		A09E60411EFA0CA300671485 /* CCLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCLogViewController.m; sourceTree = "<group>"; };
+		A09E60421EFA0CA300671485 /* CCSimpleFileOutputRedirectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCSimpleFileOutputRedirectionController.h; sourceTree = "<group>"; };
+		A09E60431EFA0CA300671485 /* CCSimpleFileOutputRedirectionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCSimpleFileOutputRedirectionController.m; sourceTree = "<group>"; };
+		A09E60441EFA0CA300671485 /* CCTeeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTeeController.h; sourceTree = "<group>"; };
+		A09E60451EFA0CA300671485 /* CCTeeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTeeController.m; sourceTree = "<group>"; };
+		A09E60461EFA0CA300671485 /* NSObject+CCReverseComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CCReverseComparison.h"; sourceTree = "<group>"; };
+		A09E60471EFA0CA300671485 /* NSObject+CCReverseComparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CCReverseComparison.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +100,7 @@
 		A09E60101EF9241C00671485 /* SingleFileDownload */ = {
 			isa = PBXGroup;
 			children = (
+				A09E60301EFA0CA300671485 /* CCLogSystem */,
 				A09E60141EF9241C00671485 /* AppDelegate.h */,
 				A09E60151EF9241C00671485 /* AppDelegate.m */,
 				A09E60171EF9241C00671485 /* ViewController.h */,
@@ -90,6 +125,36 @@
 				A09E60121EF9241C00671485 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A09E60301EFA0CA300671485 /* CCLogSystem */ = {
+			isa = PBXGroup;
+			children = (
+				A09E60311EFA0CA300671485 /* CCFileOutputRedirectionController.h */,
+				A09E60321EFA0CA300671485 /* CCLocationMake.h */,
+				A09E60331EFA0CA300671485 /* CCLocationMake.m */,
+				A09E60341EFA0CA300671485 /* CCLog.h */,
+				A09E60351EFA0CA300671485 /* CCLog.m */,
+				A09E60361EFA0CA300671485 /* CCLogController+Utility.h */,
+				A09E60371EFA0CA300671485 /* CCLogController+Utility.m */,
+				A09E60381EFA0CA300671485 /* CCLogController.h */,
+				A09E60391EFA0CA300671485 /* CCLogController.m */,
+				A09E603A1EFA0CA300671485 /* CCLogReviewViewController.h */,
+				A09E603B1EFA0CA300671485 /* CCLogReviewViewController.m */,
+				A09E603C1EFA0CA300671485 /* CCLogStringImp.h */,
+				A09E603D1EFA0CA300671485 /* CCLogStringImp.m */,
+				A09E603E1EFA0CA300671485 /* CCLogSystem.h */,
+				A09E603F1EFA0CA300671485 /* CCLogSystem.m */,
+				A09E60401EFA0CA300671485 /* CCLogViewController.h */,
+				A09E60411EFA0CA300671485 /* CCLogViewController.m */,
+				A09E60421EFA0CA300671485 /* CCSimpleFileOutputRedirectionController.h */,
+				A09E60431EFA0CA300671485 /* CCSimpleFileOutputRedirectionController.m */,
+				A09E60441EFA0CA300671485 /* CCTeeController.h */,
+				A09E60451EFA0CA300671485 /* CCTeeController.m */,
+				A09E60461EFA0CA300671485 /* NSObject+CCReverseComparison.h */,
+				A09E60471EFA0CA300671485 /* NSObject+CCReverseComparison.m */,
+			);
+			path = CCLogSystem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,10 +231,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				A09E60191EF9241C00671485 /* ViewController.m in Sources */,
+				A09E604C1EFA0CA300671485 /* CCLogReviewViewController.m in Sources */,
 				A09E60161EF9241C00671485 /* AppDelegate.m in Sources */,
+				A09E60501EFA0CA300671485 /* CCSimpleFileOutputRedirectionController.m in Sources */,
+				A09E604D1EFA0CA300671485 /* CCLogStringImp.m in Sources */,
+				A09E60491EFA0CA300671485 /* CCLog.m in Sources */,
 				A09E60131EF9241C00671485 /* main.m in Sources */,
 				A09E602D1EF9246100671485 /* CommonUtile.m in Sources */,
+				A09E60481EFA0CA300671485 /* CCLocationMake.m in Sources */,
+				A09E60521EFA0CA300671485 /* NSObject+CCReverseComparison.m in Sources */,
 				A09E602A1EF9244800671485 /* DownloadFileManager.m in Sources */,
+				A09E604E1EFA0CA300671485 /* CCLogSystem.m in Sources */,
+				A09E60511EFA0CA300671485 /* CCTeeController.m in Sources */,
+				A09E604B1EFA0CA300671485 /* CCLogController.m in Sources */,
+				A09E604F1EFA0CA300671485 /* CCLogViewController.m in Sources */,
+				A09E604A1EFA0CA300671485 /* CCLogController+Utility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +404,7 @@
 				A09E60271EF9241C00671485 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

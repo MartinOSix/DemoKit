@@ -17,6 +17,12 @@ typedef NS_OPTIONS(NSInteger, DownloadType) {
     DownloadType_DownloadFaild
 };
 
+@interface NSURLSession (CorrectedResumeData)
+
+- (NSURLSessionDownloadTask *)downloadTaskWithCorrectResumeData:(NSData *)resumeData;
+
+@end
+
 @protocol NewDownloadFileDelegate <NSObject>
 
 -(void)downloadTask:(NSURLSessionTask *)task StateChange:(DownloadType)type;

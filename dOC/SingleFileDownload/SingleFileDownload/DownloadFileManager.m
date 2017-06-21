@@ -12,18 +12,22 @@
 @interface DownloadFileManager ()<NSURLSessionDelegate,NSURLSessionDownloadDelegate>
 
 @property (nonatomic, strong) NSURLSession *session;
+@property (nonatomic, copy) NSData *resumeData;
 
 @end
 
 @implementation DownloadFileManager
+
 
 -(NSURLSession *)session{
     
     if (_session == nil) {
         NSString *identify = [NSString stringWithFormat:@"com.runo.BackgroundTask.%@",self.downloadUrl];
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:identify];
-        //[NSURLSessionConfiguration backgroundSessionConfiguration:@"com.zyprosoft.runo.backgroundsession"];
         _session = [NSURLSession sessionWithConfiguration:configuration delegate:self delegateQueue:nil];
+        [_session getAllTasksWithCompletionHandler:^(NSArray<__kindof NSURLSessionTask *> * _Nonnull tasks) {
+            
+        }];
     }
     return _session;
 }
@@ -36,10 +40,12 @@
         self.downloadUrl = url;
         self.currentLength = 0;
         self.fileLength = 0;
+        [self session];
         //self.session = [self backgroundSession];
         if ([CommonUtile fileExistAtPath:[[CommonUtile downloadFileDir] stringByAppendingPathComponent:self.downloadUrl.lastPathComponent]]) {
             
-            self.downloadType = DownloadType_success;
+            //self.downloadType = DownloadType_success;
+            self.downloadType = DownloadType_unDownload;
             
         }else if([CommonUtile fileExistAtPath:[[CommonUtile downloadCacheFileDir] stringByAppendingPathComponent:self.downloadUrl.lastPathComponent]]){
             self.downloadType = DownloadType_StopDownload;
@@ -60,13 +66,19 @@
     if (self.downloadTask) {
         return;
     }
-    NSLog(@"current url  %@",self.downloadUrl);
+    
     NSURL *downloadURL = [NSURL URLWithString:self.downloadUrl];
     NSURLRequest *request = [NSURLRequest requestWithURL:downloadURL];
-    self.downloadTask = [self.session downloadTaskWithRequest:request];
+    if (self.resumeData) {
+        NSLog(@"resume current url  %@",self.downloadUrl);
+        self.downloadTask = [self.session downloadTaskWithCorrectResumeData:self.resumeData];
+    }else{
+        NSLog(@"start current url  %@",self.downloadUrl);
+        self.downloadTask = [self.session downloadTaskWithRequest:request];
+    }
     [self.downloadTask resume];
-    NSUInteger taskIdentifier = arc4random() % ((arc4random() % 10000 + arc4random() % 10000));
-    [self.downloadTask setValue:@(taskIdentifier) forKeyPath:@"taskIdentifier"];
+//    NSUInteger taskIdentifier = arc4random() % ((arc4random() % 10000 + arc4random() % 10000));
+//    [self.downloadTask setValue:@(taskIdentifier) forKeyPath:@"taskIdentifier"];
     self.downloadType = DownloadType_downloading;
     if (self.delegate) {
         [self.delegate downloadTask:self.downloadTask StateChange:DownloadType_downloading];
@@ -83,18 +95,18 @@
         [self startDownload];
         
     }else if(self.downloadType == DownloadType_downloading){
-        [self.downloadTask suspend];
-        self.downloadType = DownloadType_StopDownload;
-        if (self.delegate) {
-            [self.delegate downloadTask:self.downloadTask StateChange:DownloadType_StopDownload];
-        }
-        
+        [self.downloadTask cancelByProducingResumeData:^(NSData * _Nullable resumeData) {
+            self.resumeData = resumeData;
+            self.downloadType = DownloadType_StopDownload;
+            if (self.delegate) {
+                [self.delegate downloadTask:self.downloadTask StateChange:DownloadType_StopDownload];
+            }
+        }];
+        self.downloadTask = nil;
     }else if(self.downloadType == DownloadType_StopDownload){
-        [self.downloadTask resume];
-        self.downloadType = DownloadType_downloading;
-        if (self.delegate) {
-            [self.delegate downloadTask:self.downloadTask StateChange:DownloadType_downloading];
-        }
+        
+        [self startDownload];
+
     }
 }
 
@@ -103,6 +115,7 @@
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask
 didFinishDownloadingToURL:(NSURL *)location{
     
+    NSLog(@"didFinishDownloadingToURL");
     NSString *fileUrl = [[CommonUtile downloadFileDir] stringByAppendingPathComponent:self.downloadUrl.lastPathComponent];
     if ([CommonUtile fileExistAtPath:fileUrl]) {
         [[NSFileManager defaultManager] removeItemAtPath:fileUrl error:nil];
@@ -144,14 +157,22 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite{
     NSLog(@"所有任务已完成!");
 }
 
+//所有任务结束都会走这里，即使后台结束，当创建了一个相同的indentify的session时，之前的task代理也会走这里，cancelbyresumeData也走这里，正常结束也走这里，总之一个task的结束一定会走这里
 -(void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error{
     
     NSLog(@"error -- %@",error.description);
     if (error != nil) {
         
+        NSDictionary *dic = error.userInfo;
+        NSString *url = dic[NSErrorFailingURLStringKey];
+        NSData *data = dic[NSURLSessionDownloadTaskResumeData];
+        NSString *string = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
+        NSLog(string);
+        self.resumeData = data;
+        return;
     }
-    
 }
+
 
 
 @end

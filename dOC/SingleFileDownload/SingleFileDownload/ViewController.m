@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "DownloadFileManager.h"
 #import "CommonUtile.h"
+#import "CCLogSystem.h"
 
 @interface ViewController () <NewDownloadFileDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *btn;
@@ -25,7 +26,7 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    NSString *fileUrl = @"http://120.25.226.186:32812/resources/videos/minion_02.mp4";
+    NSString *fileUrl = @"http://get.videolan.org/vlc/2.2.5.1/macosx/vlc-2.2.5.1.dmg";
     self.fileManger = [[DownloadFileManager alloc]initWithUrl:fileUrl];
     self.fileManger.delegate = self;
     
@@ -33,6 +34,9 @@
 - (IBAction)btnclick:(id)sender {
     
     [self.fileManger stopOrContinueDownload];
+}
+- (IBAction)logclick:(id)sender {
+    [CCLogSystem activeDeveloperUI];
 }
 
 -(void)downloadTask:(NSURLSessionTask *)task StateChange:(DownloadType)type{
@@ -45,6 +49,7 @@
             case DownloadType_success:
                 [self.btn setTitle:@"完成" forState:UIControlStateNormal];
                 self.progress.progress = 1;
+                self.downloadLabel.text = @"下载完成";
                 break;
             case DownloadType_StopDownload:
                 [self.btn setTitle:@"继续" forState:UIControlStateNormal];
@@ -62,9 +67,9 @@
 
 -(void)downloadTask:(NSURLSessionTask *)task Progress:(NSInteger)currendData TotalData:(NSInteger)totalData{
     
-    NSLog(@"task %p",task);
     dispatch_async(dispatch_get_main_queue(), ^{
         self.progress.progress = currendData/(totalData*1.0);
+        NSLog(@"task %p  %.2f",task,currendData/(totalData*1.0));
         self.downloadLabel.text = [NSString stringWithFormat:@"%.2fM / %.2fM",currendData/(1024*1024.0),totalData/(1024*1024.0)];
     });
 }

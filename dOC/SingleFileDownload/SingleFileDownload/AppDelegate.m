@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "CCLogSystem.h"
 /**屏幕尺寸*/
 #define kScreenBounds ([[UIScreen mainScreen] bounds])
 #define kScreenWidth (kScreenBounds.size.width)
@@ -20,7 +21,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [CCLogSystem setupDefaultLogConfigure];
     NSLog(NSHomeDirectory());
     self.window = [[UIWindow alloc]initWithFrame:kScreenBounds];
     ViewController *vc = [[ViewController alloc]initWithNibName:@"ViewController" bundle:nil];
