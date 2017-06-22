@@ -33,32 +33,6 @@ typedef NS_OPTIONS(NSInteger, DownloadType) {
 
 @end
 
-#pragma mark - class DownloadFileModel
-
-typedef void(^DownloadProgressCB)(CGFloat progress);
-typedef void(^DownloadStateChangeCB)(DownloadType type);
-
-@interface DownloadFileModel : NSObject
-
-@property(nonatomic,strong) NSString *cqDownloadUrl;
-@property(nonatomic,strong) NSString *cqDownloadFilePath;
-
-@property(nonatomic,weak)   id<NewDownloadFileDelegate> cqDelegate;
-@property(nonatomic,strong) NSData  *cqResumeData;
-@property(nonatomic,assign) CGFloat cqProgress;
-@property(nonatomic,assign) NSUInteger cqTotalLength;
-@property(nonatomic,assign) NSUInteger cqCurrentDownloadLength;
-@property(nonatomic,assign) DownloadType cqDownloadType;
-
-
-@property(nonatomic,copy) DownloadProgressCB cqDownloadProgressCB;
-@property(nonatomic,copy) DownloadStateChangeCB cqDownloadStateChangeCB;
-
--(instancetype)initWithUrl:(NSString *)url;
-- (void)setCacheFile;
-- (void)loadCacheFile;
-@end
-
 #pragma mark - class CommonUtile
 @interface CommonUtile : NSObject
 
@@ -75,5 +49,37 @@ typedef void(^DownloadStateChangeCB)(DownloadType type);
 @interface NSString (MD5)
 
 @property (readonly) NSString *md5String;
+
+@end
+
+
+
+
+#pragma mark - class DownloadFileModel
+
+typedef void(^DownloadProgressCB)(CGFloat progress);
+typedef void(^DownloadStateChangeCB)(DownloadType type);
+
+@interface DownloadFileModel : NSObject <NSCoding>
+
+@property(nonatomic,strong) NSString *cqDownloadUrl;
+@property(nonatomic,readonly) NSString *cqDownloadFilePath;
+@property(nonatomic,strong) NSString *cqSessionTaskId;
+
+@property(nonatomic,strong) NSData  *cqResumeData;
+@property(nonatomic,assign) CGFloat cqProgress;
+@property(nonatomic,assign) NSUInteger cqTotalLength;
+@property(nonatomic,assign) NSUInteger cqCurrentDownloadLength;
+@property(nonatomic,assign) DownloadType cqDownloadType;
+
+-(instancetype)initWithUrl:(NSString *)url;
+- (void)setCacheFile;
+- (void)loadCacheFile;
+- (void)checkDownload;
+//用户接口
+@property(nonatomic,weak) id<NewDownloadFileDelegate> cqDelegate;
+-(void)startDownloadTask;
+-(void)stopDonwloadTask;
+-(void)cancelDownloadTask;
 
 @end

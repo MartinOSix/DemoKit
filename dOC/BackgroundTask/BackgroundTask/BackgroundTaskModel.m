@@ -40,6 +40,7 @@
     dispatch_once(&onceToken, ^{
         
         //这个sessionConfiguration 很重要， com.zyprosoft.xxx  这里，这个com.company.这个一定要和 bundle identifier 里面的一致，否则ApplicationDelegate 不会调用handleEventsForBackgroundURLSession代理方法
+        
         NSString *identify = [NSString stringWithFormat:@"com.zyprosoft.runo.%@",self.downloadUrl];
         NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration backgroundSessionConfigurationWithIdentifier:identify];
         //[NSURLSessionConfiguration backgroundSessionConfiguration:@"com.zyprosoft.runo.backgroundsession"];

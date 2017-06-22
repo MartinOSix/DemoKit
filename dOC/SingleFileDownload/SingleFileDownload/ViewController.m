@@ -31,8 +31,15 @@
     
 }
 - (IBAction)btnclick:(id)sender {
-    NSString *fileUrl = @"http://get.videolan.org/vlc/2.2.5.1/macosx/vlc-2.2.5.1.dmg";
-    self.fileModel = [[DownloadFileManager shareManager] startDownloadWithURL:fileUrl Delegate:self];
+    NSString *fileUrl = @"http://120.25.226.186:32812/resources/videos/minion_02.mp4";
+    if (self.fileModel.cqDownloadType == DownloadType_downloading) {
+        [self.fileModel stopDonwloadTask];
+    }else{
+        self.fileModel = [[DownloadFileManager shareManager]getModelByUrl:fileUrl];
+        self.fileModel.cqDelegate = self;
+        [self.fileModel startDownloadTask];
+    }
+    
 }
 - (IBAction)logclick:(id)sender {
     [CCLogSystem activeDeveloperUI];

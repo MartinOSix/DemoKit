@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "CCLogSystem.h"
+#import "DownloadFileManager.h"
+#import "HomeViewController.h"
 /**屏幕尺寸*/
 #define kScreenBounds ([[UIScreen mainScreen] bounds])
 #define kScreenWidth (kScreenBounds.size.width)
@@ -22,11 +24,15 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [CCLogSystem setupDefaultLogConfigure];
+    [[DownloadFileManager shareManager]setUpSession];
     NSLog(NSHomeDirectory());
     self.window = [[UIWindow alloc]initWithFrame:kScreenBounds];
-    ViewController *vc = [[ViewController alloc]initWithNibName:@"ViewController" bundle:nil];
-    self.window.rootViewController = vc;
+    HomeViewController *homeVC = [[HomeViewController alloc]init];
+    //ViewController *vc = [[ViewController alloc]initWithNibName:@"ViewController" bundle:nil];
+    self.window.rootViewController = homeVC;
     [self.window makeKeyAndVisible];
+    
+    
     
     return YES;
 }

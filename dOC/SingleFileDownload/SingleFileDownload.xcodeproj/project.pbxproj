@@ -28,6 +28,9 @@
 		A09E60511EFA0CA300671485 /* CCTeeController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60451EFA0CA300671485 /* CCTeeController.m */; };
 		A09E60521EFA0CA300671485 /* NSObject+CCReverseComparison.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60471EFA0CA300671485 /* NSObject+CCReverseComparison.m */; };
 		A09E60541EFA4EB100671485 /* QQ20170621-0.png in Resources */ = {isa = PBXBuildFile; fileRef = A09E60531EFA4EB000671485 /* QQ20170621-0.png */; };
+		A09E605B1EFBB2AB00671485 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E605A1EFBB2AB00671485 /* HomeViewController.m */; };
+		A09E605F1EFBB2EA00671485 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E605D1EFBB2EA00671485 /* MovieTableViewCell.m */; };
+		A09E60601EFBB2EA00671485 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A09E605E1EFBB2EA00671485 /* MovieTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +73,11 @@
 		A09E60461EFA0CA300671485 /* NSObject+CCReverseComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CCReverseComparison.h"; sourceTree = "<group>"; };
 		A09E60471EFA0CA300671485 /* NSObject+CCReverseComparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CCReverseComparison.m"; sourceTree = "<group>"; };
 		A09E60531EFA4EB000671485 /* QQ20170621-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QQ20170621-0.png"; sourceTree = "<group>"; };
+		A09E60591EFBB2AB00671485 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		A09E605A1EFBB2AB00671485 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		A09E605C1EFBB2EA00671485 /* MovieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
+		A09E605D1EFBB2EA00671485 /* MovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
+		A09E605E1EFBB2EA00671485 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,7 @@
 		A09E60101EF9241C00671485 /* SingleFileDownload */ = {
 			isa = PBXGroup;
 			children = (
+				A09E60581EFBB28A00671485 /* ListDownload */,
 				A09E60301EFA0CA300671485 /* CCLogSystem */,
 				A09E60141EF9241C00671485 /* AppDelegate.h */,
 				A09E60531EFA4EB000671485 /* QQ20170621-0.png */,
@@ -158,6 +167,18 @@
 				A09E60471EFA0CA300671485 /* NSObject+CCReverseComparison.m */,
 			);
 			path = CCLogSystem;
+			sourceTree = "<group>";
+		};
+		A09E60581EFBB28A00671485 /* ListDownload */ = {
+			isa = PBXGroup;
+			children = (
+				A09E605C1EFBB2EA00671485 /* MovieTableViewCell.h */,
+				A09E605D1EFBB2EA00671485 /* MovieTableViewCell.m */,
+				A09E605E1EFBB2EA00671485 /* MovieTableViewCell.xib */,
+				A09E60591EFBB2AB00671485 /* HomeViewController.h */,
+				A09E605A1EFBB2AB00671485 /* HomeViewController.m */,
+			);
+			name = ListDownload;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +242,7 @@
 			files = (
 				A09E60541EFA4EB100671485 /* QQ20170621-0.png in Resources */,
 				A09E60211EF9241C00671485 /* LaunchScreen.storyboard in Resources */,
+				A09E60601EFBB2EA00671485 /* MovieTableViewCell.xib in Resources */,
 				A09E601E1EF9241C00671485 /* Assets.xcassets in Resources */,
 				A09E602F1EF925F500671485 /* ViewController.xib in Resources */,
 				A09E601C1EF9241C00671485 /* Main.storyboard in Resources */,
@@ -238,10 +260,12 @@
 				A09E604C1EFA0CA300671485 /* CCLogReviewViewController.m in Sources */,
 				A09E60161EF9241C00671485 /* AppDelegate.m in Sources */,
 				A09E60501EFA0CA300671485 /* CCSimpleFileOutputRedirectionController.m in Sources */,
+				A09E605F1EFBB2EA00671485 /* MovieTableViewCell.m in Sources */,
 				A09E604D1EFA0CA300671485 /* CCLogStringImp.m in Sources */,
 				A09E60491EFA0CA300671485 /* CCLog.m in Sources */,
 				A09E60131EF9241C00671485 /* main.m in Sources */,
 				A09E602D1EF9246100671485 /* CommonUtile.m in Sources */,
+				A09E605B1EFBB2AB00671485 /* HomeViewController.m in Sources */,
 				A09E60481EFA0CA300671485 /* CCLocationMake.m in Sources */,
 				A09E60521EFA0CA300671485 /* NSObject+CCReverseComparison.m in Sources */,
 				A09E602A1EF9244800671485 /* DownloadFileManager.m in Sources */,

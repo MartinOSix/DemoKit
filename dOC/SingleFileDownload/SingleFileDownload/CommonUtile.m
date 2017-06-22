@@ -9,6 +9,7 @@
 #import "CommonUtile.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonHMAC.h>
+#import "DownloadFileManager.h"
 
 #pragma mark - C Function
 
@@ -214,8 +215,6 @@ static NSMutableDictionary *getResumeDictionary(NSData *data) {
         self.cqTotalLength = 0;
         self.cqDownloadUrl = url;
         self.cqDownloadType = DownloadType_unDownload;
-        [self loadCacheFile];
-        self.cqDownloadFilePath = [[[CommonUtile downloadFileDir] stringByAppendingString:self.cqDownloadUrl.md5String]stringByAppendingPathExtension:self.cqDownloadUrl.pathExtension];
         [self checkDownload];
         
     }
@@ -223,43 +222,12 @@ static NSMutableDictionary *getResumeDictionary(NSData *data) {
     
 }
 
-- (void)loadCacheFile{
-    
-    NSDictionary *dic = [[NSUserDefaults standardUserDefaults] objectForKey:self.cqDownloadUrl.md5String];
-    if (dic == nil) {
-        
-        return;
-    }
-    if (dic[@"resumeData"] != [NSNull null]) {
-        self.cqResumeData = dic[@"resumeData"];
-        self.cqDownloadType = DownloadType_StopDownload;
-    }
-    self.cqCurrentDownloadLength = [dic[@"currentLength"] unsignedIntegerValue];
-    self.cqTotalLength = [dic[@"totalLength"] unsignedIntegerValue];
-}
-
-- (void)setCacheFile{
-    
-    NSMutableDictionary *cacheDic = [NSMutableDictionary dictionary];
-    if (self.cqResumeData == nil) {
-        
-        [cacheDic setObject:[NSNull null] forKey:@"resumeData"];
-    }
-    [cacheDic setObject:@(self.cqCurrentDownloadLength) forKey:@"currentLength"];
-    [cacheDic setObject:@(self.cqTotalLength) forKey:@"totalLength"];
-    [[NSUserDefaults standardUserDefaults] setObject:cacheDic forKey:self.cqDownloadUrl.md5String];
-    
-}
-
-- (void)removeCacheFile{
-    
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:self.cqDownloadUrl.md5String];
-}
-
 - (void)checkDownload{
     
     if([[NSFileManager defaultManager] fileExistsAtPath:self.cqDownloadFilePath]){
         self.cqDownloadType = DownloadType_success;
+    }else{
+        self.cqDownloadType = DownloadType_unDownload;
     }
 }
 
@@ -275,6 +243,63 @@ static NSMutableDictionary *getResumeDictionary(NSData *data) {
     if ([self.cqDelegate respondsToSelector:@selector(downloadTaskModel:Progress:)]) {
         [self.cqDelegate downloadTaskModel:self Progress:cqProgress];
     }
+}
+
+- (void)setCqResumeData:(NSData *)cqResumeData{
+    
+    _cqResumeData = cqResumeData;
+}
+
+#pragma mark - FileModel 用户接口
+
+-(void)startDownloadTask{
+    
+    //因为manager中对于下载完成的会被移出manage中的模型字典，所以外面的自己先判断再下载
+    [self checkDownload];
+    if (self.cqDownloadType != DownloadType_success) {
+        [[DownloadFileManager shareManager]startDownloadWithURL:self.cqDownloadUrl];
+    }
+    
+}
+
+-(void)stopDonwloadTask{
+    
+    [[DownloadFileManager shareManager]stopTaskWithUrl:self.cqDownloadUrl];
+}
+
+-(void)cancelDownloadTask{
+    
+    [[DownloadFileManager shareManager]cancelTaskWithURL:self.cqDownloadUrl];
+}
+
+-(NSString *)cqDownloadFilePath{
+    return [[[CommonUtile downloadFileDir] stringByAppendingPathComponent:self.cqDownloadUrl.md5String]stringByAppendingPathExtension:self.cqDownloadUrl.pathExtension];
+}
+
+#pragma mark - coding协议
+-(void)encodeWithCoder:(NSCoder *)aCoder{
+    
+    [aCoder encodeObject:self.cqDownloadUrl forKey:@"cqDownloadUrl"];
+    [aCoder encodeObject:self.cqSessionTaskId forKey:@"cqSessionTaskId"];
+    [aCoder encodeObject:self.cqResumeData forKey:@"cqResumeData"];
+    [aCoder encodeFloat:self.cqProgress forKey:@"cqProgress"];
+    [aCoder encodeInteger:self.cqTotalLength forKey:@"cqTotalLength"];
+    [aCoder encodeInteger:self.cqCurrentDownloadLength forKey:@"cqCurrentDownloadLength"];
+    [aCoder encodeInteger:self.cqDownloadType forKey:@"cqDownloadType"];
+}
+
+- (nullable instancetype)initWithCoder:(NSCoder *)aDecoder{
+    self = [super init];
+    if (self) {
+        self.cqDownloadUrl = [aDecoder decodeObjectForKey:@"cqDownloadUrl"];
+        self.cqSessionTaskId = [aDecoder decodeObjectForKey:@"cqSessionTaskId"];
+        self.cqResumeData = [aDecoder decodeObjectForKey:@"cqResumeData"];
+        self.cqProgress = [aDecoder decodeFloatForKey:@"cqProgress"];
+        self.cqTotalLength = [aDecoder decodeIntegerForKey:@"cqTotalLength"];
+        self.cqCurrentDownloadLength = [aDecoder decodeIntegerForKey:@"cqCurrentDownloadLength"];
+        self.cqDownloadType = [aDecoder decodeIntegerForKey:@"cqDownloadType"];
+    }
+    return self;
 }
 
 @end
