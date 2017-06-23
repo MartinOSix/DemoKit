@@ -73,8 +73,6 @@ typedef void(^DownloadStateChangeCB)(DownloadType type);
 @property(nonatomic,assign) DownloadType cqDownloadType;
 
 -(instancetype)initWithUrl:(NSString *)url;
-- (void)setCacheFile;
-- (void)loadCacheFile;
 - (void)checkDownload;
 //用户接口
 @property(nonatomic,weak) id<NewDownloadFileDelegate> cqDelegate;

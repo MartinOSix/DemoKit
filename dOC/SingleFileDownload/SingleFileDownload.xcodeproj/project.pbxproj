@@ -13,8 +13,6 @@
 		A09E601C1EF9241C00671485 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09E601A1EF9241C00671485 /* Main.storyboard */; };
 		A09E601E1EF9241C00671485 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A09E601D1EF9241C00671485 /* Assets.xcassets */; };
 		A09E60211EF9241C00671485 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A09E601F1EF9241C00671485 /* LaunchScreen.storyboard */; };
-		A09E602A1EF9244800671485 /* DownloadFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60291EF9244800671485 /* DownloadFileManager.m */; };
-		A09E602D1EF9246100671485 /* CommonUtile.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E602C1EF9246100671485 /* CommonUtile.m */; };
 		A09E602F1EF925F500671485 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A09E602E1EF925F500671485 /* ViewController.xib */; };
 		A09E60481EFA0CA300671485 /* CCLocationMake.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60331EFA0CA300671485 /* CCLocationMake.m */; };
 		A09E60491EFA0CA300671485 /* CCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E60351EFA0CA300671485 /* CCLog.m */; };
@@ -31,6 +29,8 @@
 		A09E605B1EFBB2AB00671485 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E605A1EFBB2AB00671485 /* HomeViewController.m */; };
 		A09E605F1EFBB2EA00671485 /* MovieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E605D1EFBB2EA00671485 /* MovieTableViewCell.m */; };
 		A09E60601EFBB2EA00671485 /* MovieTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A09E605E1EFBB2EA00671485 /* MovieTableViewCell.xib */; };
+		A09E606D1EFCA73D00671485 /* CommonUtile.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E606A1EFCA73D00671485 /* CommonUtile.m */; };
+		A09E606E1EFCA73D00671485 /* DownloadFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A09E606C1EFCA73D00671485 /* DownloadFileManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,10 +44,6 @@
 		A09E601D1EF9241C00671485 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A09E60201EF9241C00671485 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A09E60221EF9241C00671485 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A09E60281EF9244800671485 /* DownloadFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadFileManager.h; sourceTree = "<group>"; };
-		A09E60291EF9244800671485 /* DownloadFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadFileManager.m; sourceTree = "<group>"; };
-		A09E602B1EF9246100671485 /* CommonUtile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtile.h; sourceTree = "<group>"; };
-		A09E602C1EF9246100671485 /* CommonUtile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtile.m; sourceTree = "<group>"; };
 		A09E602E1EF925F500671485 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		A09E60311EFA0CA300671485 /* CCFileOutputRedirectionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCFileOutputRedirectionController.h; sourceTree = "<group>"; };
 		A09E60321EFA0CA300671485 /* CCLocationMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCLocationMake.h; sourceTree = "<group>"; };
@@ -78,6 +74,10 @@
 		A09E605C1EFBB2EA00671485 /* MovieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieTableViewCell.h; sourceTree = "<group>"; };
 		A09E605D1EFBB2EA00671485 /* MovieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieTableViewCell.m; sourceTree = "<group>"; };
 		A09E605E1EFBB2EA00671485 /* MovieTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieTableViewCell.xib; sourceTree = "<group>"; };
+		A09E60691EFCA73D00671485 /* CommonUtile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtile.h; sourceTree = "<group>"; };
+		A09E606A1EFCA73D00671485 /* CommonUtile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtile.m; sourceTree = "<group>"; };
+		A09E606B1EFCA73D00671485 /* DownloadFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadFileManager.h; sourceTree = "<group>"; };
+		A09E606C1EFCA73D00671485 /* DownloadFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadFileManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +110,7 @@
 		A09E60101EF9241C00671485 /* SingleFileDownload */ = {
 			isa = PBXGroup;
 			children = (
+				A09E60681EFCA73D00671485 /* FileDownloadManager */,
 				A09E60581EFBB28A00671485 /* ListDownload */,
 				A09E60301EFA0CA300671485 /* CCLogSystem */,
 				A09E60141EF9241C00671485 /* AppDelegate.h */,
@@ -118,10 +119,6 @@
 				A09E60171EF9241C00671485 /* ViewController.h */,
 				A09E60181EF9241C00671485 /* ViewController.m */,
 				A09E602E1EF925F500671485 /* ViewController.xib */,
-				A09E60281EF9244800671485 /* DownloadFileManager.h */,
-				A09E60291EF9244800671485 /* DownloadFileManager.m */,
-				A09E602B1EF9246100671485 /* CommonUtile.h */,
-				A09E602C1EF9246100671485 /* CommonUtile.m */,
 				A09E601A1EF9241C00671485 /* Main.storyboard */,
 				A09E601D1EF9241C00671485 /* Assets.xcassets */,
 				A09E601F1EF9241C00671485 /* LaunchScreen.storyboard */,
@@ -179,6 +176,17 @@
 				A09E605A1EFBB2AB00671485 /* HomeViewController.m */,
 			);
 			name = ListDownload;
+			sourceTree = "<group>";
+		};
+		A09E60681EFCA73D00671485 /* FileDownloadManager */ = {
+			isa = PBXGroup;
+			children = (
+				A09E60691EFCA73D00671485 /* CommonUtile.h */,
+				A09E606A1EFCA73D00671485 /* CommonUtile.m */,
+				A09E606B1EFCA73D00671485 /* DownloadFileManager.h */,
+				A09E606C1EFCA73D00671485 /* DownloadFileManager.m */,
+			);
+			path = FileDownloadManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,14 +272,14 @@
 				A09E604D1EFA0CA300671485 /* CCLogStringImp.m in Sources */,
 				A09E60491EFA0CA300671485 /* CCLog.m in Sources */,
 				A09E60131EF9241C00671485 /* main.m in Sources */,
-				A09E602D1EF9246100671485 /* CommonUtile.m in Sources */,
 				A09E605B1EFBB2AB00671485 /* HomeViewController.m in Sources */,
 				A09E60481EFA0CA300671485 /* CCLocationMake.m in Sources */,
+				A09E606D1EFCA73D00671485 /* CommonUtile.m in Sources */,
 				A09E60521EFA0CA300671485 /* NSObject+CCReverseComparison.m in Sources */,
-				A09E602A1EF9244800671485 /* DownloadFileManager.m in Sources */,
 				A09E604E1EFA0CA300671485 /* CCLogSystem.m in Sources */,
 				A09E60511EFA0CA300671485 /* CCTeeController.m in Sources */,
 				A09E604B1EFA0CA300671485 /* CCLogController.m in Sources */,
+				A09E606E1EFCA73D00671485 /* DownloadFileManager.m in Sources */,
 				A09E604F1EFA0CA300671485 /* CCLogViewController.m in Sources */,
 				A09E604A1EFA0CA300671485 /* CCLogController+Utility.m in Sources */,
 			);
