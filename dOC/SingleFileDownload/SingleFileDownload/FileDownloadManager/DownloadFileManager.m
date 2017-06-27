@@ -19,6 +19,10 @@
 
 @implementation DownloadFileManager
 
++(void)initialize{
+    NSLog(@"类方法的初始化");
+}
+
 -(void)setCacheAchieveModels{
     
     NSData *data = [NSKeyedArchiver archivedDataWithRootObject:self.downloadModels];
@@ -41,7 +45,7 @@
     if (self.downloadModels == nil) {
         self.downloadModels = [NSMutableDictionary dictionary];
     }
-    
+
 }
 
 +(instancetype)shareManager{
