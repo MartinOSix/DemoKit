@@ -64,7 +64,15 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [CCLogSystem activeDeveloperUI];
+    //[CCLogSystem activeDeveloperUI];
+    if (indexPath.row%2==0) {
+        [[UIApplication sharedApplication] unregisterForRemoteNotifications];
+    }else{
+        [[UIApplication sharedApplication] registerForRemoteNotifications];
+    }
+    
+    
+    
 }
 
 @end

@@ -108,6 +108,7 @@
 		A09E5FB51EF913A400671485 /* CCTeeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTeeController.m; sourceTree = "<group>"; };
 		A09E5FB61EF913A400671485 /* NSObject+CCReverseComparison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CCReverseComparison.h"; sourceTree = "<group>"; };
 		A09E5FB71EF913A400671485 /* NSObject+CCReverseComparison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CCReverseComparison.m"; sourceTree = "<group>"; };
+		A0D2FAD11F048EB800B7BCC0 /* BackgroundTask.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BackgroundTask.entitlements; sourceTree = "<group>"; };
 		A7566218B9F1E36441658811 /* Pods-BackgroundTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BackgroundTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-BackgroundTask/Pods-BackgroundTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -179,6 +180,7 @@
 		A079DEB21E1CF205005F2099 /* BackgroundTask */ = {
 			isa = PBXGroup;
 			children = (
+				A0D2FAD11F048EB800B7BCC0 /* BackgroundTask.entitlements */,
 				A09E5FA01EF913A300671485 /* CCLogSystem */,
 				A079DEB61E1CF205005F2099 /* AppDelegate.h */,
 				A079DEB71E1CF205005F2099 /* AppDelegate.m */,
@@ -336,6 +338,9 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
 								enabled = 1;
 							};
 						};
@@ -624,6 +629,7 @@
 			baseConfigurationReference = 878860FF5FF2BA6351403FC1 /* Pods-BackgroundTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BackgroundTask/BackgroundTask.entitlements;
 				DEVELOPMENT_TEAM = XUCTDNYC49;
 				INFOPLIST_FILE = BackgroundTask/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -638,6 +644,7 @@
 			baseConfigurationReference = A7566218B9F1E36441658811 /* Pods-BackgroundTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BackgroundTask/BackgroundTask.entitlements;
 				DEVELOPMENT_TEAM = XUCTDNYC49;
 				INFOPLIST_FILE = BackgroundTask/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

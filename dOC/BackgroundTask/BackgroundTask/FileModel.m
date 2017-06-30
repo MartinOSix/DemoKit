@@ -332,7 +332,6 @@
             self.downloadType = DownloadType_DownloadFaild;
             [self.delegate modelTypeChange:self];
         }];
-
     }
 }
 
