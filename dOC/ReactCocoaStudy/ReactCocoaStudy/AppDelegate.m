@@ -7,8 +7,14 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Caculator.h"
+#import "ViewController.h"
+/**屏幕尺寸*/
+#define kScreenBounds ([[UIScreen mainScreen] bounds])
+#define kScreenWidth (kScreenBounds.size.width)
+#define kScreenHeight (kScreenBounds.size.height)
 @interface AppDelegate ()
+
 
 @end
 
@@ -17,7 +23,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    ViewController *vc = [[ViewController alloc]initWithNibName:@"ViewController" bundle:nil];
+    self.window = [[UIWindow alloc]initWithFrame:kScreenBounds];
+    self.window.rootViewController = vc;
+    [self.window makeKeyAndVisible];
     return YES;
+}
+
+//测试函数编程方式
+- (void)test_Caculator{
+    
+    Caculator *c = [[Caculator alloc]init];
+    BOOL isEqual = [[[c caculator:^int(int result) {
+        result += 2;
+        result += 5;
+        return result;
+    }] equal:^BOOL(int result) {
+        return result == 10;
+    }] isEqule];
+    NSLog(@"%d",isEqual);
 }
 
 
