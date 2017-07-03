@@ -45,6 +45,7 @@
 		A0B5A26B1D9BA1AF009458CB /* ViewController3.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0B5A2691D9BA1AF009458CB /* ViewController3.xib */; };
 		A0B5A2711D9BA565009458CB /* ViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B5A26F1D9BA565009458CB /* ViewController4.m */; };
 		A0B5A2721D9BA565009458CB /* ViewController4.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0B5A2701D9BA565009458CB /* ViewController4.xib */; };
+		A0D2FAFD1F06006500B7BCC0 /* WaveViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D2FAFC1F06006500B7BCC0 /* WaveViewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -123,6 +124,8 @@
 		A0B5A26E1D9BA565009458CB /* ViewController4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController4.h; sourceTree = "<group>"; };
 		A0B5A26F1D9BA565009458CB /* ViewController4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController4.m; sourceTree = "<group>"; };
 		A0B5A2701D9BA565009458CB /* ViewController4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController4.xib; sourceTree = "<group>"; };
+		A0D2FAFB1F06006500B7BCC0 /* WaveViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveViewViewController.h; sourceTree = "<group>"; };
+		A0D2FAFC1F06006500B7BCC0 /* WaveViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveViewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -289,6 +292,8 @@
 				A0222BF91D9CEB6000F59181 /* ViewController9.m */,
 				A0222BFB1D9CF03500F59181 /* BezierView.h */,
 				A0222BFC1D9CF03500F59181 /* BezierView.m */,
+				A0D2FAFB1F06006500B7BCC0 /* WaveViewViewController.h */,
+				A0D2FAFC1F06006500B7BCC0 /* WaveViewViewController.m */,
 			);
 			name = test;
 			sourceTree = "<group>";
@@ -454,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0D2FAFD1F06006500B7BCC0 /* WaveViewViewController.m in Sources */,
 				A0222BED1D9BCA9A00F59181 /* ViewController5.m in Sources */,
 				A0222BF71D9CB55100F59181 /* ViewController8.m in Sources */,
 				A0B5A2241D9A0C2B009458CB /* ViewController.m in Sources */,

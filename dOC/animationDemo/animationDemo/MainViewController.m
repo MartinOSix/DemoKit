@@ -48,7 +48,8 @@
                                                @"渐变动画",
                                                @"关键帧动画，动画合集",
                                                @"转场动画",
-                                               @"阴影，表盘，锚点，layer代理"
+                                               @"阴影，表盘，锚点，layer代理",
+                                               @"CADisplayLink,波浪线"
                                                    ]];
     self.viewControllers = [NSMutableArray arrayWithArray:@[
                                                    @"ViewController2",
@@ -60,7 +61,8 @@
                                                    @"ViewController8",
                                                    @"ViewController9",
                                                    @"ViewController10",
-                                                   @"ViewController"
+                                                   @"ViewController",
+                                                   @"WaveViewViewController"
                                                             ]];
     
 }

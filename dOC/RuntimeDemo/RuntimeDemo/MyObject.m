@@ -11,7 +11,7 @@
 @implementation MyObject
 
 -(void)getPoint{
-    NSLog(@"point 1");
+    NSLog(@"myObject point 1");
 }
 
 @end

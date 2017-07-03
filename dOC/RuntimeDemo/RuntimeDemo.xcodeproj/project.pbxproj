@@ -10,6 +10,7 @@
 		A079DF3C1E1F827B005F2099 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A079DF3B1E1F827B005F2099 /* main.m */; };
 		A079DF441E1F82A0005F2099 /* MyObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A079DF431E1F82A0005F2099 /* MyObject.m */; };
 		A079DF471E1F82C5005F2099 /* testObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A079DF461E1F82C5005F2099 /* testObject.m */; };
+		A0BF25661F09E77F009E26DB /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BF25651F09E77F009E26DB /* NSObject+Runtime.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		A079DF431E1F82A0005F2099 /* MyObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyObject.m; sourceTree = "<group>"; };
 		A079DF451E1F82C5005F2099 /* testObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testObject.h; sourceTree = "<group>"; };
 		A079DF461E1F82C5005F2099 /* testObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testObject.m; sourceTree = "<group>"; };
+		A0BF25641F09E77F009E26DB /* NSObject+Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Runtime.h"; sourceTree = "<group>"; };
+		A0BF25651F09E77F009E26DB /* NSObject+Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Runtime.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				A079DF431E1F82A0005F2099 /* MyObject.m */,
 				A079DF451E1F82C5005F2099 /* testObject.h */,
 				A079DF461E1F82C5005F2099 /* testObject.m */,
+				A0BF25641F09E77F009E26DB /* NSObject+Runtime.h */,
+				A0BF25651F09E77F009E26DB /* NSObject+Runtime.m */,
 			);
 			path = RuntimeDemo;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A079DF441E1F82A0005F2099 /* MyObject.m in Sources */,
+				A0BF25661F09E77F009E26DB /* NSObject+Runtime.m in Sources */,
 				A079DF471E1F82C5005F2099 /* testObject.m in Sources */,
 				A079DF3C1E1F827B005F2099 /* main.m in Sources */,
 			);
@@ -261,6 +267,7 @@
 				A079DF411E1F827B005F2099 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

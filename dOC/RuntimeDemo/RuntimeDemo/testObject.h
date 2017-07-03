@@ -9,7 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface testObject : NSObject
-@property(nonatomic,assign)NSInteger age;
+
+@property(nonatomic,assign) NSInteger age;
+@property(nonatomic,strong) NSString *strName;
+@property(nonatomic,strong) NSArray *assets;
+@property(nonatomic,strong) NSDictionary *classmate;
+
 -(void)testPoint;
 -(void)main;
 @end
