@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Caculator.h"
 #import "ViewController.h"
+#import "MVVMLoginViewController.h"
 /**屏幕尺寸*/
 #define kScreenBounds ([[UIScreen mainScreen] bounds])
 #define kScreenWidth (kScreenBounds.size.width)
@@ -24,7 +25,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    ViewController *vc = [[ViewController alloc]initWithNibName:@"ViewController" bundle:nil];
+    MVVMLoginViewController *vc = [[MVVMLoginViewController alloc]initWithNibName:@"MVVMLoginViewController" bundle:nil];
     self.window = [[UIWindow alloc]initWithFrame:kScreenBounds];
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];

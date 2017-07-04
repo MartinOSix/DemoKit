@@ -17,6 +17,15 @@
 		A0BF25911F0A3ED3009E26DB /* ViewController_A.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BF25901F0A3ED3009E26DB /* ViewController_A.m */; };
 		A0BF25931F0A4370009E26DB /* ViewController_A.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BF25921F0A4370009E26DB /* ViewController_A.xib */; };
 		A0BF25951F0A441B009E26DB /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BF25941F0A441B009E26DB /* ViewController.xib */; };
+		A0BF25991F0B4282009E26DB /* RAC_Test.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BF25981F0B4282009E26DB /* RAC_Test.m */; };
+		A0BF259D1F0B76E3009E26DB /* MVVMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BF259C1F0B76E3009E26DB /* MVVMLoginViewController.m */; };
+		A0BF259F1F0B7754009E26DB /* MVVMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BF259E1F0B7754009E26DB /* MVVMLoginViewController.xib */; };
+		A0BF25A21F0B78E6009E26DB /* LoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BF25A11F0B78E6009E26DB /* LoginViewModel.m */; };
+		A0BF25A51F0B7900009E26DB /* AccountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BF25A41F0B7900009E26DB /* AccountModel.m */; };
+		A0BF25A91F0B9211009E26DB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BF25A71F0B9211009E26DB /* MainViewController.m */; };
+		A0BF25AA1F0B9211009E26DB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0BF25A81F0B9211009E26DB /* MainViewController.xib */; };
+		A0BF25AD1F0B932C009E26DB /* RequestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BF25AC1F0B932C009E26DB /* RequestViewModel.m */; };
+		A0BF25B01F0B95E4009E26DB /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BF25AF1F0B95E4009E26DB /* Book.m */; };
 		F99B77F9B72EF344FD788190 /* Pods_ReactCocoaStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC66BB56BFEA204099BDD7E /* Pods_ReactCocoaStudy.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +49,22 @@
 		A0BF25901F0A3ED3009E26DB /* ViewController_A.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController_A.m; sourceTree = "<group>"; };
 		A0BF25921F0A4370009E26DB /* ViewController_A.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController_A.xib; sourceTree = "<group>"; };
 		A0BF25941F0A441B009E26DB /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		A0BF25971F0B4282009E26DB /* RAC_Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RAC_Test.h; sourceTree = "<group>"; };
+		A0BF25981F0B4282009E26DB /* RAC_Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RAC_Test.m; sourceTree = "<group>"; };
+		A0BF259B1F0B76E3009E26DB /* MVVMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MVVMLoginViewController.h; sourceTree = "<group>"; };
+		A0BF259C1F0B76E3009E26DB /* MVVMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MVVMLoginViewController.m; sourceTree = "<group>"; };
+		A0BF259E1F0B7754009E26DB /* MVVMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MVVMLoginViewController.xib; sourceTree = "<group>"; };
+		A0BF25A01F0B78E6009E26DB /* LoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewModel.h; sourceTree = "<group>"; };
+		A0BF25A11F0B78E6009E26DB /* LoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewModel.m; sourceTree = "<group>"; };
+		A0BF25A31F0B7900009E26DB /* AccountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountModel.h; sourceTree = "<group>"; };
+		A0BF25A41F0B7900009E26DB /* AccountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountModel.m; sourceTree = "<group>"; };
+		A0BF25A61F0B9211009E26DB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		A0BF25A71F0B9211009E26DB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		A0BF25A81F0B9211009E26DB /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		A0BF25AB1F0B932C009E26DB /* RequestViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestViewModel.h; sourceTree = "<group>"; };
+		A0BF25AC1F0B932C009E26DB /* RequestViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestViewModel.m; sourceTree = "<group>"; };
+		A0BF25AE1F0B95E4009E26DB /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
+		A0BF25AF1F0B95E4009E26DB /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		BB5B078D512CFC7904723C7C /* Pods-ReactCocoaStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactCocoaStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactCocoaStudy/Pods-ReactCocoaStudy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +118,8 @@
 		A0BF25721F0A36E4009E26DB /* ReactCocoaStudy */ = {
 			isa = PBXGroup;
 			children = (
+				A0BF259A1F0B76C4009E26DB /* MVVM实践 */,
+				A0BF25961F0B4265009E26DB /* RAC_Test */,
 				A0BF258A1F0A3712009E26DB /* 函数式编程思想实践 */,
 				A0BF25761F0A36E4009E26DB /* AppDelegate.h */,
 				A0BF25771F0A36E4009E26DB /* AppDelegate.m */,
@@ -127,6 +154,36 @@
 				A0BF25921F0A4370009E26DB /* ViewController_A.xib */,
 			);
 			name = "函数式编程思想实践";
+			sourceTree = "<group>";
+		};
+		A0BF25961F0B4265009E26DB /* RAC_Test */ = {
+			isa = PBXGroup;
+			children = (
+				A0BF25971F0B4282009E26DB /* RAC_Test.h */,
+				A0BF25981F0B4282009E26DB /* RAC_Test.m */,
+			);
+			name = RAC_Test;
+			sourceTree = "<group>";
+		};
+		A0BF259A1F0B76C4009E26DB /* MVVM实践 */ = {
+			isa = PBXGroup;
+			children = (
+				A0BF259B1F0B76E3009E26DB /* MVVMLoginViewController.h */,
+				A0BF259C1F0B76E3009E26DB /* MVVMLoginViewController.m */,
+				A0BF259E1F0B7754009E26DB /* MVVMLoginViewController.xib */,
+				A0BF25A01F0B78E6009E26DB /* LoginViewModel.h */,
+				A0BF25A11F0B78E6009E26DB /* LoginViewModel.m */,
+				A0BF25A31F0B7900009E26DB /* AccountModel.h */,
+				A0BF25A41F0B7900009E26DB /* AccountModel.m */,
+				A0BF25A61F0B9211009E26DB /* MainViewController.h */,
+				A0BF25A71F0B9211009E26DB /* MainViewController.m */,
+				A0BF25AB1F0B932C009E26DB /* RequestViewModel.h */,
+				A0BF25AC1F0B932C009E26DB /* RequestViewModel.m */,
+				A0BF25A81F0B9211009E26DB /* MainViewController.xib */,
+				A0BF25AE1F0B95E4009E26DB /* Book.h */,
+				A0BF25AF1F0B95E4009E26DB /* Book.m */,
+			);
+			name = "MVVM实践";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,10 +248,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0BF259F1F0B7754009E26DB /* MVVMLoginViewController.xib in Resources */,
 				A0BF25951F0A441B009E26DB /* ViewController.xib in Resources */,
 				A0BF25931F0A4370009E26DB /* ViewController_A.xib in Resources */,
 				A0BF25831F0A36E4009E26DB /* LaunchScreen.storyboard in Resources */,
 				A0BF25801F0A36E4009E26DB /* Assets.xcassets in Resources */,
+				A0BF25AA1F0B9211009E26DB /* MainViewController.xib in Resources */,
 				A0BF257E1F0A36E4009E26DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,10 +313,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0BF25A21F0B78E6009E26DB /* LoginViewModel.m in Sources */,
 				A0BF25911F0A3ED3009E26DB /* ViewController_A.m in Sources */,
 				A0BF258D1F0A372D009E26DB /* Caculator.m in Sources */,
+				A0BF25A91F0B9211009E26DB /* MainViewController.m in Sources */,
+				A0BF25B01F0B95E4009E26DB /* Book.m in Sources */,
+				A0BF25A51F0B7900009E26DB /* AccountModel.m in Sources */,
 				A0BF257B1F0A36E4009E26DB /* ViewController.m in Sources */,
+				A0BF259D1F0B76E3009E26DB /* MVVMLoginViewController.m in Sources */,
 				A0BF25781F0A36E4009E26DB /* AppDelegate.m in Sources */,
+				A0BF25AD1F0B932C009E26DB /* RequestViewModel.m in Sources */,
+				A0BF25991F0B4282009E26DB /* RAC_Test.m in Sources */,
 				A0BF25751F0A36E4009E26DB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

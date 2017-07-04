@@ -4,5 +4,6 @@ use_frameworks!
 target "ReactCocoaStudy" do
 
 pod 'ReactiveObjC'
+pod 'MBProgressHUD'
 
 end
