@@ -16,7 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    NSLog(@"%zd",[self testTrangle:7]);
+    NSLog(@"%zd",[self testCountN:30]);
+    /*
     NSInteger sourceDataCount = 10;
     NSMutableArray *arr = [NSMutableArray array];
     for (int i = 0; i < sourceDataCount; i ++) {
@@ -102,9 +104,43 @@
     [self mergeSort:arr];
     interval = [date timeIntervalSinceNow];
     NSLog(@"quickSort3  %.5f",interval);
-    
+    */
 }
 
+
+- (NSInteger)testCountN:(NSInteger) n{
+    
+    //求 N！末尾0的个数
+    // f(N!) = k + f(k!) k = N/5 取整 k < 5 f(k!) = 0
+    if (n < 5) {
+        return 0;
+    }else{
+        
+        return n/5 + [self testCountN:n/5];
+        
+    }
+}
+
+- (NSInteger)testTrangle:(NSInteger) n{
+    
+    //计算1-n中所有整数组成的不同组合的三角
+    int count = 0;
+    for (int a = 2; a <= n-2; a++) {
+        for (int b = a+1; b <= n-1; b++) {
+            for (int c = b+1; c <= n; c++) {
+                if ( a+b > c &&
+                     a+c > b &&
+                     c-b < a &&
+                     c-b < a
+                    ) {
+                    NSLog(@"a %d,b %d,c %d",a,b,c);
+                    count++;
+                }
+            }
+        }
+    }
+    return count;
+}
 
 - (void)mergeTest{
     
