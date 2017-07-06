@@ -53,7 +53,6 @@
             
             // 字典转模型，遍历字典中的所有元素，全部映射成模型，并且生成数组
             NSArray *modelArr = [[dictArr.rac_sequence map:^id(id value) {
-                
                 return [Book bookWithDict:value];
             }] array];
             return modelArr;
@@ -73,7 +72,7 @@
     if (cell == nil) {
        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    cell.textLabel.text = ((Book *)self.models[0]).name;
+    cell.textLabel.text = ((Book *)self.models[indexPath.row]).name;
     return cell;
 }
 

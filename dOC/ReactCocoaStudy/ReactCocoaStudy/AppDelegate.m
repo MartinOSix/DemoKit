@@ -29,6 +29,10 @@
     self.window = [[UIWindow alloc]initWithFrame:kScreenBounds];
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
+    
+    UIImage *image = [UIImage imageNamed:@"QQ20170706-0"];
+    NSLog(@"--- 1   %p  %p",image.CGImage,image.CIImage);
+    
     return YES;
 }
 

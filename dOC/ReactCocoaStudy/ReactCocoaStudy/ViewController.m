@@ -49,6 +49,8 @@
     
     //[self test_timeOut];
     
+    UIImage *image = [UIImage imageNamed:@"QQ20170706-0"];
+    NSLog(@"--- 2%p",image);
     
     [self test_retry];
 }

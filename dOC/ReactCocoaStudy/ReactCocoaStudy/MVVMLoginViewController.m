@@ -10,6 +10,7 @@
 #import "LoginViewModel.h"
 #import "AccountModel.h"
 #import "MainViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface MVVMLoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameTF;
@@ -57,11 +58,14 @@
     [super viewDidLoad];
  
     [self bindModel];
-    
+    UIImage *image = [UIImage imageNamed:@"QQ20170706-0"];
+    NSLog(@"--- 2   %p  %p",image.CGImage,image.CIImage);
 }
 
 - (IBAction)loginAction:(id)sender {
-    [self.loginViewModel.loginCommand execute:@(1)];
+    
+    [[[CLLocationManager alloc]init] startUpdatingLocation];
+    //[self.loginViewModel.loginCommand execute:@(1)];
 }
 
 @end

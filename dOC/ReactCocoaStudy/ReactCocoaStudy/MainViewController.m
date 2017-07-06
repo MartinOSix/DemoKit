@@ -11,7 +11,7 @@
 
 @interface MainViewController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) UITableView *tableView;
 
 @property (strong, nonatomic) RequestViewModel *requesViewModel;
 
@@ -25,6 +25,14 @@
         _requesViewModel = [[RequestViewModel alloc] init];
     }
     return _requesViewModel;
+}
+
+- (UITableView *)tableView{
+    if (_tableView == nil) {
+        _tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        [self.view addSubview:_tableView];
+    }
+    return _tableView;
 }
 
 
