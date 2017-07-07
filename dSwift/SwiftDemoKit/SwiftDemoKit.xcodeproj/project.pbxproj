@@ -58,6 +58,10 @@
 		A09F2DFE1EBC6DCC00E37355 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09F2DFD1EBC6DCC00E37355 /* AVFoundation.framework */; };
 		A09F2E001EBC6E4100E37355 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09F2DFF1EBC6E4100E37355 /* AVKit.framework */; };
 		A09F2E021EBC6E4700E37355 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09F2E011EBC6E4700E37355 /* MediaPlayer.framework */; };
+		A0BF26001F0F1F4F009E26DB /* OverturnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF25FF1F0F1F4F009E26DB /* OverturnViewController.swift */; };
+		A0BF26021F0F1FC7009E26DB /* imagem.png in Resources */ = {isa = PBXBuildFile; fileRef = A0BF26011F0F1FC7009E26DB /* imagem.png */; };
+		A0BF26041F0F3931009E26DB /* ColorfulTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF26031F0F3931009E26DB /* ColorfulTextViewController.swift */; };
+		A0BF26071F0F3ACB009E26DB /* UIColor_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF26061F0F3ACB009E26DB /* UIColor_Extension.swift */; };
 		A0D8A7001E7A791700E5C46B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D8A6FF1E7A791700E5C46B /* AppDelegate.swift */; };
 		A0D8A7021E7A791700E5C46B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D8A7011E7A791700E5C46B /* ViewController.swift */; };
 		A0D8A7051E7A791700E5C46B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D8A7031E7A791700E5C46B /* Main.storyboard */; };
@@ -162,6 +166,10 @@
 		A09F2DFD1EBC6DCC00E37355 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A09F2DFF1EBC6E4100E37355 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		A09F2E011EBC6E4700E37355 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		A0BF25FF1F0F1F4F009E26DB /* OverturnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverturnViewController.swift; sourceTree = "<group>"; };
+		A0BF26011F0F1FC7009E26DB /* imagem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagem.png; sourceTree = "<group>"; };
+		A0BF26031F0F3931009E26DB /* ColorfulTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorfulTextViewController.swift; sourceTree = "<group>"; };
+		A0BF26061F0F3ACB009E26DB /* UIColor_Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor_Extension.swift; sourceTree = "<group>"; };
 		A0D8A6FC1E7A791700E5C46B /* SwiftDemoKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemoKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D8A6FF1E7A791700E5C46B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0D8A7011E7A791700E5C46B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -331,6 +339,8 @@
 				A072E61A1ED8110D00547596 /* BaseAnimation */,
 				A072E61B1ED8112700547596 /* CoreAnimationViewController.swift */,
 				A0610C0E1ED9501C008EE872 /* KeyFrameAnimationViewController.swift */,
+				A0BF25FF1F0F1F4F009E26DB /* OverturnViewController.swift */,
+				A0BF26031F0F3931009E26DB /* ColorfulTextViewController.swift */,
 			);
 			name = CoreAnimation;
 			sourceTree = "<group>";
@@ -386,6 +396,7 @@
 		A09F2DEF1EBAC03000E37355 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				A0BF26051F0F3AB5009E26DB /* Category */,
 				A00C7FB31EBC74AA00439AAA /* CCLogSystem */,
 				A0D8A7031E7A791700E5C46B /* Main.storyboard */,
 				A0D8A7061E7A791700E5C46B /* Assets.xcassets */,
@@ -395,6 +406,7 @@
 				A0DB84751E7F85BB007C7828 /* moments.mp4 */,
 				A0DB84791E7FBD16007C7828 /* swift.playground */,
 				A00C7FD91EBC75E000439AAA /* SwiftDemoKit-Bridging-Header.h */,
+				A0BF26011F0F1FC7009E26DB /* imagem.png */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -406,6 +418,14 @@
 				A09F2DF71EBB35CE00E37355 /* MidleNavViewController.swift */,
 			);
 			name = TranctionAnimation;
+			sourceTree = "<group>";
+		};
+		A0BF26051F0F3AB5009E26DB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				A0BF26061F0F3ACB009E26DB /* UIColor_Extension.swift */,
+			);
+			name = Category;
 			sourceTree = "<group>";
 		};
 		A0D8A6F31E7A791700E5C46B = {
@@ -592,6 +612,7 @@
 				A0D8A7071E7A791700E5C46B /* Assets.xcassets in Resources */,
 				A0D8A7051E7A791700E5C46B /* Main.storyboard in Resources */,
 				A0610C251EE152BB008EE872 /* AlertViewController.xib in Resources */,
+				A0BF26021F0F1FC7009E26DB /* imagem.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,8 +676,10 @@
 				A00C80DC1ECA908C00439AAA /* SortCollectionView.swift in Sources */,
 				A00C80231EC053E900439AAA /* ThreeTouchViewController.swift in Sources */,
 				A072E5D11ED667E400547596 /* TabAViewController.swift in Sources */,
+				A0BF26071F0F3ACB009E26DB /* UIColor_Extension.swift in Sources */,
 				A00C7FD31EBC74AA00439AAA /* CCSimpleFileOutputRedirectionController.m in Sources */,
 				A00C7FDB1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift in Sources */,
+				A0BF26001F0F1F4F009E26DB /* OverturnViewController.swift in Sources */,
 				A0D8A7021E7A791700E5C46B /* ViewController.swift in Sources */,
 				A0DB847D1E7FCCB5007C7828 /* AnimateTableViewController.swift in Sources */,
 				A072E5D81ED66E4B00547596 /* SearchViewController.swift in Sources */,
@@ -667,6 +690,7 @@
 				A072E61E1ED8118200547596 /* BaseAnimationViewController.swift in Sources */,
 				A072E5DA1ED6759A00547596 /* SearchResultViewController.swift in Sources */,
 				A0DB84741E7F6BB3007C7828 /* VideoBackgroundController.swift in Sources */,
+				A0BF26041F0F3931009E26DB /* ColorfulTextViewController.swift in Sources */,
 				A00C7FCD1EBC74AA00439AAA /* CCLogController+Utility.m in Sources */,
 				A0D8A7001E7A791700E5C46B /* AppDelegate.swift in Sources */,
 				A0D8A7301E7B723A00E5C46B /* LocationViewController.swift in Sources */,

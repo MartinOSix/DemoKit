@@ -15,7 +15,9 @@ class CoreAnimationViewController: UIViewController,UITableViewDelegate,UITableV
     let tableView = UITableView.init(frame: CGRect.zero, style: UITableViewStyle.plain)
     let dataSource = [("基本动画","BaseAnimationViewController"),
                       ("转场动画","TransactionAnimationViewController"),
-                      ("关键帧动画","KeyFrameAnimationViewController")
+                      ("关键帧动画","KeyFrameAnimationViewController"),
+                      ("折叠图片动画","OverturnViewController"),
+                      ("文字渐变效果","ColorfulTextViewController")
                       ] as [(String,String)]
     
     override func viewDidLoad() {
