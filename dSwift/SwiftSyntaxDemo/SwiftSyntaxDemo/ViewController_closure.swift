@@ -123,10 +123,11 @@ class ViewController_closure: UIViewController {
         print("值捕获\(fun2())")
         
         funcType4 { (abc) in
-            print(abc)
+            //print(abc)
         }
         print("functype 4 end ")
-        
+     
+        testUnownedAndWeak()
     }
     
     //func funcType1(_ addMethod: closure1) {  别名 == 下面那句效果
@@ -147,10 +148,46 @@ class ViewController_closure: UIViewController {
         //closure("哈哈哈")
     }
     
-    
-    
+    //闭包中 unowned 和 weakd的使用
+    func testUnownedAndWeak() {
+        
+        var i1 = 1, i2 = 1
+        
+        //当不使用捕获列表时，闭包将会创建一个外部变量的强引用
+        let fStrong = {
+            i1 += 1
+            i2 += 2
+            
+        }
+        
+        //使用捕获列表，闭包内部会创建一个新的可用常量。如果没有指定常量修饰符，闭包将会简单地拷贝原始值到新的变量中，对于值类型和引用类型都是一样的。
+        let fcopy = { [i1] in
+            print(i1,i2)
+        }
+        
+        fStrong()
+        print(i1,i2)
+        fcopy()
+        
+        
+        var c1 = aClass()
+        var c2 = aClass()
+        
+        var fSpec = { [c1,weak c2] in
+            
+            c1.value += 1
+            if let c2 = c2 {
+                c2.value += 1
+            }
+        }
+        fSpec()
+        print(c1.value,c2.value)
+    }
 }
 
+class aClass{
+    var value = 1
+}
 
 class ClassA {
     

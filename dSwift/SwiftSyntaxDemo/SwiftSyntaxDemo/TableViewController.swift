@@ -25,7 +25,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
                       ("数组","ViewController_Array"),
                       ("字典","ViewController_Dictonary"),
                       ("控制流","ViewController_controlFlow"),
-                      ("深入理解协议","DeepProtocolViewController")
+                      ("深入理解协议","DeepProtocolViewController"),
+                      ("序列化协议","SequenceTypeViewController")
         ] as [(String,String)]
     
     

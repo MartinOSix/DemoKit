@@ -1,17 +1,13 @@
 //
 //  AppDelegate.m
-//  CQFramework
+//  AFanalyze
 //
-//  Created by runo on 16/10/28.
-//  Copyright © 2016年 com.runo. All rights reserved.
+//  Created by runo on 17/7/18.
+//  Copyright © 2017年 com.runo. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
-#import "CQDBOperator.h"
-#import "testModel.h"
-#import "HahaABC.h"
-#import "NSDate+CQExtention.h"
+
 @interface AppDelegate ()
 
 @end
@@ -21,42 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    
-    UINavigationController *nav =[[UINavigationController alloc]initWithRootViewController:[ViewController new]];
-    self.window.rootViewController = nav;
-    
-    
     return YES;
 }
 
--(void)testDBOperator{
-    
-    
-       
-}
-
--(void)changeRootController:(UIViewController *)vc Animate:(BOOL)animal{
-    
-    CATransition *transition = [CATransition animation];
-    transition.duration = animal?10:0;
-    transition.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-    transition.type = kCATransitionPush;
-    //kCATransitionMoveIn;//kCATransitionFade;
-    transition.subtype = kCATransitionFromRight;
-    self.window.rootViewController = vc;
-    [self.window.layer addAnimation:transition forKey:@"animation"];
-    
-}
-
-
--(void)changeRootController:(UIViewController *)vc FromVC:(UIViewController *)fromvc Animate:(BOOL)animal{
-    
-     [UIView transitionFromView:fromvc.view toView:vc.view duration:2 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL finished) {
-         self.window.rootViewController = vc;
-     }];
-    
-}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

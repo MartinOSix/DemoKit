@@ -71,5 +71,24 @@ class ViewController_Class: UIViewController {
         stu.mark = 10
         stu.mark2 = 30
         print(stu.total)
+        
+        //值类型嵌套引用类型的赋值
+        var outer = Outer()
+        var outer2 = outer
+        outer2.value = 43
+        outer.value = 43
+        outer.inner.value = 43
+        
+        print("outer2.value = \(outer2.value), outer.value = \(outer.value) outer2.inner.value = \(outer2.inner.value) outer.inner.value = \(outer.inner.value)")
+        
     }
+}
+
+class Innser {
+    var value = 42
+}
+
+struct Outer {
+    var value = 42
+    var inner = Innser()
 }

@@ -28,6 +28,7 @@
 		A0C3134D1E0BD55D00A72F11 /* ViewController_ViewB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C3134C1E0BD55D00A72F11 /* ViewController_ViewB.swift */; };
 		A0C3134F1E0BE50500A72F11 /* NSObject_SharInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C3134E1E0BE50500A72F11 /* NSObject_SharInstance.swift */; };
 		A0C313521E0D1CE900A72F11 /* ViewController_Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C313511E0D1CE900A72F11 /* ViewController_Array.swift */; };
+		A0F583B01F1709CC0077D2F8 /* SequenceTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F583AF1F1709CC0077D2F8 /* SequenceTypeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		A0C3134C1E0BD55D00A72F11 /* ViewController_ViewB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_ViewB.swift; sourceTree = "<group>"; };
 		A0C3134E1E0BE50500A72F11 /* NSObject_SharInstance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObject_SharInstance.swift; sourceTree = "<group>"; };
 		A0C313511E0D1CE900A72F11 /* ViewController_Array.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Array.swift; sourceTree = "<group>"; };
+		A0F583AF1F1709CC0077D2F8 /* SequenceTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceTypeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				A0AC9A761E120C9F005626C8 /* ViewController_Class.swift */,
 				A072E5DB1ED6C32D00547596 /* TableViewController.swift */,
 				A072E5DD1ED6CB5A00547596 /* DeepProtocolViewController.swift */,
+				A0F583AF1F1709CC0077D2F8 /* SequenceTypeViewController.swift */,
 			);
 			path = SwiftSyntaxDemo;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0F583B01F1709CC0077D2F8 /* SequenceTypeViewController.swift in Sources */,
 				A0C3134D1E0BD55D00A72F11 /* ViewController_ViewB.swift in Sources */,
 				A0C3134B1E0BD55100A72F11 /* ViewController_ViewA.swift in Sources */,
 				A0AC9A711E10B8E4005626C8 /* ViewController_Dictonary.swift in Sources */,
