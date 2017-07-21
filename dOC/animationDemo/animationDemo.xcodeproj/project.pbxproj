@@ -46,6 +46,7 @@
 		A0B5A2711D9BA565009458CB /* ViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = A0B5A26F1D9BA565009458CB /* ViewController4.m */; };
 		A0B5A2721D9BA565009458CB /* ViewController4.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0B5A2701D9BA565009458CB /* ViewController4.xib */; };
 		A0D2FAFD1F06006500B7BCC0 /* WaveViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D2FAFC1F06006500B7BCC0 /* WaveViewViewController.m */; };
+		A0F584171F20569C0077D2F8 /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F584161F20569C0077D2F8 /* HUDViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,8 @@
 		A0B5A2701D9BA565009458CB /* ViewController4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController4.xib; sourceTree = "<group>"; };
 		A0D2FAFB1F06006500B7BCC0 /* WaveViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveViewViewController.h; sourceTree = "<group>"; };
 		A0D2FAFC1F06006500B7BCC0 /* WaveViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveViewViewController.m; sourceTree = "<group>"; };
+		A0F584151F20569C0077D2F8 /* HUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDViewController.h; sourceTree = "<group>"; };
+		A0F584161F20569C0077D2F8 /* HUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +207,7 @@
 		A0B5A21B1D9A0C2B009458CB /* animationDemo */ = {
 			isa = PBXGroup;
 			children = (
+				A0F584141F20568E0077D2F8 /* HUD */,
 				A0222C061D9D0D7000F59181 /* 转场动画 */,
 				A0B5A26D1D9BA553009458CB /* 立体对象 */,
 				A0B5A2661D9BA199009458CB /* test */,
@@ -306,6 +310,15 @@
 				A0B5A2701D9BA565009458CB /* ViewController4.xib */,
 			);
 			name = "立体对象";
+			sourceTree = "<group>";
+		};
+		A0F584141F20568E0077D2F8 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				A0F584151F20569C0077D2F8 /* HUDViewController.h */,
+				A0F584161F20569C0077D2F8 /* HUDViewController.m */,
+			);
+			name = HUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -459,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0F584171F20569C0077D2F8 /* HUDViewController.m in Sources */,
 				A0D2FAFD1F06006500B7BCC0 /* WaveViewViewController.m in Sources */,
 				A0222BED1D9BCA9A00F59181 /* ViewController5.m in Sources */,
 				A0222BF71D9CB55100F59181 /* ViewController8.m in Sources */,
