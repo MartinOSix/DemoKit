@@ -17,6 +17,17 @@
         test = [[RAC_Test alloc]init];
     }
     
+    
+    //[test test_MulticastConnection];
+    
+    //[test test_RACCommand];//命令，也可以替代代理，并且可以监听执行过程
+    
+    //[test test_Tuple];
+    
+    //[test test_RACSubject];//测试可以替代代理的RACsubject
+    
+    //[test test_signalBase];//测试signal 基本使用
+    
     //[test test_Concat];
     
     //[test test_Then];
@@ -29,7 +40,183 @@
  
 //    [test test_reduce];
     
-    [test test_filter];
+//    [test test_filter];
+}
+
+- (void)test_MulticastConnection{
+    
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        
+        NSLog(@"例1 发送一次请求，设计上只需要发送一次");
+        [subscriber sendNext:@"发送的请求"];
+        return nil;
+    }];
+    
+    [signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"收到回复 ：%@",x);
+    }];
+    
+    [signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"收到回复 ：%@",x);
+    }];
+    
+    RACSignal *signal2 = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        
+        NSLog(@"例2 发送一次请求，设计上只需要发送一次");
+        [subscriber sendNext:@"发送的请求"];
+        return nil;
+    }];
+    
+    RACMulticastConnection *connection = [signal2 publish];
+    
+    [connection.signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"例2 收到回复 ：%@",x);
+    }];
+    
+    [connection.signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"例2 收到回复 ：%@",x);
+    }];
+    
+    [connection connect];
+}
+
+
+- (void)test_RACCommand{
+    
+    RACCommand *command = [[RACCommand alloc]initWithSignalBlock:^RACSignal * _Nonnull(id  _Nullable input) {
+        
+        NSLog(@"执行命令 参数 %@",input);
+        return [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+               
+                sleep(5);
+                NSLog(@"发送 %@",[NSThread currentThread]);
+                [subscriber sendNext:@"请求来的数据"];
+                [subscriber sendCompleted];
+            });
+            return nil;
+        }];
+        
+    }];
+    
+    //订阅命令中的信号
+    [command.executionSignals subscribeNext:^(RACSignal * x) {
+        
+        //命令中的信号发送过来的还是个信号
+        [x subscribeNext:^(id  _Nullable x) {
+            NSLog(@"接收 %@",[NSThread currentThread]);
+            NSLog(@"命令中信号发送过来的信号订阅的信息 ：%@",x);
+        }];
+    }];
+    
+    //直接订阅信号中的信号
+    [command.executionSignals.switchToLatest subscribeNext:^(id  _Nullable x) {
+        NSLog(@"直接订阅信号中的信号-- %@",x);
+    }];
+    
+    //状态改变也会走这里
+    [[command.executing skip:1] subscribeNext:^(NSNumber * _Nullable x) {
+       
+        if ([x boolValue] == YES) {
+            NSLog(@"正在执行");
+        }else{
+            NSLog(@"执行完毕");
+        }
+        
+    }];
+    
+    NSLog(@"开始执行");
+    [command execute:@2];
+    
+}
+
+
+- (void)test_Tuple{
+    
+    
+    //RAC遍历数组
+    NSArray *number = @[@1,@2,@3,@4];
+    
+    [number.rac_sequence.signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"数组中的数据 %@",x);
+    }];
+    
+    
+    //高级用法
+    NSArray *newNumber = [[number.rac_sequence map:^id _Nullable(id  _Nullable value) {
+        return @([value integerValue] * 2);
+    }] array];
+    
+    [newNumber.rac_sequence.signal subscribeNext:^(id  _Nullable x) {
+        NSLog(@"new number : %@",x);
+    }];
+    
+    //RAC遍历字典
+    NSDictionary *dict = @{@"name":@"xiaomign",@"age":@"23",@"sex":@"man"};
+    
+    [dict.rac_sequence.signal subscribeNext:^(RACTuple *x) {
+        RACTupleUnpack(NSString *key,NSString *value) = x;
+        NSLog(@"解包中的key:%@ value:%@",key,value);
+    }];
+    
+    
+    
+    
+}
+
+- (void)test_RACSubject{
+    
+    RACSubject *subject = [RACSubject subject];
+    
+    //对于RACSubject先发送的消息再订阅消息，那么将会收不到消息。
+    [subject sendNext:@"先发送的消息"];
+    
+    //订阅信号
+    [subject subscribeNext:^(id  _Nullable x) {
+        NSLog(@"test_RACSubject订阅信号收到 %@",x);
+    }];
+    
+    //发送信号
+    [subject sendNext:@"1234"];
+    [subject sendNext:@"aaa"];
+    [subject sendNext:@"123vvv4"];
+    
+    
+    RACReplaySubject *replySubject = [RACReplaySubject subject];
+    
+    
+    //先发送信号
+    [replySubject sendNext:@"先发送的1号"];
+    
+    //后订阅信号
+    [replySubject subscribeNext:^(id  _Nullable x) {
+       
+        NSLog(@"replySubject 订阅的信号 %@",x);
+        
+    }];
+    
+    
+}
+
+- (void)test_signalBase{
+    
+    //创建信号
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
+        
+        [subscriber sendNext:@(1234)];
+        
+        return [RACDisposable disposableWithBlock:^{
+            NSLog(@"信号被销毁");
+        }];
+    }];
+    
+    //订阅信号
+    [signal subscribeNext:^(id  _Nullable x) {
+        
+        NSLog(@"订阅收到的信号 %@",x);
+        
+    }];
 }
 
 - (void)test_filter{

@@ -27,6 +27,8 @@
 		A0BF25AD1F0B932C009E26DB /* RequestViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BF25AC1F0B932C009E26DB /* RequestViewModel.m */; };
 		A0BF25B01F0B95E4009E26DB /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BF25AF1F0B95E4009E26DB /* Book.m */; };
 		A0BF25B41F0E0E6A009E26DB /* QQ20170706-0.png in Resources */ = {isa = PBXBuildFile; fileRef = A0BF25B31F0E0E6A009E26DB /* QQ20170706-0.png */; };
+		A0F584201F271CB10077D2F8 /* RACTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F5841E1F271CB10077D2F8 /* RACTestViewController.m */; };
+		A0F584211F271CB10077D2F8 /* RACTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0F5841F1F271CB10077D2F8 /* RACTestViewController.xib */; };
 		F99B77F9B72EF344FD788190 /* Pods_ReactCocoaStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC66BB56BFEA204099BDD7E /* Pods_ReactCocoaStudy.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,9 @@
 		A0BF25AE1F0B95E4009E26DB /* Book.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		A0BF25AF1F0B95E4009E26DB /* Book.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
 		A0BF25B31F0E0E6A009E26DB /* QQ20170706-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QQ20170706-0.png"; sourceTree = "<group>"; };
+		A0F5841D1F271CB10077D2F8 /* RACTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACTestViewController.h; sourceTree = "<group>"; };
+		A0F5841E1F271CB10077D2F8 /* RACTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACTestViewController.m; sourceTree = "<group>"; };
+		A0F5841F1F271CB10077D2F8 /* RACTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RACTestViewController.xib; sourceTree = "<group>"; };
 		BB5B078D512CFC7904723C7C /* Pods-ReactCocoaStudy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactCocoaStudy.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReactCocoaStudy/Pods-ReactCocoaStudy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +169,9 @@
 			children = (
 				A0BF25971F0B4282009E26DB /* RAC_Test.h */,
 				A0BF25981F0B4282009E26DB /* RAC_Test.m */,
+				A0F5841D1F271CB10077D2F8 /* RACTestViewController.h */,
+				A0F5841E1F271CB10077D2F8 /* RACTestViewController.m */,
+				A0F5841F1F271CB10077D2F8 /* RACTestViewController.xib */,
 			);
 			name = RAC_Test;
 			sourceTree = "<group>";
@@ -253,6 +261,7 @@
 			files = (
 				A0BF259F1F0B7754009E26DB /* MVVMLoginViewController.xib in Resources */,
 				A0BF25B41F0E0E6A009E26DB /* QQ20170706-0.png in Resources */,
+				A0F584211F271CB10077D2F8 /* RACTestViewController.xib in Resources */,
 				A0BF25951F0A441B009E26DB /* ViewController.xib in Resources */,
 				A0BF25931F0A4370009E26DB /* ViewController_A.xib in Resources */,
 				A0BF25831F0A36E4009E26DB /* LaunchScreen.storyboard in Resources */,
@@ -328,6 +337,7 @@
 				A0BF25781F0A36E4009E26DB /* AppDelegate.m in Sources */,
 				A0BF25AD1F0B932C009E26DB /* RequestViewModel.m in Sources */,
 				A0BF25991F0B4282009E26DB /* RAC_Test.m in Sources */,
+				A0F584201F271CB10077D2F8 /* RACTestViewController.m in Sources */,
 				A0BF25751F0A36E4009E26DB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
