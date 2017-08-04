@@ -21,13 +21,26 @@ class ViewController_MultThread: UIViewController {
         label = labe
         self.view.addSubview(labe)
         
-        self.function1()
-        print("这句话最先打印")
-        self.function2()
-        self.function3()
+        //self.function1()
+        //print("这句话最先打印")
+        //self.function2()
+        //self.function3()
         //self.function4()
-        self.function5()
+        //self.function5()
+        
+        testBarrier()
     }
+    
+    func testBarrier() {
+        
+        let closure = {
+            print("this is closure 1")
+        }
+        
+        DispatchQueue.global().async(execute: closure)
+        
+    }
+    
     
     //异步操作
     func function1() {

@@ -26,6 +26,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.tabBar.hidden = YES;
+    
     
     ViewController *vc1 = [ViewController new];
     ViewController_B *vc2 = [ViewController_B new];
@@ -67,6 +69,8 @@
     [self.tabBar addSubview:view];
     [self.tabBar sendSubviewToBack:view];
     
+    
+    self.selectedIndex = 1;
 }
 
 - (void)didReceiveMemoryWarning {

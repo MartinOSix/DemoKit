@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-class SequenceTypeViewController: UIViewController {
+class ViewController_SequenceType: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,10 +22,6 @@ class SequenceTypeViewController: UIViewController {
 class CustomeModel {
     
     var values: [Int] = [0,1,2,3,4,5,6,7]
-    
-}
-
-extension CustomeModel: Sequence {
     
 }
 

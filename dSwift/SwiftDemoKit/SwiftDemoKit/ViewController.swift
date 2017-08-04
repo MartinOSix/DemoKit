@@ -43,7 +43,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                       ("搜索viewcontroller","SearchViewController"),
                       ("动画集合","CoreAnimationViewController"),
                       ("collection自定义的section背景","MyCollectionViewController"),
-                      ("用户通知","UserNotificationViewController")
+                      ("用户通知","UserNotificationViewController"),
+                      ("属性字符串","ViewController_attributeString"),
+                      ("共享文件列表","ViewController_shareFile")
     ] as [(String,String)]
     
     

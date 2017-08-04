@@ -47,6 +47,7 @@
 		A0B5A2721D9BA565009458CB /* ViewController4.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0B5A2701D9BA565009458CB /* ViewController4.xib */; };
 		A0D2FAFD1F06006500B7BCC0 /* WaveViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D2FAFC1F06006500B7BCC0 /* WaveViewViewController.m */; };
 		A0F584171F20569C0077D2F8 /* HUDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F584161F20569C0077D2F8 /* HUDViewController.m */; };
+		A0F585901F32B4270077D2F8 /* CustomButtom.m in Sources */ = {isa = PBXBuildFile; fileRef = A0F5858F1F32B4270077D2F8 /* CustomButtom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,8 @@
 		A0D2FAFC1F06006500B7BCC0 /* WaveViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveViewViewController.m; sourceTree = "<group>"; };
 		A0F584151F20569C0077D2F8 /* HUDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUDViewController.h; sourceTree = "<group>"; };
 		A0F584161F20569C0077D2F8 /* HUDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUDViewController.m; sourceTree = "<group>"; };
+		A0F5858E1F32B4270077D2F8 /* CustomButtom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButtom.h; sourceTree = "<group>"; };
+		A0F5858F1F32B4270077D2F8 /* CustomButtom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButtom.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +237,8 @@
 				A0B5A22A1D9A0C2B009458CB /* LaunchScreen.storyboard */,
 				A0B5A22D1D9A0C2B009458CB /* Info.plist */,
 				A0B5A21C1D9A0C2B009458CB /* Supporting Files */,
+				A0F5858E1F32B4270077D2F8 /* CustomButtom.h */,
+				A0F5858F1F32B4270077D2F8 /* CustomButtom.m */,
 			);
 			path = animationDemo;
 			sourceTree = "<group>";
@@ -485,6 +490,7 @@
 				A0B5A26A1D9BA1AF009458CB /* ViewController3.m in Sources */,
 				A0B5A2611D9B6128009458CB /* ViewController2.m in Sources */,
 				A0222BFA1D9CEB6000F59181 /* ViewController9.m in Sources */,
+				A0F585901F32B4270077D2F8 /* CustomButtom.m in Sources */,
 				A0B5A25B1D9A75DA009458CB /* NSDate+CQDate.m in Sources */,
 				A0B5A2711D9BA565009458CB /* ViewController4.m in Sources */,
 				A079DF4A1E233A93005F2099 /* MainViewController.m in Sources */,

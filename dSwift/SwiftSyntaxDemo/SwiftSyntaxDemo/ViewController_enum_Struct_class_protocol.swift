@@ -93,9 +93,15 @@ struct StudentScore {
 
 class ViewController_enum_Struct_class_protocol: UIViewController {
 
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let temp = [1,2,3,4]
+        print("max num  = \(temp.mamax)")
+        
         self.view.backgroundColor = UIColor.white
         
         test_enumeType()
@@ -147,5 +153,24 @@ class ViewController_enum_Struct_class_protocol: UIViewController {
             print("不同实例")
         }
     }
-
+    
 }
+
+//协议拓展
+extension Collection where Self.Iterator.Element : Comparable {
+    
+    var mamax: Self.Iterator.Element {
+        var best = self[self.startIndex]
+        for elt in self {
+            if elt > best {
+                best = elt
+            }
+        }
+        return best
+    }
+    
+}
+
+
+
+

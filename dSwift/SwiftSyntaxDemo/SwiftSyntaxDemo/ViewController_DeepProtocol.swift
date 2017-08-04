@@ -26,7 +26,7 @@ class StuClass: DeepProtocol {
     
 }
 
-class DeepProtocolViewController: UIViewController {
+class ViewController_DeepProtocol: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

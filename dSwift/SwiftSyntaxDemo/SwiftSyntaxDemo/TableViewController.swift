@@ -25,8 +25,9 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
                       ("数组","ViewController_Array"),
                       ("字典","ViewController_Dictonary"),
                       ("控制流","ViewController_controlFlow"),
-                      ("深入理解协议","DeepProtocolViewController"),
-                      ("序列化协议","SequenceTypeViewController")
+                      ("深入理解协议","ViewController_DeepProtocol"),
+                      ("序列化协议","ViewController_SequenceType"),
+                      ("泛型与函数式思维解析json","ViewController_genericity")
         ] as [(String,String)]
     
     
@@ -72,5 +73,12 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         vc.title = dataSource[indexPath.row].0
         vc.view.backgroundColor = UIColor.white
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
+        
+        if motion == .motionShake {
+            self.tableView.backgroundColor = UIColor.init(red: CGFloat.init(arc4random()%255)/255.0, green: CGFloat.init(arc4random()%255)/255.0, blue: CGFloat.init(arc4random()%255)/255.0, alpha: 0.8)
+        }
     }
 }

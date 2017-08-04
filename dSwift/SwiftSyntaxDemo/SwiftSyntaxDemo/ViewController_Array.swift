@@ -13,10 +13,93 @@ class ViewController_Array: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.createArray()
+        //self.createArray()
         
         //self.anyArray()
+        
+        arrayMapFunction()
     }
+    
+    
+    func arrayMapFunction() {
+        
+        let oldArr = (1...8)
+        let newArr = oldArr.map { (a) -> Int in
+            return a*a
+        }
+        print(newArr)
+     
+        let arr1 = [Optional("1234"),nil,Optional("hahha")]
+        
+        let arr1_n = arr1.map { (arg1) -> String in
+            if let str = arg1 {
+                return str
+            }
+            return ""
+        }
+        print(arr1_n)
+        
+        let arr1_n2 = arr1.filter { (arg1) -> Bool in
+            if let str = arg1 {
+                return true
+            }
+            return false
+        }
+        print(arr1_n2)
+        
+        //线程组
+        let group = DispatchGroup.init();
+        
+        //异步任务一
+        let workItem1 = DispatchWorkItem.init {
+            
+            print("thread 1 Start")
+            for i in 1...10 {
+                sleep(1)
+                print("thread 1  -- \(i)");
+            }
+            print("thread 1 End")
+        }
+        
+        //将异步任务添加到线程组中，并开始异步执行
+        DispatchQueue.global().async(group: group, execute: workItem1);
+    
+        let workItem2 = DispatchWorkItem.init {
+            
+            print("thread 2 Start")
+            for i in 1...5 {
+                sleep(2)
+                print("thread 2  -- \(i)");
+            }
+            print("thread 2 End")
+        }
+        DispatchQueue.global().async(group: group, execute: workItem2);
+        
+        let workItem3 = DispatchWorkItem.init {
+            
+            print("thread 3 Start")
+            for i in 1...15 {
+                sleep(1)
+                print("thread 3  -- \(i)");
+            }
+            print("thread 3 End")
+            
+        }
+        DispatchQueue.global().async(group: group, execute: workItem3);
+        
+        
+        //线程组中所有线程执行完毕所走的通知
+        group.notify(queue: DispatchQueue.main) { 
+            
+            print("所有线程执行完毕")
+            
+        }
+        
+        
+    }
+    
+    
+    
 
     func anyArray() {
         
@@ -124,8 +207,4 @@ class ViewController_Array: UIViewController {
         
         
     }
-    
-    
-    
-    
 }

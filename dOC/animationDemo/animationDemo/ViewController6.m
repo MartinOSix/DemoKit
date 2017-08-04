@@ -39,6 +39,22 @@
     textLayer.contentsScale = [UIScreen mainScreen].scale;
     textLayer.string = text;
     
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(100, 100, 120, 100);
+    btn.backgroundColor = [UIColor redColor];
+    [btn setTitle:@"哈哈哈哈" forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont systemFontOfSize:10];
+    [btn setImage:[UIImage imageNamed:@"1"] forState:UIControlStateNormal];
+    btn.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    [self.view addSubview:btn];
+    
+    //10是imageView与上面的边距，120是btn的宽度，100是高度
+    CGSize imgSize = btn.imageView.bounds.size;
+    [btn setTitleEdgeInsets:UIEdgeInsetsMake(10+10+imgSize.height, -imgSize.width, 0.0, 0.0)];
+    btn.imageEdgeInsets = UIEdgeInsetsMake(10, (120-imgSize.width)/2, 100-imgSize.height-10, (120-imgSize.width)/2);
+    
+    //btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+    //btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
 }
 
 - (void)didReceiveMemoryWarning {

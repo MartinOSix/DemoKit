@@ -17,6 +17,19 @@ class ViewController_controlFlow: UIViewController {
         self.funcType_if()
         self.funcType_Switch()
         // Do any additional setup after loading the view.
+        
+        var name : String? = nil;
+        name = "name"
+        guard name != nil else {
+            print("name is nil")
+            return;
+        }
+        print("\(name) is not nil")
+        
+        if let name1 = name{
+            print("\(name1) is not nil")
+        }
+        
     }
     
     func funType_For() {

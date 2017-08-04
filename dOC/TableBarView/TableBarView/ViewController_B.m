@@ -47,6 +47,18 @@
     view.clipsToBounds = NO;
     view.layer.masksToBounds = NO;
     
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(100, 100, 100, 100);
+    btn.backgroundColor = [UIColor blueColor];
+    [btn addTarget:self action:@selector(btnclick) forControlEvents:UIControlEventTouchUpInside];
+    
+}
+
+- (void)btnclick{
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

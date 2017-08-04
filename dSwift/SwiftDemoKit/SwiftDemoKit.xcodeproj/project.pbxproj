@@ -81,6 +81,8 @@
 		A0DB847B1E7FBFDF007C7828 /* TableHeadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB847A1E7FBFDF007C7828 /* TableHeadViewController.swift */; };
 		A0DB847D1E7FCCB5007C7828 /* AnimateTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB847C1E7FCCB5007C7828 /* AnimateTableViewController.swift */; };
 		A0DB847F1E7FD12A007C7828 /* WaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB847E1E7FD12A007C7828 /* WaveViewController.swift */; };
+		A0F585B61F340A780077D2F8 /* ViewController_attributeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F585B51F340A780077D2F8 /* ViewController_attributeString.swift */; };
+		A0F585B81F34216C0077D2F8 /* ViewController_shareFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F585B71F34216C0077D2F8 /* ViewController_shareFile.swift */; };
 		A0FA50971E811C17008B296C /* DrawPaintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA50961E811C17008B296C /* DrawPaintViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -196,6 +198,8 @@
 		A0DB847A1E7FBFDF007C7828 /* TableHeadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableHeadViewController.swift; sourceTree = "<group>"; };
 		A0DB847C1E7FCCB5007C7828 /* AnimateTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimateTableViewController.swift; sourceTree = "<group>"; };
 		A0DB847E1E7FD12A007C7828 /* WaveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveViewController.swift; sourceTree = "<group>"; };
+		A0F585B51F340A780077D2F8 /* ViewController_attributeString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_attributeString.swift; sourceTree = "<group>"; };
+		A0F585B71F34216C0077D2F8 /* ViewController_shareFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_shareFile.swift; sourceTree = "<group>"; };
 		A0FA50961E811C17008B296C /* DrawPaintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawPaintViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -389,6 +393,8 @@
 				A00C80DB1ECA908C00439AAA /* SortCollectionView.swift */,
 				A00C81241ECD2F5800439AAA /* QRCodeViewController.swift */,
 				A0610C101ED97263008EE872 /* UserNotificationViewController.swift */,
+				A0F585B51F340A780077D2F8 /* ViewController_attributeString.swift */,
+				A0F585B71F34216C0077D2F8 /* ViewController_shareFile.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -681,6 +687,7 @@
 				A00C7FDB1EBC85ED00439AAA /* CollectionDemoDetailViewController.swift in Sources */,
 				A0BF26001F0F1F4F009E26DB /* OverturnViewController.swift in Sources */,
 				A0D8A7021E7A791700E5C46B /* ViewController.swift in Sources */,
+				A0F585B81F34216C0077D2F8 /* ViewController_shareFile.swift in Sources */,
 				A0DB847D1E7FCCB5007C7828 /* AnimateTableViewController.swift in Sources */,
 				A072E5D81ED66E4B00547596 /* SearchViewController.swift in Sources */,
 				A0610C241EE152BB008EE872 /* AlertViewController.swift in Sources */,
@@ -691,6 +698,7 @@
 				A072E5DA1ED6759A00547596 /* SearchResultViewController.swift in Sources */,
 				A0DB84741E7F6BB3007C7828 /* VideoBackgroundController.swift in Sources */,
 				A0BF26041F0F3931009E26DB /* ColorfulTextViewController.swift in Sources */,
+				A0F585B61F340A780077D2F8 /* ViewController_attributeString.swift in Sources */,
 				A00C7FCD1EBC74AA00439AAA /* CCLogController+Utility.m in Sources */,
 				A0D8A7001E7A791700E5C46B /* AppDelegate.swift in Sources */,
 				A0D8A7301E7B723A00E5C46B /* LocationViewController.swift in Sources */,
