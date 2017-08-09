@@ -39,10 +39,10 @@ class CollectionChangePositionViewController: UIViewController,UICollectionViewD
         collectionView.delegate = self
         
         self.view.addSubview(collectionView)
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         return self.data.count
     }
     

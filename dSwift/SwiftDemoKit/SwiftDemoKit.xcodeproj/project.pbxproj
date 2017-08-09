@@ -83,6 +83,8 @@
 		A0DB847F1E7FD12A007C7828 /* WaveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB847E1E7FD12A007C7828 /* WaveViewController.swift */; };
 		A0F585B61F340A780077D2F8 /* ViewController_attributeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F585B51F340A780077D2F8 /* ViewController_attributeString.swift */; };
 		A0F585B81F34216C0077D2F8 /* ViewController_shareFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F585B71F34216C0077D2F8 /* ViewController_shareFile.swift */; };
+		A0F585BA1F3802860077D2F8 /* ViewController_Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F585B91F3802860077D2F8 /* ViewController_Notification.swift */; };
+		A0F585BC1F39534E0077D2F8 /* ViewController_KeyChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F585BB1F39534E0077D2F8 /* ViewController_KeyChain.swift */; };
 		A0FA50971E811C17008B296C /* DrawPaintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0FA50961E811C17008B296C /* DrawPaintViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -200,6 +202,9 @@
 		A0DB847E1E7FD12A007C7828 /* WaveViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveViewController.swift; sourceTree = "<group>"; };
 		A0F585B51F340A780077D2F8 /* ViewController_attributeString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_attributeString.swift; sourceTree = "<group>"; };
 		A0F585B71F34216C0077D2F8 /* ViewController_shareFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_shareFile.swift; sourceTree = "<group>"; };
+		A0F585B91F3802860077D2F8 /* ViewController_Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_Notification.swift; sourceTree = "<group>"; };
+		A0F585BB1F39534E0077D2F8 /* ViewController_KeyChain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController_KeyChain.swift; sourceTree = "<group>"; };
+		A0F585BD1F3956000077D2F8 /* SwiftDemoKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftDemoKit.entitlements; sourceTree = "<group>"; };
 		A0FA50961E811C17008B296C /* DrawPaintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawPaintViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -395,6 +400,8 @@
 				A0610C101ED97263008EE872 /* UserNotificationViewController.swift */,
 				A0F585B51F340A780077D2F8 /* ViewController_attributeString.swift */,
 				A0F585B71F34216C0077D2F8 /* ViewController_shareFile.swift */,
+				A0F585B91F3802860077D2F8 /* ViewController_Notification.swift */,
+				A0F585BB1F39534E0077D2F8 /* ViewController_KeyChain.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -458,6 +465,7 @@
 		A0D8A6FE1E7A791700E5C46B /* SwiftDemoKit */ = {
 			isa = PBXGroup;
 			children = (
+				A0F585BD1F3956000077D2F8 /* SwiftDemoKit.entitlements */,
 				A09F2DEF1EBAC03000E37355 /* Source */,
 				A09F2DEE1EBABFB500E37355 /* ViewController */,
 				A0D8A6FF1E7A791700E5C46B /* AppDelegate.swift */,
@@ -570,6 +578,9 @@
 							com.apple.BackgroundModes = {
 								enabled = 1;
 							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
 						};
 					};
 					A0D8A70F1E7A791700E5C46B = {
@@ -662,6 +673,7 @@
 				A0610C1A1EE1030E008EE872 /* ImagePickerViewController.swift in Sources */,
 				A09F2DFA1EBC2C6400E37355 /* CollectionViewAnimationController.swift in Sources */,
 				A0610BC61ED90C4D008EE872 /* TransactionAnimationViewController.swift in Sources */,
+				A0F585BA1F3802860077D2F8 /* ViewController_Notification.swift in Sources */,
 				A0610C281EE16860008EE872 /* UIDynamicMenuViewController.swift in Sources */,
 				A00C7FD01EBC74AA00439AAA /* CCLogStringImp.m in Sources */,
 				A00C7FD51EBC74AA00439AAA /* NSObject+CCReverseComparison.m in Sources */,
@@ -676,6 +688,7 @@
 				A0610BC81ED914F6008EE872 /* MyCollectionViewController.swift in Sources */,
 				A0DB847F1E7FD12A007C7828 /* WaveViewController.swift in Sources */,
 				A00C80A91EC5A62600439AAA /* URLImageViewController.swift in Sources */,
+				A0F585BC1F39534E0077D2F8 /* ViewController_KeyChain.swift in Sources */,
 				A00C80DA1EC9B00F00439AAA /* CollectionChangePositionViewController.swift in Sources */,
 				A09F2DF41EBB294900E37355 /* TAManager.swift in Sources */,
 				A00C80E31ECAE63900439AAA /* LinerLayout.swift in Sources */,
@@ -858,6 +871,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftDemoKit/SwiftDemoKit.entitlements;
 				DEVELOPMENT_TEAM = XUCTDNYC49;
 				INFOPLIST_FILE = SwiftDemoKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10;
@@ -872,6 +886,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SwiftDemoKit/SwiftDemoKit.entitlements;
 				DEVELOPMENT_TEAM = XUCTDNYC49;
 				INFOPLIST_FILE = SwiftDemoKit/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10;

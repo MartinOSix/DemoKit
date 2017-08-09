@@ -21,23 +21,29 @@ class ViewController_attributeString: UIViewController {
         super.viewDidLoad()
         
         var frame : CGRect = label.frame
-        frame.size.height = 30
+        frame.size.height = 60
+        frame.size.width = kScreenWidth
         frame.origin.y = 100
         label.frame = frame
-        label.autoresizingMask = [.flexibleLeftMargin,.flexibleRightMargin]
-        //self.view.addSubview(label)
+        self.view.addSubview(label)
         
-        //let string = "Testing Attribute String"
+        let string = "Testing Attribute String"
+        let attributedString = NSMutableAttributedString.init(string: string)
         
+        let firstAttributes: [String: Any] = [NSForegroundColorAttributeName: UIColor.blue, NSBackgroundColorAttributeName: UIColor.yellow, NSUnderlineStyleAttributeName: 2]
+        let secondAttributes: [String: Any] = [NSForegroundColorAttributeName: UIColor.red, NSBackgroundColorAttributeName: UIColor.blue, NSStrikethroughStyleAttributeName: 1]
+        let thirdAttributes: [String: Any] = [NSForegroundColorAttributeName: UIColor.green, NSBackgroundColorAttributeName: UIColor.black, NSFontAttributeName: UIFont.systemFont(ofSize: 40)]
         
+        attributedString.addAttributes(firstAttributes, range: NSRange.init(location: 0, length: 8))
+        attributedString.addAttributes(secondAttributes, range: NSRange.init(location: 8, length: 10))
+        attributedString.addAttributes(thirdAttributes, range: NSRange.init(location: 18, length: 6))
+        label.attributedText = attributedString
         
         //tableView 编辑模式下不缩进
         tableView.delegate = self
         tableView.dataSource = self
         //self.view .addSubview(tableView)
         self.tableView.setEditing(true, animated: true)
-        
-        
         
     }
 

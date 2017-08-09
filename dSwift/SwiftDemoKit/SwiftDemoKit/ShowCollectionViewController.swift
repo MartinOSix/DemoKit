@@ -47,6 +47,7 @@ class ShowCollectionViewController: UIViewController,CustomWaterFallLayoutDelega
         collectionView.backgroundColor = UIColor.white
         collectionView.dataSource = self
         collectionView.delegate = self
+        collectionView.allowsMultipleSelection = true
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         view.addSubview(collectionView)
     }
@@ -80,7 +81,19 @@ extension ShowCollectionViewController: UICollectionViewDataSource, UICollection
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         cell.backgroundColor = lineDataSource[indexPath.row%5]
+        for view in cell.subviews {
+            view.removeFromSuperview()
+        }
+        collectionView .selectItem(at: indexPath, animated: false, scrollPosition: UICollectionViewScrollPosition.init(rawValue: 0))
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        print("dis select \(indexPath)")
     }
     
 }
