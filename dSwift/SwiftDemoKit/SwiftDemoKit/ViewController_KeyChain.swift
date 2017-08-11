@@ -14,6 +14,31 @@ class ViewController_KeyChain: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        /*
+         //方法一：
+         NSError *error;
+         NSURL *ipURL = [NSURL URLWithString:@"http://ifconfig.me/ip"];
+         NSString *ip = [NSString stringWithContentsOfURL:ipURL encoding:NSUTF8StringEncoding error:&error];
+         //方法二：个人推荐用这个请求，速度比较快
+         /*
+         http://ipof.in/json
+         http://ipof.in/xml
+         http://ipof.in/txt
+         If you want HTTPS you can use the same URLs with https prefix. The advantage being that even if you are on a Wifi you will get the public address.
+         */
+         NSError *error;
+         NSURL *ipURL = [NSURL URLWithString:@"http://ipof.in/txt"];
+         NSString *ip = [NSString stringWithContentsOfURL:ipURL encoding:NSUTF8StringEncoding error:&error];
+         */
+        
+        let url = URL.init(string: "http://ifconfig.me/ip")
+        do {
+            let ipaddress = try String.init(contentsOf: url!, encoding: String.Encoding.utf8)
+            print("ip \(ipaddress)")
+        }
+        catch{
+            print(error)
+        }
     }
 
 }

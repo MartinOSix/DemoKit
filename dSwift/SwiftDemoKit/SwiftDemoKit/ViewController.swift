@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     let tableView = UITableView.init(frame: CGRect.zero, style: UITableViewStyle.plain)
     let dataSource = [("Collection创建使用","CollectionDemoViewController"),
+                      ("钥匙串的使用","ViewController_KeyChain"),
                       ("时间处理","DateViewController"),
                       ("重力行为","UIDynamicMenuViewController"),
                       ("提示框","AlertViewController"),
